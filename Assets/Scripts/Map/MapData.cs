@@ -34,10 +34,14 @@ namespace MapSystem {
 		#endregion
 
 		[HideInInspector]
-		public List<HexTile> tilesOnMap;
+		public List<HexTile> playerMap;
+
+		[HideInInspector]
+		public List<HexTile> enemyMap;
 
 		void Awake()	{
-			tilesOnMap = new List<HexTile>(mapWidth * mapHeight);
+			playerMap = new List<HexTile>(mapWidth * mapHeight);
+			enemyMap = new List<HexTile>(mapWidth * mapHeight);
 			SetTilePrefab(Type.SEA);
 		}
 
@@ -68,9 +72,15 @@ namespace MapSystem {
 			
 		}
 
-		public void AddCell(HexTile cellToAdd, int index) {
-			tilesOnMap.Insert(index, cellToAdd);
+		public void AddCell(HexTile cellToAdd, int index, string type) {
+			switch(type) {
+				case "enemyMap":
+					enemyMap.Insert(index, cellToAdd);
+					break;
+				case "playerMap":
+					playerMap.Insert(index, cellToAdd);
+					break;
+			}
 		}
-
 	}
 }

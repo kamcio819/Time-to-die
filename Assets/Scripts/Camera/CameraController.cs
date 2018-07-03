@@ -57,6 +57,29 @@ public class CameraController : MonoBehaviour {
 		}
     }
 
+    bool ReachedHorizontalBorders(Vector3 position) {
+        if(position.z > 6f || position.z < -2f) {
+            if(position.x > 11.5f || position.x < -0.5f) {
+                Debug.Log(1);
+                return true;
+            }
+            Debug.Log(2);
+            return true;
+        }
+        return false;
+    }
+
+    bool ReachedVertcialBoders(Vector3 position) {
+        if(position.x > 11.5f || position.x < -0.5f) {
+               if(position.z > 6f || position.z < -2f) {
+                   Debug.Log(3);
+                   return true;
+               }
+               Debug.Log(4);
+               return true;
+        }
+        return false;
+    }
     void AdjustZoom (float delta) {
 		zoom = Mathf.Clamp01(zoom + delta);
 
@@ -75,7 +98,9 @@ public class CameraController : MonoBehaviour {
 
 		Vector3 position = transform.localPosition;
 		position += direction * distance;
-		transform.localPosition = position;
+        if(!ReachedHorizontalBorders(position) && !ReachedVertcialBoders(position)) {
+		    transform.localPosition = position;
+        }
 	}
 
 }
