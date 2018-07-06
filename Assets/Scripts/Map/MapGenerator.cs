@@ -10,6 +10,7 @@ public class MapGenerator : MonoBehaviour {
 	GameObject playerMap;
 
 	GameObject enemyMap;
+	
 	void Awake () {
 
 		mapData = GetComponent<MapData>();
