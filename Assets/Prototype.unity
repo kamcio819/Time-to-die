@@ -125,11 +125,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4808841170174930, guid: d1337c461182f9541b078f11a0a0e339, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4808841170174930, guid: d1337c461182f9541b078f11a0a0e339, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 50
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 4808841170174930, guid: d1337c461182f9541b078f11a0a0e339, type: 2}
       propertyPath: m_LocalRotation.x
@@ -155,6 +155,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1360627337628366, guid: d1337c461182f9541b078f11a0a0e339, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1337c461182f9541b078f11a0a0e339, type: 2}
   m_IsPrefabParent: 0
@@ -171,6 +175,9 @@ GameObject:
   - component: {fileID: 996952943}
   - component: {fileID: 996952947}
   - component: {fileID: 996952948}
+  - component: {fileID: 996952950}
+  - component: {fileID: 996952949}
+  - component: {fileID: 996952951}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -251,12 +258,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575929cd08127964d866f2b4633a184a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileMap: {fileID: 1982981608}
-  InitOffsetY: 5
-  stickMinZoom: 5
-  stickMaxZoom: 1
-  swivelMinZoom: 75
-  swivelMaxZoom: 45
+  cameraData:
+    stickMinZoom: 5
+    stickMaxZoom: 1
+    swivelMinZoom: 75
+    swivelMaxZoom: 45
+    focusedMap: {fileID: 0}
+    centerTile: {fileID: 0}
 --- !u!114 &996952948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,6 +274,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55b780a9b0f6f0943b62af0d0d8682d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &996952949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996952942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe18bc976be90840a063775a624808f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &996952950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996952942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab04355d82c9c54ea9af1955d47d2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &996952951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996952942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4d55f5770f286409843d9ee51194da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1144702646
@@ -296,8 +337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 672b0a9ee5856bb469ac67c899996065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapWidth: 7
-  mapHeight: 15
+  mapWidth: 8
+  mapHeight: 16
   tilePrefab: {fileID: 114759814495831850, guid: 2ad629a802065be4395018d827833e2d,
     type: 2}
   playerMap: []
@@ -437,8 +478,3 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ff5d2cd0fddf5b4390c1d02b93535b6, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1982981608 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1302720006680782, guid: 0ff5d2cd0fddf5b4390c1d02b93535b6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1765393031}

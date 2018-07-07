@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using MapSystem;
+using System;
+
 public class MapGenerator : MonoBehaviour {
 
+	public event Action MapsGenerated;
 	MapData mapData;
 	
 	GameObject playerMap;
@@ -28,6 +30,7 @@ public class MapGenerator : MonoBehaviour {
 				CreateCell(x, z, i++, enemyMap);
 			}
 		}
+		MapsGenerated.Invoke();
 	}
 	
 	void CreateCell (int x, int z, int i, GameObject map) {
@@ -40,5 +43,9 @@ public class MapGenerator : MonoBehaviour {
 		cell.transform.SetParent(map.transform, false);
 		cell.transform.localPosition = position;
 		mapData.AddCell(cell, i, map.transform.name);
+
+		if(x * 2 == mapData.mapWidth && z * 2 == mapData.mapHeight) {
+			cell.transform.name = map.transform.name + "CenterTile";
+		}
 	}
 }
