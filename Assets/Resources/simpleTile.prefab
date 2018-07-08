@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23140753910286878}
   - component: {fileID: 114101658211093580}
   m_Layer: 0
-  m_Name: simpleTile
+  m_Name: SimpleTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,3 +100,4 @@ MonoBehaviour:
   tileHeight: 4
   isWalkable: 1
   tileType: 0
+  availableToPlaceOn: 0

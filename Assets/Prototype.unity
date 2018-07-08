@@ -339,8 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapWidth: 8
   mapHeight: 16
-  tilePrefab: {fileID: 114759814495831850, guid: 2ad629a802065be4395018d827833e2d,
-    type: 2}
+  tilePrefab: {fileID: 0}
   playerMap: []
   enemyMap: []
 --- !u!114 &1144702648

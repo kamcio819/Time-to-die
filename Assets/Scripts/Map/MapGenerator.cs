@@ -34,11 +34,18 @@ public class MapGenerator : MonoBehaviour {
 	}
 	
 	void CreateCell (int x, int z, int i, GameObject map) {
+
 		Vector3 position;
 		position.x = (x + z * 0.5f - z / 2) * (HexMetrics.INNER_RADIUS * 4f);
 		position.y = 0f;
 		position.z = z * 0.5f;
 
+		if(map.transform.name == "PlayerMap") {
+			mapData.SetTilePrefab(x,z);
+		}
+		else if(map.transform.name == "EnemyMap") {
+			mapData.ResetTilePrefab();
+		}
 		HexTile cell = Instantiate<HexTile>(mapData.tilePrefab);
 		cell.transform.SetParent(map.transform, false);
 		cell.transform.localPosition = position;

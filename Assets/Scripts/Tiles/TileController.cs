@@ -20,7 +20,9 @@ public class TileController : MonoBehaviour {
  	}
 
 	void OnMouseDown() {
-		HighlightTileAlpha();
+		if(GetComponent<HexTile>().availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES) {
+			HighlightTileAlpha();
+		}
 	}
 	void ChangeTileAlpha() {
 		meshRenderer.materials[0].SetFloat("_Metallic", 0.05f);

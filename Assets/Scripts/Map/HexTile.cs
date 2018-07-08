@@ -17,6 +17,8 @@ using MapSystem;
 			public bool isWalkable;
 
 			public Type tileType;
+
+			public AvailableToPlaceOn availableToPlaceOn;
 		#endregion
 	}
 

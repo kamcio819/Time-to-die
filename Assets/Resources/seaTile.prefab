@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 65915536007035544}
   - component: {fileID: 114755319531945904}
   m_Layer: 0
-  m_Name: seaTile
+  m_Name: SeaTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,4 +124,5 @@ MonoBehaviour:
   tileWidth: 5
   tileHeight: 5
   isWalkable: 0
-  tileType: 5
+  tileType: 2
+  availableToPlaceOn: 0

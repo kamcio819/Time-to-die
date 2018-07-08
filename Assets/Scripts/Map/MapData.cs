@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,18 +10,19 @@ namespace MapSystem {
 	#region HexTilesType
 			public enum Type {
 				SIMPLE,
-				ROADCROSS,
-				ROADANGLE,
-				ROADFORK,
-				ROADLINE,
+				SIMPLENVIRO,
 				SEA,
-				RIVER
+				SEAENVIRO
 			}
 	#endregion
 
-	public struct MapMatrix {
-
+	#region Clickable
+	public enum AvailableToPlaceOn {
+		YES,
+		NO
 	}
+	#endregion
+	
 	public class MapData: MonoBehaviour {
 		
 		#region MapConstraints
@@ -28,6 +30,8 @@ namespace MapSystem {
 			public int mapWidth;
 
 			public int mapHeight;
+
+			private int[][] mapMatrix;
 
 			[HideInInspector]
 			public HexTile tilePrefab;
@@ -39,34 +43,53 @@ namespace MapSystem {
 		[HideInInspector]
 		public List<HexTile> enemyMap;
 
-		void Awake()	{
+		void Awake() {
+			SetupTilesArray();
+			GenerateMapMatrix();
 			playerMap = new List<HexTile>(mapWidth * mapHeight);
 			enemyMap = new List<HexTile>(mapWidth * mapHeight);
-			SetTilePrefab(Type.SEA);
 		}
 
-		public void SetTilePrefab(Type tileType) {
-			switch(tileType) {
-				case Type.SIMPLE:
-					tilePrefab = Resources.Load<HexTile>("simpleTile");
+		void SetupTilesArray () {	
+        mapMatrix = new int[mapWidth][];
+        for (int i = 0; i < mapMatrix.Length; i++) {
+            mapMatrix[i] = new int[mapHeight];
+        }
+  		}
+
+      private void GenerateMapMatrix() {
+			for(int i = 0; i < mapWidth; ++i) {
+				for(int z = 0; z < mapHeight; ++z) {
+					if(UnityEngine.Random.Range(0,10) == 2) {
+						mapMatrix[i][z] = 1;
+						continue;
+					}
+					if(UnityEngine.Random.Range(0,10) == 4) {
+						mapMatrix[i][z] = 2;
+						continue;
+					}
+					if(UnityEngine.Random.Range(0,10) == 5) {
+						mapMatrix[i][z] = 3;
+						continue;
+					}
+					mapMatrix[i][z] = 0;
+				}
+			}
+      }
+
+      public void SetTilePrefab(int x, int z) {
+			switch(mapMatrix[x][z]) {
+				case 3:
+					tilePrefab = Resources.Load<HexTile>("SimpleTile");
 					break;
-				case Type.SEA:
-					tilePrefab = Resources.Load<HexTile>("seaTile");
+				case 0:
+					tilePrefab = Resources.Load<HexTile>("SeaTile");
 					break;
-				case Type.ROADLINE:
-					tilePrefab = Resources.Load<HexTile>("roadLineTile");
+				case 2:
+					tilePrefab = Resources.Load<HexTile>("EnviroSeaTile" + UnityEngine.Random.Range(1,2).ToString());
 					break;
-				case Type.ROADFORK:
-					tilePrefab = Resources.Load<HexTile>("roadForkTile");
-					break;
-				case Type.ROADCROSS:
-					tilePrefab = Resources.Load<HexTile>("roadCrossTile");
-					break;
-				case Type.ROADANGLE:
-					tilePrefab = Resources.Load<HexTile>("roadAngleTile");
-					break;
-				case Type.RIVER:
-					tilePrefab = Resources.Load<HexTile>("riverTile");
+				case 1:
+					tilePrefab = Resources.Load<HexTile>("EnviroSimpleTile" + UnityEngine.Random.Range(1,2).ToString());
 					break;
 			}
 			
@@ -81,6 +104,10 @@ namespace MapSystem {
 					playerMap.Insert(index, cellToAdd);
 					break;
 			}
+		}
+
+		public void ResetTilePrefab() {
+			tilePrefab = Resources.Load<HexTile>("SeaTile");
 		}
 	}
 }
