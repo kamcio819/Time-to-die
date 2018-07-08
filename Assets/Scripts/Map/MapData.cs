@@ -60,15 +60,15 @@ namespace MapSystem {
       private void GenerateMapMatrix() {
 			for(int i = 0; i < mapWidth; ++i) {
 				for(int z = 0; z < mapHeight; ++z) {
-					if(UnityEngine.Random.Range(0,10) == 2) {
+					if(UnityEngine.Random.Range(0,15) == 1) {
 						mapMatrix[i][z] = 1;
 						continue;
 					}
-					if(UnityEngine.Random.Range(0,10) == 4) {
+					if(UnityEngine.Random.Range(0,15) == 2) {
 						mapMatrix[i][z] = 2;
 						continue;
 					}
-					if(UnityEngine.Random.Range(0,10) == 5) {
+					if(UnityEngine.Random.Range(0,15) == 3) {
 						mapMatrix[i][z] = 3;
 						continue;
 					}
