@@ -1,1 +1,1 @@
-Simple Unity game with hexagon scenery
+Simple Unity Battleship game with hexagon scenery
