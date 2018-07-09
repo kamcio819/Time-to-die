@@ -151,6 +151,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1360627337628366, guid: d1337c461182f9541b078f11a0a0e339, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1337c461182f9541b078f11a0a0e339, type: 2}
   m_IsPrefabParent: 0
@@ -175,7 +179,7 @@ GameObject:
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!81 &996952943
 AudioListener:
@@ -316,7 +320,7 @@ GameObject:
   m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1144702647
 MonoBehaviour:
@@ -390,9 +394,9 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 2
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.55
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -403,13 +407,13 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
-  m_ShadowAngle: 0
+  m_ShadowAngle: 32
 --- !u!4 &1598490049
 Transform:
   m_ObjectHideFlags: 0
@@ -417,7 +421,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1598490047}
   m_LocalRotation: {x: 0.15304591, y: 0.6903456, z: -0.6903456, w: 0.15304591}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 4.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -465,6 +469,10 @@ Prefab:
     - target: {fileID: 1302720006680782, guid: 0ff5d2cd0fddf5b4390c1d02b93535b6, type: 2}
       propertyPath: m_Name
       value: PlayerMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302720006680782, guid: 0ff5d2cd0fddf5b4390c1d02b93535b6, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ff5d2cd0fddf5b4390c1d02b93535b6, type: 2}
