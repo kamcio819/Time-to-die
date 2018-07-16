@@ -7,17 +7,18 @@ using System;
 public class MapGenerator : MonoBehaviour {
 
 	public event Action MapsGenerated;
+
 	MapData mapData;
 	
-	GameObject playerMap;
+	[SerializeField]
+	private GameObject playerMap;
 
-	GameObject enemyMap;
+	[SerializeField]
+	private GameObject enemyMap;
 	
 	void Awake () {
 
 		mapData = GetComponent<MapData>();
-		playerMap = GameObject.Find("PlayerMap");
-		enemyMap = GameObject.Find("EnemyMap");
 
 		for (int z = 0, i = 0; z < mapData.mapHeight; z++) {
 			for (int x = 0; x < mapData.mapWidth; x++) {

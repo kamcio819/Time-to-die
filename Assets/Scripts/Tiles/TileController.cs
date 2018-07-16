@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TileController : MonoBehaviour {
 
@@ -13,15 +14,21 @@ public class TileController : MonoBehaviour {
 		meshRenderer = GetComponent<MeshRenderer>();
 	}
 	void OnMouseEnter() {
-     ChangeTileAlpha();
+	  if(!EventSystem.current.IsPointerOverGameObject()) {
+     		ChangeTileAlpha();
+	  }
    }
  	void OnMouseExit() {
-     ResetTileAlpha();
+		if(!EventSystem.current.IsPointerOverGameObject()) {
+     		 ResetTileAlpha();
+	   }
  	}
 
 	void OnMouseDown() {
-		if(GetComponent<HexTile>().availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES) {
-			HighlightTileAlpha();
+		if(!EventSystem.current.IsPointerOverGameObject()) {
+			if(GetComponent<HexTile>().availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES) {
+				HighlightTileAlpha();
+			}
 		}
 	}
 	void ChangeTileAlpha() {
