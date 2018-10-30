@@ -8,6 +8,7 @@ public class MapGenerator : MonoBehaviour {
 
 	public event Action MapsGenerated;
 
+	[SerializeField]
 	MapData mapData;
 	
 	[SerializeField]
@@ -16,9 +17,10 @@ public class MapGenerator : MonoBehaviour {
 	[SerializeField]
 	private GameObject enemyMap;
 	
-	void Awake () {
+	[SerializeField]
+	private ChangeMapController changeMapController;
 
-		mapData = GetComponent<MapData>();
+	void Awake () {
 
 		for (int z = 0, i = 0; z < mapData.mapHeight; z++) {
 			for (int x = 0; x < mapData.mapWidth; x++) {
@@ -54,6 +56,12 @@ public class MapGenerator : MonoBehaviour {
 
 		if(x * 2 == mapData.mapWidth && z * 2 == mapData.mapHeight) {
 			cell.transform.name = map.transform.name + "CenterTile";
+			if(map.transform.name == "PlayerMap") {
+				changeMapController.SetPlayerCenterTile(cell.transform);
+			}
+			else if(map.transform.name == "EnemyMap") {
+				changeMapController.SetEnemyCenterTile(cell.transform);
+			}
 		}
 	}
 }
