@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BattleShipData))]
 public class BattleShip : MonoBehaviour {
 
 	[SerializeField]	

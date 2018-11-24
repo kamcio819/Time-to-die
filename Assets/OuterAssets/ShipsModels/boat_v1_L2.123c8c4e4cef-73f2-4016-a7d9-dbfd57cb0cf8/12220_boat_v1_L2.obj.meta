@@ -1,0 +1,301 @@
+fileFormatVersion: 2
+guid: de35df81dd1ee374fb1787f2c330d87b
+timeCreated: 1543071289
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: boat_01_buffer
+    100004: boat_02_buffer
+    100006: boat_03_buffer
+    100008: boat_04_buffer
+    100010: boat_05_buffer
+    100012: boat_06_buffer
+    100014: boat_07_buffer
+    100016: boat_08_buffer
+    100018: boat_09_buffer
+    100020: boat_10_buffer
+    100022: boat_11_buffer
+    100024: boat_12_buffer
+    100026: boat_13_buffer
+    100028: boat_14_buffer
+    100030: boat_body
+    100032: boat_body_MeshPart0
+    100034: boat_body_MeshPart1
+    100036: boat_deck
+    100038: boat_door
+    100040: boat_door_white
+    100042: boat_fence_black
+    100044: boat_glass
+    100046: boat_lid_black
+    100048: boat_life_buoy_conditioner
+    100050: boat_roof_white
+    100052: boat_shield_flag
+    100054: boat_stairs_lamps
+    100056: boat_superstructure_white
+    100058: boat_superstructure_white_MeshPart0
+    100060: boat_superstructure_white_MeshPart1
+    100062: boat_tightrope
+    100064: boat_tools
+    100066: boat_window_antenna_white
+    400000: //RootNode
+    400002: boat_01_buffer
+    400004: boat_02_buffer
+    400006: boat_03_buffer
+    400008: boat_04_buffer
+    400010: boat_05_buffer
+    400012: boat_06_buffer
+    400014: boat_07_buffer
+    400016: boat_08_buffer
+    400018: boat_09_buffer
+    400020: boat_10_buffer
+    400022: boat_11_buffer
+    400024: boat_12_buffer
+    400026: boat_13_buffer
+    400028: boat_14_buffer
+    400030: boat_body
+    400032: boat_body_MeshPart0
+    400034: boat_body_MeshPart1
+    400036: boat_deck
+    400038: boat_door
+    400040: boat_door_white
+    400042: boat_fence_black
+    400044: boat_glass
+    400046: boat_lid_black
+    400048: boat_life_buoy_conditioner
+    400050: boat_roof_white
+    400052: boat_shield_flag
+    400054: boat_stairs_lamps
+    400056: boat_superstructure_white
+    400058: boat_superstructure_white_MeshPart0
+    400060: boat_superstructure_white_MeshPart1
+    400062: boat_tightrope
+    400064: boat_tools
+    400066: boat_window_antenna_white
+    2300000: boat_01_buffer
+    2300002: boat_02_buffer
+    2300004: boat_03_buffer
+    2300006: boat_04_buffer
+    2300008: boat_05_buffer
+    2300010: boat_06_buffer
+    2300012: boat_07_buffer
+    2300014: boat_08_buffer
+    2300016: boat_09_buffer
+    2300018: boat_10_buffer
+    2300020: boat_11_buffer
+    2300022: boat_12_buffer
+    2300024: boat_13_buffer
+    2300026: boat_14_buffer
+    2300028: boat_body_MeshPart0
+    2300030: boat_body_MeshPart1
+    2300032: boat_deck
+    2300034: boat_door
+    2300036: boat_door_white
+    2300038: boat_fence_black
+    2300040: boat_glass
+    2300042: boat_lid_black
+    2300044: boat_life_buoy_conditioner
+    2300046: boat_roof_white
+    2300048: boat_shield_flag
+    2300050: boat_stairs_lamps
+    2300052: boat_superstructure_white_MeshPart0
+    2300054: boat_superstructure_white_MeshPart1
+    2300056: boat_tightrope
+    2300058: boat_tools
+    2300060: boat_window_antenna_white
+    3300000: boat_01_buffer
+    3300002: boat_02_buffer
+    3300004: boat_03_buffer
+    3300006: boat_04_buffer
+    3300008: boat_05_buffer
+    3300010: boat_06_buffer
+    3300012: boat_07_buffer
+    3300014: boat_08_buffer
+    3300016: boat_09_buffer
+    3300018: boat_10_buffer
+    3300020: boat_11_buffer
+    3300022: boat_12_buffer
+    3300024: boat_13_buffer
+    3300026: boat_14_buffer
+    3300028: boat_body_MeshPart0
+    3300030: boat_body_MeshPart1
+    3300032: boat_deck
+    3300034: boat_door
+    3300036: boat_door_white
+    3300038: boat_fence_black
+    3300040: boat_glass
+    3300042: boat_lid_black
+    3300044: boat_life_buoy_conditioner
+    3300046: boat_roof_white
+    3300048: boat_shield_flag
+    3300050: boat_stairs_lamps
+    3300052: boat_superstructure_white_MeshPart0
+    3300054: boat_superstructure_white_MeshPart1
+    3300056: boat_tightrope
+    3300058: boat_tools
+    3300060: boat_window_antenna_white
+    4300000: boat_01_buffer
+    4300002: boat_02_buffer
+    4300004: boat_03_buffer
+    4300006: boat_04_buffer
+    4300008: boat_05_buffer
+    4300010: boat_06_buffer
+    4300012: boat_07_buffer
+    4300014: boat_08_buffer
+    4300016: boat_09_buffer
+    4300018: boat_10_buffer
+    4300020: boat_11_buffer
+    4300022: boat_12_buffer
+    4300024: boat_13_buffer
+    4300026: boat_14_buffer
+    4300028: boat_body_MeshPart0
+    4300030: boat_body_MeshPart1
+    4300032: boat_deck
+    4300034: boat_door
+    4300036: boat_door_white
+    4300038: boat_fence_black
+    4300040: boat_glass
+    4300042: boat_lid_black
+    4300044: boat_life_buoy_conditioner
+    4300046: boat_roof_white
+    4300048: boat_shield_flag
+    4300050: boat_stairs_lamps
+    4300052: boat_superstructure_white_MeshPart0
+    4300054: boat_superstructure_white_MeshPart1
+    4300056: boat_tightrope
+    4300058: boat_tools
+    4300060: boat_window_antenna_white
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boat_black
+    second: {fileID: 2100000, guid: 6de0b9a2cdb403847b5747b9ac68ccc4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boat_buffer
+    second: {fileID: 2100000, guid: a36de919cd1a69b4eaa9fb557aa29e50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boat_deck
+    second: {fileID: 2100000, guid: 88b204791987a144880e0222a3f20e2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boat_door
+    second: {fileID: 2100000, guid: 345847bddbc8b984287bd4b60ed4b8d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boat_glass
+    second: {fileID: 2100000, guid: 2974fe00d9f5b8046b34c866336599a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boat_life_buoy_conditioner
+    second: {fileID: 2100000, guid: caad1a2d92cb7254e92b75f1a5c7a3e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boat_shield_flag
+    second: {fileID: 2100000, guid: 6d0a4379b635fc9498fc236a6192e39a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boat_stairs_lamps
+    second: {fileID: 2100000, guid: ca26cf6d1cd7d734da58b7cd725dd7af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boat_tightrope
+    second: {fileID: 2100000, guid: b57771b45e3c53e40bb882b26290496b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boat_tools
+    second: {fileID: 2100000, guid: f59c0257710b6ef44997fb4b7a620d37, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boat_white
+    second: {fileID: 2100000, guid: bbcd78be87e3ca649a3f7403cf3561d0, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0003
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -5,7 +5,7 @@ using System;
 
 
 #region ShipType
-	public enum BattleShipType {
+	public enum BattleShipLength {
 		TILE1,
 		TILE2,
 		TILE3,
@@ -15,13 +15,38 @@ using System;
 		TILE8
 	}
 
+	public enum BattleShipType {
+		SUPPORT_CARRIER,
+		DESTROYER,
+		CRUISER,
+		BATTLESHIP,
+		MINESWEEPER,
+		HEALER,
+		SUBMARINE,
+		BOMBER
+
+	}
+
 #endregion
 
-[System.Serializable]
-public struct BattleShipData {
 
-	[SerializeField]
-	private BattleShipType typeOfShip;
-} 
+[CreateAssetMenu(fileName = "Data", menuName = "Inventory/List", order = 1)]
+public class BattleShipData : ScriptableObject {
+    [ContextMenuItem("Reset", "ResetShipName")]
+	 [TextArea]
+	 public string objectName;
+	 [Header("Stats")]
+	 [Range(0, 100)]
+    public float hp;
+	 [Range(0,500)]
+	 public float maxDamage;
+	 [Header("Ship Type")]
+	 public BattleShipType battleshipType; 
+	 public BattleShipLength battleshipLength;
+
+	 public void ResetShipName() {
+		 objectName = "";
+	 }
+}
 
 

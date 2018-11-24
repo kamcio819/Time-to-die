@@ -1,0 +1,192 @@
+fileFormatVersion: 2
+guid: bdda7c1c773b7ea4dadf9bbbd9c34952
+timeCreated: 1543073758
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: OHIO_CAT
+    100002: OHIODOOR
+    100004: OHIOHELI
+    100006: OHOI_TOR
+    100008: OHOICARB
+    100010: OHOIRUDD
+    100012: //RootNode
+    400000: OHIO_CAT
+    400002: OHIODOOR
+    400004: OHIOHELI
+    400006: OHOI_TOR
+    400008: OHOICARB
+    400010: OHOIRUDD
+    400012: //RootNode
+    2300000: OHIO_CAT
+    2300002: OHIODOOR
+    2300004: OHIOHELI
+    2300006: OHOI_TOR
+    2300008: OHOICARB
+    2300010: OHOIRUDD
+    3300000: OHIO_CAT
+    3300002: OHIODOOR
+    3300004: OHIOHELI
+    3300006: OHOI_TOR
+    3300008: OHOICARB
+    3300010: OHOIRUDD
+    4300000: OHIO_CAT
+    4300002: OHOICARB
+    4300004: OHOIRUDD
+    4300006: OHIODOOR
+    4300008: OHOI_TOR
+    4300010: OHIOHELI
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIOCARB
+    second: {fileID: 2100000, guid: 25b926ffcb7ccf14ab4067fab2ef1b36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIOCARB1
+    second: {fileID: 2100000, guid: 2c21ed3069a72ef449292dec10166ea9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIORUDD
+    second: {fileID: 2100000, guid: 6afe5f848035c1941922fea25db7b36a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIO_CAT
+    second: {fileID: 2100000, guid: 84f94ed6eaa42544ba252e723f67c058, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIO_CAT1
+    second: {fileID: 2100000, guid: 3fbff9e9f344a354789a506550afa37a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIO_CAT2
+    second: {fileID: 2100000, guid: 855305fc290da0443bca39cbb3e83088, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIO_CAT3
+    second: {fileID: 2100000, guid: e757aa3f6b16f744284815a7ec749111, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIO_TOR
+    second: {fileID: 2100000, guid: 1cc770bf1905ff04b8c20f10ecbc8efc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIO_TOR1
+    second: {fileID: 2100000, guid: 8a1bf67e772b8044b827bf2487a24291, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIO_TOR2
+    second: {fileID: 2100000, guid: b3b687eb7a021f240a05739a6397cec1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIO_TOR3
+    second: {fileID: 2100000, guid: e6b89eb7adc4b8f458864f36c3b3aaeb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIO_TOR4
+    second: {fileID: 2100000, guid: 2f25815fd93321f4f87e47a85d3ba33d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIO_TOR5
+    second: {fileID: 2100000, guid: 023ce25b536fede4eaae59ae530a398e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIO_TOR7
+    second: {fileID: 2100000, guid: 0639b1e3f0a73da489e515874145c329, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OHIO_TOR8
+    second: {fileID: 2100000, guid: 70f86da6cf8da994180b4cda4edd3dcb, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0002
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
