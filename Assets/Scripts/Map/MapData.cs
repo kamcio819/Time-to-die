@@ -72,6 +72,14 @@ namespace MapSystem {
 						mapMatrix[i][z] = 3;
 						continue;
 					}
+					if(UnityEngine.Random.Range(0,15) == 4) {
+						mapMatrix[i][z] = 4;
+						continue;
+					}
+					if(UnityEngine.Random.Range(0,15) == 5) {
+						mapMatrix[i][z] = 4;
+						continue;
+					}
 					mapMatrix[i][z] = 0;
 				}
 			}
@@ -86,10 +94,16 @@ namespace MapSystem {
 					tilePrefab = Resources.Load<HexTile>("SeaTile");
 					break;
 				case 2:
-					tilePrefab = Resources.Load<HexTile>("EnviroSeaTile" + UnityEngine.Random.Range(1,2).ToString());
+					tilePrefab = Resources.Load<HexTile>("EnviroSeaTile" + UnityEngine.Random.Range(1,3).ToString());
 					break;
 				case 1:
-					tilePrefab = Resources.Load<HexTile>("EnviroSimpleTile" + UnityEngine.Random.Range(1,2).ToString());
+					tilePrefab = Resources.Load<HexTile>("EnviroSimpleTile" + UnityEngine.Random.Range(1,3).ToString());
+					break;
+				case 4:
+					tilePrefab = Resources.Load<HexTile>("EnviroSimpleTile" + 3.ToString());
+					break;
+				case 5:
+					tilePrefab = Resources.Load<HexTile>("EnviroSeaTile" + 3.ToString());
 					break;
 			}
 			
