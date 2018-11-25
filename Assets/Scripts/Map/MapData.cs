@@ -100,10 +100,10 @@ namespace MapSystem {
 					tilePrefab = Resources.Load<HexTile>("EnviroSimpleTile" + UnityEngine.Random.Range(1,3).ToString());
 					break;
 				case 4:
-					tilePrefab = Resources.Load<HexTile>("EnviroSimpleTile" + 3.ToString());
+					tilePrefab = Resources.Load<HexTile>("EnviroSeaTile" + UnityEngine.Random.Range(3,5).ToString());
 					break;
 				case 5:
-					tilePrefab = Resources.Load<HexTile>("EnviroSeaTile" + 3.ToString());
+					tilePrefab = Resources.Load<HexTile>("EnviroSimpleTile" + UnityEngine.Random.Range(3,6).ToString());
 					break;
 			}
 			

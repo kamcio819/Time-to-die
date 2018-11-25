@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 4530454575335210}
   - component: {fileID: 33206538906091998}
   - component: {fileID: 23011264307857048}
+  - component: {fileID: 65049995465320734}
   - component: {fileID: 114932640243270914}
   m_Layer: 0
   m_Name: EnviroSimpleTile2
@@ -155,7 +156,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1933693048709814}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.484727, y: 5.094358, z: 5.389805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4972257119414008}
@@ -593,6 +594,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1757105225019826}
   m_Mesh: {fileID: 4300000, guid: 6f988613767bfc84e9fa073e3f5ca8bc, type: 3}
+--- !u!65 &65049995465320734
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1933693048709814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.95, y: 0.92, z: 0.02}
+  m_Center: {x: 0, y: 0, z: 0.07455317}
 --- !u!114 &114932640243270914
 MonoBehaviour:
   m_ObjectHideFlags: 1

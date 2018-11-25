@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class TileController : MonoBehaviour {
-
-
 	private Color prevColor;
 	private MeshRenderer meshRenderer;
 
