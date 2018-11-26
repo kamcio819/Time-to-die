@@ -52,11 +52,6 @@ public class MapGenerator : MonoBehaviour {
 		HexTile cell = Instantiate<HexTile>(mapData.tilePrefab);
 		cell.transform.SetParent(map.transform, false);
 		cell.transform.localPosition = position;
-
-		if(UnityEngine.Random.Range(0,3) == 1) {
-			cell.transform.localScale = new Vector3(-1, 1, 1);
-		}
-
 		mapData.AddCell(cell, i, map.transform.name);
 
 		if(x * 2 == mapData.mapWidth && z * 2 == mapData.mapHeight) {
