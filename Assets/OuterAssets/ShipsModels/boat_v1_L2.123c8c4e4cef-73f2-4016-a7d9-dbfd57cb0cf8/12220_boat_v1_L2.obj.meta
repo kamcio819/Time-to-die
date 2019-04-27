@@ -1,9 +1,7 @@
 fileFormatVersion: 2
 guid: de35df81dd1ee374fb1787f2c330d87b
-timeCreated: 1543071289
-licenseType: Free
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     100002: boat_01_buffer
@@ -104,6 +102,8 @@ ModelImporter:
     2300056: boat_tightrope
     2300058: boat_tools
     2300060: boat_window_antenna_white
+    2300062: boat_body
+    2300064: boat_superstructure_white
     3300000: boat_01_buffer
     3300002: boat_02_buffer
     3300004: boat_03_buffer
@@ -135,6 +135,8 @@ ModelImporter:
     3300056: boat_tightrope
     3300058: boat_tools
     3300060: boat_window_antenna_white
+    3300062: boat_body
+    3300064: boat_superstructure_white
     4300000: boat_01_buffer
     4300002: boat_02_buffer
     4300004: boat_03_buffer
@@ -166,6 +168,8 @@ ModelImporter:
     4300056: boat_tightrope
     4300058: boat_tools
     4300060: boat_window_antenna_white
+    4300062: boat_body
+    4300064: boat_superstructure_white
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -240,6 +244,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -254,6 +259,7 @@ ModelImporter:
     globalScale: 0.0003
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -264,16 +270,23 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -288,7 +301,6 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1

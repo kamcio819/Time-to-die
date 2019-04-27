@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CompassRotator : MonoBehaviour {
 
+
+	[Range(5, 15)]
+	public float roationSpeed = 10f;
+
 	// Use this for initialization
 	void Start () {
 		transform.rotation = Quaternion.identity;
@@ -12,6 +16,6 @@ public class CompassRotator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.RotateAround(transform.position, Vector3.back, 10f * Time.deltaTime);
+		transform.RotateAround(transform.position, Vector3.back, roationSpeed * Time.deltaTime);
 	}
 }
