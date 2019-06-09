@@ -6,7 +6,7 @@ using System;
 
 public class MapGenerator : MonoBehaviour {
 
-	public event Action MapsGenerated;
+	public Action MapsGenerated;
 
 	[SerializeField]
 	MapData mapData;
@@ -33,7 +33,10 @@ public class MapGenerator : MonoBehaviour {
 				CreateCell(x, z, i++, enemyMap);
 			}
 		}
-		MapsGenerated.Invoke();
+		
+		if(MapsGenerated != null) {
+			MapsGenerated();
+		}	
 	}
 	
 	void CreateCell (int x, int z, int i, GameObject map) {

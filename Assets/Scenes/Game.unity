@@ -57,7 +57,7 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 10
     m_Resolution: 2
-    m_BakeResolution: 40
+    m_BakeResolution: 0.0001
     m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
@@ -555,7 +555,6 @@ GameObject:
   - component: {fileID: 996952948}
   - component: {fileID: 996952950}
   - component: {fileID: 996952949}
-  - component: {fileID: 996952951}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -654,6 +653,7 @@ MonoBehaviour:
     swivelMaxZoom: 45
     focusedMap: {fileID: 0}
     centerTile: {fileID: 0}
+  mapGenerator: {fileID: 1441159899}
 --- !u!114 &996952948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,18 +692,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraController: {fileID: 996952947}
   mapUserType: 0
---- !u!114 &996952951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996952942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf4d55f5770f286409843d9ee51194da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1105941768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -903,6 +891,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleVehicleData: {fileID: 11400000, guid: 9bf6d53439fdade44adbb4d8ac59a299, type: 2}
+--- !u!114 &1441159899 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6847309818963991173, guid: 38b2131293f30424290dfad6261bb62c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6847309817956949053}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4e5e421952d4f4f81c5bd9db54e254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1598490047
 GameObject:
   m_ObjectHideFlags: 0

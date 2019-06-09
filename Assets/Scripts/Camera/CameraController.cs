@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using MapSystem;
 
-[RequireComponent(typeof(CameraData))]
 public class CameraController : MonoBehaviour {
 
     private float zoom = 1f;
@@ -13,10 +12,20 @@ public class CameraController : MonoBehaviour {
     [SerializeField]
     public CameraData cameraData;
 
+    [SerializeField]
+    private MapGenerator mapGenerator;
+
     void Awake() {
         swivel = transform.rotation;
-		stick = transform.position;
-        FindObjectOfType<MapGenerator>().MapsGenerated += GetInfoFromMap;
+		stick = transform.position; 
+    }
+
+    private void OnEnable() {
+        mapGenerator.MapsGenerated += GetInfoFromMap;
+    }
+
+    private void OnDisable() {
+        mapGenerator.MapsGenerated -= GetInfoFromMap;
     }
 
     void Start () {
