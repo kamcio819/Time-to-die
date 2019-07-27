@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4886436266004990
 Transform:
@@ -38,6 +38,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4886436266004990}
     m_Modifications:
+    - target: {fileID: 1736004046551052, guid: 943f1cc91ecd41649ba4995fefb996fa, type: 3}
+      propertyPath: m_Name
+      value: EnivormentPlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 4325412704923396, guid: 943f1cc91ecd41649ba4995fefb996fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -68,6 +72,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4325412704923396, guid: 943f1cc91ecd41649ba4995fefb996fa, type: 3}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325412704923396, guid: 943f1cc91ecd41649ba4995fefb996fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325412704923396, guid: 943f1cc91ecd41649ba4995fefb996fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325412704923396, guid: 943f1cc91ecd41649ba4995fefb996fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1227435772839338, guid: 943f1cc91ecd41649ba4995fefb996fa, type: 3}

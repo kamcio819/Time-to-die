@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4808841170174930
 Transform:
@@ -38,6 +38,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4808841170174930}
     m_Modifications:
+    - target: {fileID: 1364547545408520, guid: 613dad9ff0f10ef4d9ab9a50e0d28973, type: 3}
+      propertyPath: m_Name
+      value: EnviromentEnemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4227926336941806, guid: 613dad9ff0f10ef4d9ab9a50e0d28973, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -68,6 +72,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4227926336941806, guid: 613dad9ff0f10ef4d9ab9a50e0d28973, type: 3}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227926336941806, guid: 613dad9ff0f10ef4d9ab9a50e0d28973, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227926336941806, guid: 613dad9ff0f10ef4d9ab9a50e0d28973, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227926336941806, guid: 613dad9ff0f10ef4d9ab9a50e0d28973, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
