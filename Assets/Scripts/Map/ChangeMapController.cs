@@ -20,8 +20,9 @@ public class ChangeMapController : MonoBehaviour {
 	}
 
 	public MapUserType mapUserType = MapUserType.PLAYER;
+
 	void Start() {
-		GetComponent<KeyboardInput>().ChangeMap += ChangeCameraToAnotherMap;
+		//GetComponent<KeyboardInput>().ChangeMap += ChangeCameraToAnotherMap;
 	}
 
 	private void ChangeCameraToAnotherMap() {

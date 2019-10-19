@@ -19,6 +19,7 @@ using MapSystem;
 			public Type tileType;
 
 			public AvailableToPlaceOn availableToPlaceOn;
-		#endregion
-	}
+    #endregion
+
+}
 

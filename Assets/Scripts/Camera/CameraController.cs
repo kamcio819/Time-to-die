@@ -5,17 +5,25 @@ using MapSystem;
 
 public class CameraController : MonoBehaviour {
 
-    private float zoom = 1f;
-    private Quaternion swivel;
-    private Vector3 stick;
-
     [SerializeField]
     public CameraData cameraData;
 
     [SerializeField]
     private MapGenerator mapGenerator;
 
-    void Awake() {
+    [SerializeField]
+    [Range(10f, 13f)]
+    private float rightCameraMovementOffset = 12f;
+
+    [SerializeField]
+    [Range(10f, 13f)]
+    private float leftCameraMovementOffset = 10f;
+
+    private float zoom = 1f;
+    private Quaternion swivel;
+    private Vector3 stick;
+
+    private void Awake() {
         swivel = transform.rotation;
 		stick = transform.position; 
     }
@@ -28,31 +36,33 @@ public class CameraController : MonoBehaviour {
         mapGenerator.MapsGenerated -= GetInfoFromMap;
     }
 
-    void Start () {
+    private void Start () {
         transform.position = cameraData.centerTile.position + new Vector3(0, 4, 1);
 	}
 
-    void Update() {
+    private void Update() {
         float zoomDelta = Input.GetAxis("Mouse ScrollWheel");
+
 		if (zoomDelta != 0f) {
 			AdjustZoom(zoomDelta);
 		}
 
         float xDelta = Input.GetAxis("Horizontal");
 		float zDelta = Input.GetAxis("Vertical");
+
 		if (xDelta != 0f || zDelta != 0f) {
 			AdjustPosition(xDelta, zDelta);
 		}
     }
 
-    void GetInfoFromMap() {
-        cameraData.focusedMap = GameObject.Find("PlayerMap");
-        cameraData.centerTile = GameObject.Find("PlayerMapCenterTile").GetComponent<Transform>();
+    private void GetInfoFromMap() {
+        cameraData.focusedMap = mapGenerator.MapObject;
+        cameraData.centerTile = mapGenerator.CenterTile;
     }
 
-    bool ReachedHorizontalBorders(Vector3 position) {
-        if(position.z > cameraData.centerTile.position.z + 2f || position.z < cameraData.centerTile.position.z - 6f) {
-            if(position.x > cameraData.centerTile.position.x + 5f || position.x < cameraData.centerTile.position.x - 7.6f) {
+    private bool ReachedHorizontalBorders(Vector3 position) {
+        if(position.z > cameraData.centerTile.position.z + leftCameraMovementOffset || position.z < cameraData.centerTile.position.z - rightCameraMovementOffset) {
+            if(position.x > cameraData.centerTile.position.x + leftCameraMovementOffset || position.x < cameraData.centerTile.position.x - rightCameraMovementOffset) {
                 return true;
             }
             return true;
@@ -60,16 +70,17 @@ public class CameraController : MonoBehaviour {
         return false;
     }
 
-    bool ReachedVertcialBoders(Vector3 position) {
-        if(position.x > cameraData.centerTile.position.x + 5f || position.x < cameraData.centerTile.position.x - 7.6f) {
-               if(position.z > cameraData.centerTile.position.z + 2f || position.z < cameraData.centerTile.position.z - 6f) {
+    private bool ReachedVertcialBoders(Vector3 position) {
+        if(position.x > cameraData.centerTile.position.x + leftCameraMovementOffset || position.x < cameraData.centerTile.position.x - rightCameraMovementOffset) {
+               if(position.z > cameraData.centerTile.position.z + leftCameraMovementOffset || position.z < cameraData.centerTile.position.z - rightCameraMovementOffset) {
                    return true;
                }
                return true;
         }
         return false;
     }
-    void AdjustZoom (float delta) {
+
+    private void AdjustZoom (float delta) {
 		zoom = Mathf.Clamp01(zoom + delta);
 
 		float distance = Mathf.Lerp(cameraData.StickMinZoom, cameraData.StickMaxZoom, zoom);
@@ -81,7 +92,7 @@ public class CameraController : MonoBehaviour {
         transform.rotation = swivel;
 	}
 
-    void AdjustPosition (float xDelta, float zDelta) {
+    private void AdjustPosition (float xDelta, float zDelta) {
 		Vector3 direction = new Vector3(xDelta, 0f, zDelta).normalized;
 		float distance = 2f * Time.deltaTime;
 

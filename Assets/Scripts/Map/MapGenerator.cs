@@ -10,27 +10,23 @@ public class MapGenerator : MonoBehaviour {
 
 	[SerializeField]
 	MapData mapData;
-	
-	[SerializeField]
-	private GameObject playerMap;
 
-	[SerializeField]
-	private GameObject enemyMap;
+    [SerializeField]
+    private GameObject mapObject;
 	
 	[SerializeField]
 	private ChangeMapController changeMapController;
 
-	void Awake () {
+    private Transform centerTile;
+
+    public Transform CenterTile { get => centerTile; }
+    public GameObject MapObject { get => mapObject; }
+
+    void Awake () {
 
 		for (int z = 0, i = 0; z < mapData.mapHeight; z++) {
 			for (int x = 0; x < mapData.mapWidth; x++) {
-				CreateCell(x, z, i++, playerMap);
-			}
-		}
-
-		for (int z = 0, i = 0; z < mapData.mapHeight; z++) {
-			for (int x = 0; x < mapData.mapWidth; x++) {
-				CreateCell(x, z, i++, enemyMap);
+				CreateCell(x, z, i++, MapObject);
 			}
 		}
 		
@@ -46,25 +42,15 @@ public class MapGenerator : MonoBehaviour {
 		position.y = 0f;
 		position.z = z * 0.5f;
 
-		if(map.transform.name == "PlayerMap") {
-			mapData.SetTilePrefab(x,z);
-		}
-		else if(map.transform.name == "EnemyMap") {
-			mapData.ResetTilePrefab();
-		}
+		mapData.SetTilePrefab(x,z);
+
 		HexTile cell = Instantiate<HexTile>(mapData.tilePrefab);
 		cell.transform.SetParent(map.transform, false);
 		cell.transform.localPosition = position;
 		mapData.AddCell(cell, i, map.transform.name);
 
 		if(x * 2 == mapData.mapWidth && z * 2 == mapData.mapHeight) {
-			cell.transform.name = map.transform.name + "CenterTile";
-			if(map.transform.name == "PlayerMap") {
-				changeMapController.SetPlayerCenterTile(cell.transform);
-			}
-			else if(map.transform.name == "EnemyMap") {
-				changeMapController.SetEnemyCenterTile(cell.transform);
-			}
+            centerTile = cell.transform;
 		}
 	}
 }

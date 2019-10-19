@@ -45,8 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapData: {fileID: 6847309818963991178}
-  playerMap: {fileID: 0}
-  enemyMap: {fileID: 0}
+  mapObject: {fileID: 0}
   changeMapController: {fileID: 0}
 --- !u!114 &6847309818963991178
 MonoBehaviour:
@@ -60,8 +59,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 672b0a9ee5856bb469ac67c899996065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapWidth: 8
-  mapHeight: 16
+  mapWidth: 14
+  mapHeight: 42
   tilePrefab: {fileID: 0}
   playerMap: []
   enemyMap: []
