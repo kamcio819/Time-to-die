@@ -171,9 +171,9 @@ MonoBehaviour:
   m_UVRect:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 0.07
     width: 1
-    height: 1
+    height: 0.85
 --- !u!1 &3451438736950081154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,7 +1115,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -5, y: 5}
-  m_SizeDelta: {x: 270, y: 270}
+  m_SizeDelta: {x: 310, y: 245}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &8970772974018246096
 GameObject:
@@ -2235,6 +2235,23 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2579846210965080181, guid: 8b90aeb1179b6d84a8ff2949daf5dabe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579846210965080181, guid: 8b90aeb1179b6d84a8ff2949daf5dabe,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 321dfcc1c12d7cf42b0037754b1cdf9b,
+        type: 3}
+    - target: {fileID: 8117353299629754134, guid: 8b90aeb1179b6d84a8ff2949daf5dabe,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300086, guid: 148a7416d4c344a42bb28cb23ee31708,
+        type: 3}
     - target: {fileID: 7549923110820216584, guid: 8b90aeb1179b6d84a8ff2949daf5dabe,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.r
@@ -2280,23 +2297,6 @@ PrefabInstance:
       propertyPath: m_Colors.m_PressedColor.b
       value: 0.70312005
       objectReference: {fileID: 0}
-    - target: {fileID: 8117353299629754134, guid: 8b90aeb1179b6d84a8ff2949daf5dabe,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300086, guid: 148a7416d4c344a42bb28cb23ee31708,
-        type: 3}
-    - target: {fileID: 2579846210965080181, guid: 8b90aeb1179b6d84a8ff2949daf5dabe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579846210965080181, guid: 8b90aeb1179b6d84a8ff2949daf5dabe,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 321dfcc1c12d7cf42b0037754b1cdf9b,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b90aeb1179b6d84a8ff2949daf5dabe, type: 3}
 --- !u!224 &7115595737242439241 stripped
