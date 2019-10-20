@@ -7,10 +7,10 @@ using UnityEngine;
 public class MenuCameraMovementController : MonoBehaviour
 {
     [SerializeField]
-    private Transform cameraTransform;
+    private Transform cameraTransform = default;
 
     [SerializeField]
-    private Transform centerOfRotation;
+    private Transform centerOfRotation = default;
 
     [SerializeField]
     [Range(1, 10f)]

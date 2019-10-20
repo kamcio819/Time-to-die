@@ -6,13 +6,13 @@ using UnityEngine;
 public class ChangeMapController : MonoBehaviour {
 
 	[SerializeField]
-	private CameraController cameraController;
+	private CameraController cameraController = default;
 
 	[System.NonSerialized]
-	private Transform enemyMapCenterTile;
+	private Transform enemyMapCenterTile = default;
 
 	[System.NonSerialized]
-	private Transform playerMapCenterTile;
+	private Transform playerMapCenterTile = default;
 
 	public enum MapUserType {
 		ENEMY,

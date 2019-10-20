@@ -84,7 +84,7 @@ public class UIManagerTech : MonoBehaviour
 	public string newSceneName;
 	[Tooltip("The loading bar Slider UI element in the Loading Screen")]
 	public Slider loadingBar;
-	private string loadSceneName; // scene name is defined when the load game data is retrieved
+	private string loadSceneName = default; // scene name is defined when the load game data is retrieved
 
 	[Header("Register Account")]
 	public TMP_InputField username;

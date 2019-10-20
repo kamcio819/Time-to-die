@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameUIController : MonoBehaviour {
 
 	[SerializeField]
-	private GameObject ShipsScrollView;
+	private GameObject ShipsScrollView = default;
 
 
 	// Use this for initialization

@@ -9,13 +9,13 @@ public class MapGenerator : MonoBehaviour {
 	public Action MapsGenerated;
 
 	[SerializeField]
-	MapData mapData;
+	private MapData mapData = default;
 
     [SerializeField]
-    private GameObject mapObject;
+    private GameObject mapObject = default;
 	
 	[SerializeField]
-	private ChangeMapController changeMapController;
+	private ChangeMapController changeMapController = default;
 
     private Transform centerTile;
 

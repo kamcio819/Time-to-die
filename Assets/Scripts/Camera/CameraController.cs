@@ -6,10 +6,10 @@ using MapSystem;
 public class CameraController : MonoBehaviour {
 
     [SerializeField]
-    public CameraData cameraData;
+    public CameraData cameraData = default;
 
     [SerializeField]
-    private MapGenerator mapGenerator;
+    private MapGenerator mapGenerator = default;
 
     [SerializeField]
     [Range(10f, 13f)]

@@ -32,8 +32,8 @@ namespace Aura2API
         /// </summary>
         static SceneViewToolbox()
         {
-            SceneView.onSceneGUIDelegate -= OnSceneViewGUI;
-            SceneView.onSceneGUIDelegate += OnSceneViewGUI;
+            SceneView.duringSceneGui -= OnSceneViewGUI;
+            SceneView.duringSceneGui += OnSceneViewGUI;
         }
         #endregion
 
