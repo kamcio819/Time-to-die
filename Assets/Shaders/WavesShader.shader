@@ -30,15 +30,17 @@
 
 		void vert(inout appdata_full vertexData) 
         {
-			float3 p = vertexData.vertex.xyz;
+			if (vertexData.vertex.z > 0.038f) {
+				float3 p = vertexData.vertex.xyz;
 
-			float k = 2 * UNITY_PI / _Wavelength;
-			float f = k * (p.x - _Speed * _Time.y);
+				float k = 2 * UNITY_PI / _Wavelength;
+				float f = k * (p.x - _Speed * _Time.y);
 
-			p.z += _Amplitude * sin(k * (p.x - _Speed * _Time.y));
-			p.x += _Amplitude * cos(f);
+				p.z += _Amplitude * sin(k * (p.x - _Speed * _Time.y));
+				p.x += _Amplitude * cos(f);
 
-			vertexData.vertex.xyz = p;
+				vertexData.vertex.xyz = p;
+			}
         }
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
