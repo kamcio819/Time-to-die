@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
+    [SerializeField]
+    private LoadingMenuController loadingMenuController;
+
     public void QuitGame()
     {
         Application.Quit();
@@ -12,6 +15,22 @@ public class GameManager : Singleton<GameManager>
 
     public void StartGame()
     {
-        SceneManager.LoadScene("MainGame");
+        StartCoroutine(LoadScene("MainGame"));
+    }
+
+    private IEnumerator LoadScene(string sceneName)
+    {
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName);
+        asyncOperation.allowSceneActivation = false;
+
+        while (!asyncOperation.isDone)
+        {
+            loadingMenuController.SetLoadingProgress(asyncOperation.progress);
+            if (asyncOperation.progress >= 0.9f)
+            {
+                asyncOperation.allowSceneActivation = true;
+            }
+            yield return null;
+        }
     }
 }
