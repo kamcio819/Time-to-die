@@ -15,10 +15,10 @@ public class GameManager : Singleton<GameManager>
 
     public void StartGame()
     {
-        StartCoroutine(LoadScene("MainGame"));
+        StartCoroutine(LoadSceneAsync("MainGame"));
     }
 
-    private IEnumerator LoadScene(string sceneName)
+    private IEnumerator LoadSceneAsync(string sceneName)
     {
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName);
         asyncOperation.allowSceneActivation = false;
@@ -32,5 +32,10 @@ public class GameManager : Singleton<GameManager>
             }
             yield return null;
         }
+    }
+
+    public void LoadSceneSync(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

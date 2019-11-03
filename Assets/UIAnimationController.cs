@@ -20,6 +20,7 @@ public class UIAnimationController : MonoBehaviour
     [SerializeField]
     private List<PopUpMenu> screens;
 
+   
     private PopUpMenu currentScreen;
 
     public void OpenScreen(string name)
@@ -50,4 +51,10 @@ public class UIAnimationController : MonoBehaviour
             }
         }
     }
+
+    public void DisableScreens()
+    {
+        AnimateUIHandle();
+    }
+
 }

@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 16}
+  m_AnchoredPosition: {x: 0, y: 39}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4518432112760151731
@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 882154761480401617}
   - component: {fileID: 882154761480401582}
   - component: {fileID: 882154761480401583}
+  - component: {fileID: 712498966231624377}
   m_Layer: 5
   m_Name: PC_HUD
   m_TagString: Untagged
@@ -165,6 +166,23 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &712498966231624377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882154761480401580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0081408efaf148b48b831b693971d82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuScreens:
+  - {fileID: 7293348192351645567}
+  - {fileID: 8098286003237269789}
+  - {fileID: 7183784692689733667}
+  animationController: {fileID: 8178467199978156421}
 --- !u!1 &1212970790526576507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,7 +1662,7 @@ PrefabInstance:
     - target: {fileID: 2002943923780942117, guid: b2d1e334a098b364aa891f9da8b48ee7,
         type: 3}
       propertyPath: m_Name
-      value: UIButton (1)
+      value: ExitButton
       objectReference: {fileID: 0}
     - target: {fileID: 1201943318961944205, guid: b2d1e334a098b364aa891f9da8b48ee7,
         type: 3}
@@ -1753,6 +1771,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2640081099156256462, guid: b2d1e334a098b364aa891f9da8b48ee7,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640081099156256462, guid: b2d1e334a098b364aa891f9da8b48ee7,
+        type: 3}
       propertyPath: m_Colors.m_NormalColor.r
       value: 0.87248605
       objectReference: {fileID: 0}
@@ -1775,6 +1798,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
       value: 0.4292453
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640081099156256462, guid: b2d1e334a098b364aa891f9da8b48ee7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 712498966231624377}
+    - target: {fileID: 2640081099156256462, guid: b2d1e334a098b364aa891f9da8b48ee7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640081099156256462, guid: b2d1e334a098b364aa891f9da8b48ee7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640081099156256462, guid: b2d1e334a098b364aa891f9da8b48ee7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640081099156256462, guid: b2d1e334a098b364aa891f9da8b48ee7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8424076223619873917, guid: b2d1e334a098b364aa891f9da8b48ee7,
         type: 3}
@@ -2230,6 +2278,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 9c750cfb3cffabf45a5540b2889df990,
         type: 3}
+    - target: {fileID: 8332821530246565223, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f994b24032a31634b8c87c63a3214812,
+        type: 3}
+    - target: {fileID: 865361609820420285, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: m_Text
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1503a29fc9235224580c7430bd654ca1, type: 3}
 --- !u!224 &6306640177661013630 stripped
@@ -2653,6 +2712,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: c85691c0eac2c8441943a1f48ba42118,
         type: 3}
+    - target: {fileID: 8332821530246565223, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 814987d57c56c1547adeb92ed12fb3c3,
+        type: 3}
+    - target: {fileID: 865361609820420285, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: m_Text
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1503a29fc9235224580c7430bd654ca1, type: 3}
 --- !u!224 &8248152414504927931 stripped
@@ -2784,6 +2854,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e81f9844a30e46842b3b692ac7b4b6c0,
         type: 3}
+    - target: {fileID: 8729296837820297099, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_Text
+      value: "\rThe oil refinery produces 2 barrels of oil every turn, oil can be
+        used to upgrade ships movement range"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99267278316612b4188a8c9a1008c4c3, type: 3}
 --- !u!224 &6741168517302143678 stripped
@@ -3585,6 +3661,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 453fc3529b13494469132e3e2a146c64,
         type: 3}
+    - target: {fileID: 8729296837820297099, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_Text
+      value: "\rThe steel mine produces 3 steel every turn, steel can be used to upgrade
+        ships damage"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99267278316612b4188a8c9a1008c4c3, type: 3}
 --- !u!224 &4030767086264348568 stripped
@@ -3910,15 +3992,15 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b90aeb1179b6d84a8ff2949daf5dabe, type: 3}
---- !u!224 &592200780811546200 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5832073566092278561, guid: 8b90aeb1179b6d84a8ff2949daf5dabe,
-    type: 3}
-  m_PrefabInstance: {fileID: 6401967453292402041}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7115595737242439241 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4208604942782798640, guid: 8b90aeb1179b6d84a8ff2949daf5dabe,
+    type: 3}
+  m_PrefabInstance: {fileID: 6401967453292402041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &592200780811546200 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5832073566092278561, guid: 8b90aeb1179b6d84a8ff2949daf5dabe,
     type: 3}
   m_PrefabInstance: {fileID: 6401967453292402041}
   m_PrefabAsset: {fileID: 0}
@@ -4511,6 +4593,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -1.574997
       objectReference: {fileID: 0}
+    - target: {fileID: 8729296837820297099, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_Text
+      value: "\rThe gold mine produces 4 gold bars every turn, gold can be used to
+        upgrade ships health"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99267278316612b4188a8c9a1008c4c3, type: 3}
 --- !u!224 &1090636809796954185 stripped
@@ -4700,7 +4788,7 @@ PrefabInstance:
     - target: {fileID: 2002943923780942117, guid: b2d1e334a098b364aa891f9da8b48ee7,
         type: 3}
       propertyPath: m_Name
-      value: UIButton
+      value: ResumeButton
       objectReference: {fileID: 0}
     - target: {fileID: 1201943318961944205, guid: b2d1e334a098b364aa891f9da8b48ee7,
         type: 3}
@@ -4809,6 +4897,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2640081099156256462, guid: b2d1e334a098b364aa891f9da8b48ee7,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640081099156256462, guid: b2d1e334a098b364aa891f9da8b48ee7,
+        type: 3}
       propertyPath: m_Colors.m_NormalColor.r
       value: 0.87248605
       objectReference: {fileID: 0}
@@ -4831,6 +4924,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
       value: 0.4292453
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640081099156256462, guid: b2d1e334a098b364aa891f9da8b48ee7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 712498966231624377}
+    - target: {fileID: 2640081099156256462, guid: b2d1e334a098b364aa891f9da8b48ee7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640081099156256462, guid: b2d1e334a098b364aa891f9da8b48ee7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640081099156256462, guid: b2d1e334a098b364aa891f9da8b48ee7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640081099156256462, guid: b2d1e334a098b364aa891f9da8b48ee7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8424076223619873917, guid: b2d1e334a098b364aa891f9da8b48ee7,
         type: 3}
@@ -4999,12 +5117,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0d073388d0c2504da07e06f91e5cb85, type: 3}
---- !u!224 &8274427195454473136 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 31459724491674429, guid: d0d073388d0c2504da07e06f91e5cb85,
-    type: 3}
-  m_PrefabInstance: {fileID: 8267324420786983053}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1287314107256413963 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7162441523331960710, guid: d0d073388d0c2504da07e06f91e5cb85,
@@ -5017,6 +5129,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e0106e696c0344f8ca29044edbaadf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &8274427195454473136 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 31459724491674429, guid: d0d073388d0c2504da07e06f91e5cb85,
+    type: 3}
+  m_PrefabInstance: {fileID: 8267324420786983053}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8350392319608149583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5285,12 +5403,12 @@ PrefabInstance:
     - target: {fileID: 3497278583271280192, guid: 4d87a55e734dcae4f93a49b70cc4b298,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00008456805
+      value: 0.000030517578
       objectReference: {fileID: 0}
-    - target: {fileID: 6404546481148330612, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+    - target: {fileID: 6165602513492446556, guid: 4d87a55e734dcae4f93a49b70cc4b298,
         type: 3}
       propertyPath: m_Value
-      value: 1.0000002
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d87a55e734dcae4f93a49b70cc4b298, type: 3}
