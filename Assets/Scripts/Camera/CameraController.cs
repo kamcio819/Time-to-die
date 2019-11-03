@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using MapSystem;
+using DG.Tweening;
 
 public class CameraController : MonoBehaviour {
 
     [SerializeField]
     public CameraData cameraData = default;
+
+    [Space(20)]
+    [SerializeField]
+    private MapData mapData = default;
 
     [SerializeField]
     private MapGenerator mapGenerator = default;
@@ -102,5 +107,13 @@ public class CameraController : MonoBehaviour {
 		    transform.localPosition = position;
         }
 	}
+
+    public void SetCameraPosition(float xDiv, float zDiv)
+    {
+        Vector3 lastPos = transform.position;
+        Vector3 newPos = new Vector3(mapData.tilesWidth * xDiv, transform.position.y, mapData.tilesHeight * zDiv);
+        float speed = (lastPos - newPos).sqrMagnitude;
+        transform.DOMove(newPos, 0.4f);
+    }
 
 }

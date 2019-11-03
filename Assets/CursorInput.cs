@@ -8,10 +8,13 @@ public class CursorInput : MonoBehaviour,
     IPointerDownHandler
 {
     [SerializeField]
-    private RectTransform cusorRange;
+    private RectTransform cursorRange;
 
     [SerializeField]
     private RectTransform miniMap;
+
+    [SerializeField]
+    private CameraController cameraController;
 
     private bool mouseOver;
     private Vector2 pos;
@@ -34,7 +37,9 @@ public class CursorInput : MonoBehaviour,
         if(mouseOver && MouseInMinimap(Input.mousePosition))
         {
             RectTransformUtility.ScreenPointToLocalPointInRectangle(miniMap, Input.mousePosition, cam, out pos);
-            cusorRange.localPosition = pos;
+            cursorRange.localPosition = pos;
+            Vector2 div = cursorRange.localPosition / miniMap.sizeDelta;
+            cameraController.SetCameraPosition(Math.Abs(div.x), Math.Abs(div.y));
         }
     }
 

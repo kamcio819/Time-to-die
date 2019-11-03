@@ -25,17 +25,18 @@ namespace MapSystem {
 	
 	public class MapData: MonoBehaviour {
 		
-		#region MapConstraints
+		public int mapWidth;
 
-			public int mapWidth;
+		public int mapHeight;
 
-			public int mapHeight;
+        public int tilesWidth;
 
-			private int[][] mapMatrix;
+        public int tilesHeight;
 
-			[HideInInspector]
-			public HexTile tilePrefab;
-		#endregion
+		private int[][] mapMatrix;
+       
+		[HideInInspector]
+		public HexTile tilePrefab;
 
 		[HideInInspector]
 		public List<HexTile> playerMap;

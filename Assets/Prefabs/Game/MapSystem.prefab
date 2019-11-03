@@ -61,6 +61,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapWidth: 14
   mapHeight: 42
+  tilesWidth: 24
+  tilesHeight: 20
   tilePrefab: {fileID: 0}
   playerMap: []
   enemyMap: []
