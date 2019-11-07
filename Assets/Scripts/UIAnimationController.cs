@@ -18,9 +18,8 @@ public class UIAnimationController : MonoBehaviour
     private GameUI currentGameUI;
 
     [SerializeField]
-    private List<PopUpMenu> screens;
+    private List<PopUpMenu> screens = default;
 
-   
     private PopUpMenu currentScreen;
 
     public void OpenScreen(string name)

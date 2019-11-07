@@ -14,9 +14,6 @@ public class MapGenerator : MonoBehaviour {
     [SerializeField]
     private GameObject mapObject = default;
 	
-	[SerializeField]
-	private ChangeMapController changeMapController = default;
-
     private Transform centerTile;
 
     public Transform CenterTile { get => centerTile; }

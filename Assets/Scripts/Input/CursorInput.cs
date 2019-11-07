@@ -8,17 +8,16 @@ public class CursorInput : MonoBehaviour,
     IPointerDownHandler
 {
     [SerializeField]
-    private RectTransform cursorRange;
+    private RectTransform cursorRange = default;
 
     [SerializeField]
-    private RectTransform miniMap;
+    private RectTransform miniMap = default;
 
     [SerializeField]
-    private CameraController cameraController;
+    private CameraController cameraController = default;
 
     private bool mouseOver;
     private Vector2 pos;
-
     private Camera cam;
 
     public void OnPointerDown(PointerEventData eventData)

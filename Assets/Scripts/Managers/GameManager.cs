@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField]
-    private LoadingMenuController loadingMenuController;
+    private LoadingMenuController loadingMenuController = default;
 
     public void QuitGame()
     {

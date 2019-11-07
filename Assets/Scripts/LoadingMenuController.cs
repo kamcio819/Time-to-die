@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LoadingMenuController : MonoBehaviour
 {
     [SerializeField]
-    private Image loadingProgressBar;
+    private Image loadingProgressBar = default;
 
     public void SetLoadingProgress(float progress)
     {

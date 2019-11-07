@@ -10,10 +10,10 @@ public class PopUpMenu : MonoBehaviour
     private bool active = false;
 
     [SerializeField]
-    private RectTransform rectTransform;
+    private RectTransform rectTransform = default;
 
     [SerializeField]
-    private float x;
+    private float x = default;
 
     public void TogglePopUpMenu()
     {

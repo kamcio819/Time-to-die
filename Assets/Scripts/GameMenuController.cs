@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameMenuController : UIController
 {
     [SerializeField]
-    private UIAnimationController animationController;
+    private UIAnimationController animationController = default;
 
     public void ExitGame()
     {

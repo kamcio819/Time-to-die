@@ -5,10 +5,10 @@ using UnityEngine;
 public class SettingsMenuController : UIController
 {
     [SerializeField]
-    private Transform openedPanelParent;
+    private Transform openedPanelParent = default;
 
     [SerializeField]
-    private Transform disabledPanelParent;
+    private Transform disabledPanelParent = default;
 
     public override void OpenScreen(string screenName)
     {
