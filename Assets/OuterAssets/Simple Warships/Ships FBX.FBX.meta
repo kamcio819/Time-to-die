@@ -1,113 +1,323 @@
 fileFormatVersion: 2
 guid: 46cd524120389ad418423045618d2621
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Battleship
-    100002: Corvette
-    100004: Cruiser
-    100006: Destroyer
-    100008: Frigate
-    100010: Large Cannons
-    100012: Large Turret
-    100014: Medium Cannons
-    100016: Medium Turret
-    100018: Platform
-    100020: //RootNode
-    100022: Small Cannons
-    100024: Small Turret
-    100026: Battleship Low Poly Mesh
-    100028: Corvette Low Poly Mesh
-    100030: Cruiser Low Poly Mesh
-    100032: Destroyer Low Poly Mesh
-    100034: Frigate Low Poly Mesh
-    400000: Battleship
-    400002: Corvette
-    400004: Cruiser
-    400006: Destroyer
-    400008: Frigate
-    400010: Large Cannons
-    400012: Large Turret
-    400014: Medium Cannons
-    400016: Medium Turret
-    400018: Platform
-    400020: //RootNode
-    400022: Small Cannons
-    400024: Small Turret
-    400026: Battleship Low Poly Mesh
-    400028: Corvette Low Poly Mesh
-    400030: Cruiser Low Poly Mesh
-    400032: Destroyer Low Poly Mesh
-    400034: Frigate Low Poly Mesh
-    2300000: Battleship
-    2300002: Corvette
-    2300004: Cruiser
-    2300006: Destroyer
-    2300008: Frigate
-    2300010: Large Cannons
-    2300012: Large Turret
-    2300014: Medium Cannons
-    2300016: Medium Turret
-    2300018: Platform
-    2300020: Small Cannons
-    2300022: Small Turret
-    2300024: Battleship Low Poly Mesh
-    2300026: Corvette Low Poly Mesh
-    2300028: Cruiser Low Poly Mesh
-    2300030: Destroyer Low Poly Mesh
-    2300032: Frigate Low Poly Mesh
-    3300000: Battleship
-    3300002: Corvette
-    3300004: Cruiser
-    3300006: Destroyer
-    3300008: Frigate
-    3300010: Large Cannons
-    3300012: Large Turret
-    3300014: Medium Cannons
-    3300016: Medium Turret
-    3300018: Platform
-    3300020: Small Cannons
-    3300022: Small Turret
-    3300024: Battleship Low Poly Mesh
-    3300026: Corvette Low Poly Mesh
-    3300028: Cruiser Low Poly Mesh
-    3300030: Destroyer Low Poly Mesh
-    3300032: Frigate Low Poly Mesh
-    4300000: Battleship
-    4300002: Cruiser
-    4300004: Destroyer
-    4300006: Frigate
-    4300008: Corvette
-    4300010: Large Turret
-    4300012: Medium Turret
-    4300014: Small Turret
-    4300016: Large Cannons
-    4300018: Medium Cannons
-    4300020: Small Cannons
-    4300022: Platform
-    4300024: Battleship Low Poly Mesh
-    4300026: Cruiser Low Poly Mesh
-    4300028: Destroyer Low Poly Mesh
-    4300030: Frigate Low Poly Mesh
-    4300032: Corvette Low Poly Mesh
-    6400000: Battleship
-    6400002: Corvette
-    6400004: Cruiser
-    6400006: Destroyer
-    6400008: Frigate
-    6400010: Large Cannons
-    6400012: Large Turret
-    6400014: Medium Cannons
-    6400016: Medium Turret
-    6400018: Platform
-    6400020: Small Cannons
-    6400022: Small Turret
-    6400024: Battleship Low Poly Mesh
-    6400026: Corvette Low Poly Mesh
-    6400028: Cruiser Low Poly Mesh
-    6400030: Destroyer Low Poly Mesh
-    6400032: Frigate Low Poly Mesh
-    2186277476908879412: ImportLogs
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Battleship
+  - first:
+      1: 100002
+    second: Corvette
+  - first:
+      1: 100004
+    second: Cruiser
+  - first:
+      1: 100006
+    second: Destroyer
+  - first:
+      1: 100008
+    second: Frigate
+  - first:
+      1: 100010
+    second: Large Cannons
+  - first:
+      1: 100012
+    second: Large Turret
+  - first:
+      1: 100014
+    second: Medium Cannons
+  - first:
+      1: 100016
+    second: Medium Turret
+  - first:
+      1: 100018
+    second: Platform
+  - first:
+      1: 100020
+    second: //RootNode
+  - first:
+      1: 100022
+    second: Small Cannons
+  - first:
+      1: 100024
+    second: Small Turret
+  - first:
+      1: 100026
+    second: Battleship Low Poly Mesh
+  - first:
+      1: 100028
+    second: Corvette Low Poly Mesh
+  - first:
+      1: 100030
+    second: Cruiser Low Poly Mesh
+  - first:
+      1: 100032
+    second: Destroyer Low Poly Mesh
+  - first:
+      1: 100034
+    second: Frigate Low Poly Mesh
+  - first:
+      4: 400000
+    second: Battleship
+  - first:
+      4: 400002
+    second: Corvette
+  - first:
+      4: 400004
+    second: Cruiser
+  - first:
+      4: 400006
+    second: Destroyer
+  - first:
+      4: 400008
+    second: Frigate
+  - first:
+      4: 400010
+    second: Large Cannons
+  - first:
+      4: 400012
+    second: Large Turret
+  - first:
+      4: 400014
+    second: Medium Cannons
+  - first:
+      4: 400016
+    second: Medium Turret
+  - first:
+      4: 400018
+    second: Platform
+  - first:
+      4: 400020
+    second: //RootNode
+  - first:
+      4: 400022
+    second: Small Cannons
+  - first:
+      4: 400024
+    second: Small Turret
+  - first:
+      4: 400026
+    second: Battleship Low Poly Mesh
+  - first:
+      4: 400028
+    second: Corvette Low Poly Mesh
+  - first:
+      4: 400030
+    second: Cruiser Low Poly Mesh
+  - first:
+      4: 400032
+    second: Destroyer Low Poly Mesh
+  - first:
+      4: 400034
+    second: Frigate Low Poly Mesh
+  - first:
+      23: 2300000
+    second: Battleship
+  - first:
+      23: 2300002
+    second: Corvette
+  - first:
+      23: 2300004
+    second: Cruiser
+  - first:
+      23: 2300006
+    second: Destroyer
+  - first:
+      23: 2300008
+    second: Frigate
+  - first:
+      23: 2300010
+    second: Large Cannons
+  - first:
+      23: 2300012
+    second: Large Turret
+  - first:
+      23: 2300014
+    second: Medium Cannons
+  - first:
+      23: 2300016
+    second: Medium Turret
+  - first:
+      23: 2300018
+    second: Platform
+  - first:
+      23: 2300020
+    second: Small Cannons
+  - first:
+      23: 2300022
+    second: Small Turret
+  - first:
+      23: 2300024
+    second: Battleship Low Poly Mesh
+  - first:
+      23: 2300026
+    second: Corvette Low Poly Mesh
+  - first:
+      23: 2300028
+    second: Cruiser Low Poly Mesh
+  - first:
+      23: 2300030
+    second: Destroyer Low Poly Mesh
+  - first:
+      23: 2300032
+    second: Frigate Low Poly Mesh
+  - first:
+      33: 3300000
+    second: Battleship
+  - first:
+      33: 3300002
+    second: Corvette
+  - first:
+      33: 3300004
+    second: Cruiser
+  - first:
+      33: 3300006
+    second: Destroyer
+  - first:
+      33: 3300008
+    second: Frigate
+  - first:
+      33: 3300010
+    second: Large Cannons
+  - first:
+      33: 3300012
+    second: Large Turret
+  - first:
+      33: 3300014
+    second: Medium Cannons
+  - first:
+      33: 3300016
+    second: Medium Turret
+  - first:
+      33: 3300018
+    second: Platform
+  - first:
+      33: 3300020
+    second: Small Cannons
+  - first:
+      33: 3300022
+    second: Small Turret
+  - first:
+      33: 3300024
+    second: Battleship Low Poly Mesh
+  - first:
+      33: 3300026
+    second: Corvette Low Poly Mesh
+  - first:
+      33: 3300028
+    second: Cruiser Low Poly Mesh
+  - first:
+      33: 3300030
+    second: Destroyer Low Poly Mesh
+  - first:
+      33: 3300032
+    second: Frigate Low Poly Mesh
+  - first:
+      43: 4300000
+    second: Battleship
+  - first:
+      43: 4300002
+    second: Cruiser
+  - first:
+      43: 4300004
+    second: Destroyer
+  - first:
+      43: 4300006
+    second: Frigate
+  - first:
+      43: 4300008
+    second: Corvette
+  - first:
+      43: 4300010
+    second: Large Turret
+  - first:
+      43: 4300012
+    second: Medium Turret
+  - first:
+      43: 4300014
+    second: Small Turret
+  - first:
+      43: 4300016
+    second: Large Cannons
+  - first:
+      43: 4300018
+    second: Medium Cannons
+  - first:
+      43: 4300020
+    second: Small Cannons
+  - first:
+      43: 4300022
+    second: Platform
+  - first:
+      43: 4300024
+    second: Battleship Low Poly Mesh
+  - first:
+      43: 4300026
+    second: Cruiser Low Poly Mesh
+  - first:
+      43: 4300028
+    second: Destroyer Low Poly Mesh
+  - first:
+      43: 4300030
+    second: Frigate Low Poly Mesh
+  - first:
+      43: 4300032
+    second: Corvette Low Poly Mesh
+  - first:
+      64: 6400000
+    second: Battleship
+  - first:
+      64: 6400002
+    second: Corvette
+  - first:
+      64: 6400004
+    second: Cruiser
+  - first:
+      64: 6400006
+    second: Destroyer
+  - first:
+      64: 6400008
+    second: Frigate
+  - first:
+      64: 6400010
+    second: Large Cannons
+  - first:
+      64: 6400012
+    second: Large Turret
+  - first:
+      64: 6400014
+    second: Medium Cannons
+  - first:
+      64: 6400016
+    second: Medium Turret
+  - first:
+      64: 6400018
+    second: Platform
+  - first:
+      64: 6400020
+    second: Small Cannons
+  - first:
+      64: 6400022
+    second: Small Turret
+  - first:
+      64: 6400024
+    second: Battleship Low Poly Mesh
+  - first:
+      64: 6400026
+    second: Corvette Low Poly Mesh
+  - first:
+      64: 6400028
+    second: Cruiser Low Poly Mesh
+  - first:
+      64: 6400030
+    second: Destroyer Low Poly Mesh
+  - first:
+      64: 6400032
+    second: Frigate Low Poly Mesh
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -215,30 +425,32 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 0
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -248,6 +460,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
