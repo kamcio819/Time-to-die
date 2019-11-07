@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: treehead2
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 1102b2a66afe915419431cd8bf0e3788, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -56,12 +56,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Amplitude: 0.02
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
+    - _Distance: 5
     - _DstBlend: 0
+    - _Frequency: 40
     - _GlossMapScale: 1
-    - _Glossiness: 1
+    - _Glossiness: 0.664
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
@@ -69,9 +72,20 @@ Material:
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 1
     - _SrcBlend: 1
+    - _Strength: 0.007
     - _UVSec: 0
+    - _Wavelength: 1
+    - _WindFrecuency: 47.8
+    - _WindGustDistance: 7.7
+    - _WindStrength: 0.01
+    - _Winddistance: 30.8
+    - _Windfreq: 20.5
+    - _Windspeed: 5
+    - _Windstrength: 1
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.0627451, g: 0.4666667, b: 0.24313727, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _WindDirection: {r: 0.5, g: 0.05, b: 0.5, a: 0}
