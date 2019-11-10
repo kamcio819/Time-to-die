@@ -3,187 +3,103 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public abstract class ModuleSystem<T> : Module
-    where T : Unit
+public abstract class IModuleSystem : Module, IInitiable
 {
-    [SerializeField]
-    protected List<T> singleUnits;
-
-    protected override void Awake()
+    protected virtual void Awake()
     {
-        base.Awake();
-
-        for (int i = 0; i < singleUnits.Count; ++i)
-        {
-            InitUnit initUnit = singleUnits[i] as InitUnit;
-            if (initUnit)
-            {
-                initUnit.Initialize();
-            }
-        }
+        Initialize();
     }
 
-    protected override void OnDisable()
-    {
-        base.OnDisable();
-
-        for (int i = 0; i < singleUnits.Count; ++i)
-        {
-            ExitUnit exitUnit = singleUnits[i] as ExitUnit;
-            if (exitUnit)
-            {
-                exitUnit.Exit();
-            }
-        }
-    }
-
-    protected override void Update()
-    {
-        base.Update();
-        for (int i = 0; i < singleUnits.Count; ++i)
-        {
-            TickUnit tickUnit = singleUnits[i] as TickUnit;
-            if (tickUnit)
-            {
-                tickUnit.Tick();
-            }
-        }
-    }
-
-    public override void GetUnits()
-    {
-        singleUnits = GetComponentsInChildren<T>().ToList();
-    }
+    public abstract void Initialize();
 }
 
-public abstract class ModuleSystem<T1, T2> : Module 
-    where T1 : TickUnit
-    where T2 : Unit
+public abstract class EModuleSystem : Module, IExitable
 {
-    [SerializeField]
-    protected List<T1> tickUnits;
-
-    [SerializeField]
-    protected List<T2> restUnits;
-
-
-    protected override void Awake()
+    protected virtual void OnDestroy()
     {
-        base.Awake();
-
-        for (int i = 0; i < restUnits.Count; ++i)
-        {
-            InitUnit initUnit = restUnits[i] as InitUnit;
-            if (initUnit)
-            {
-                initUnit.Initialize();
-            }
-        }
+        Exit();
     }
 
-    protected override void OnDisable()
-    {
-        base.OnDisable();
-
-        for (int i = 0; i < restUnits.Count; ++i)
-        {
-            ExitUnit exitUnit = restUnits[i] as ExitUnit;
-            if (exitUnit)
-            {
-                exitUnit.Exit();
-            }
-        }
-    }
-
-    protected override void Update()
-    {
-        base.Update();
-        for (int i = 0; i < tickUnits.Count; ++i)
-        {
-            TickUnit tickUnit = tickUnits[i] as TickUnit;
-            if (tickUnit)
-            {
-                tickUnit.Tick();
-            }
-        }
-    }
-
-    public override void GetUnits()
-    {
-        tickUnits = GetComponentsInChildren<T1>().ToList();
-        T2[] units = GetComponentsInChildren<T2>();
-        for(int i =0; i < units.Length; ++i)
-        {
-            Unit unit = tickUnits.Find(x => x.Equals(units[i]));
-            if(!unit)
-            {
-                restUnits.Add(units[i]);
-            }
-        }
-    }
+    public abstract void Exit();
 }
 
-public abstract class ModuleSystem<T1, T2, T3> : Module
-    where T1: InitUnit
-    where T2: TickUnit
-    where T3: ExitUnit
+public abstract class TModuleSystem : Module, ITickable
 {
-    [SerializeField]
-    protected List<T1> initUnits;
-
-    [SerializeField]
-    protected List<T2> tickUnits;
-
-    [SerializeField]
-    protected List<T3> exitUnits;
-
-    protected override void Awake()
+    protected virtual void Update()
     {
-        base.Awake();
-
-        for (int i = 0; i < initUnits.Count; ++i)
-        {
-            InitUnit initUnit = initUnits[i] as InitUnit;
-            if (initUnit)
-            {
-                initUnit.Initialize();
-            }
-        }
+        Tick();
     }
 
-    protected override void OnDisable()
-    
-{
-
-        base.OnDisable();
-
-        for (int i = 0; i < exitUnits.Count; ++i)
-        {
-            ExitUnit exitUnit = exitUnits[i] as ExitUnit;
-            if (exitUnit)
-            {
-                exitUnit.Exit();
-            }
-        }
-    }
-
-    protected override void Update()
-    {
-        base.Update();
-        for (int i = 0; i < tickUnits.Count; ++i)
-        {
-            TickUnit tickUnit = tickUnits[i] as TickUnit;
-            if (tickUnit)
-            {
-                tickUnit.Tick();
-            }
-        }
-    }
-
-    public override void GetUnits()
-    {
-        initUnits = GetComponentsInChildren<T1>().ToList();
-        tickUnits = GetComponentsInChildren<T2>().ToList();
-        exitUnits = GetComponentsInChildren<T3>().ToList();
-    }
+    public abstract void Tick();
 }
+
+public abstract class IEModuleSystem : Module, IInitiable, IExitable
+{
+    protected virtual void Awake()
+    {
+        Initialize();
+    }
+
+    protected virtual void OnDestroy()
+    {
+        Exit();
+    }
+
+    public abstract void Initialize();
+    public abstract void Exit();
+}
+
+public abstract class ITModuleSystem : Module, IInitiable, ITickable
+{
+    protected virtual void Awake()
+    {
+        Initialize();
+    }
+
+    protected virtual void Update()
+    {
+        Tick();
+    }
+
+    public abstract void Initialize();
+    public abstract void Tick();
+}
+
+public abstract class TEModuleSystem : Module, ITickable, IExitable
+{
+    protected virtual void OnDestroy()
+    {
+        Exit();
+    }
+
+    protected virtual void Update()
+    {
+        Tick();
+    }
+
+    public abstract void Tick();
+    public abstract void Exit();
+}
+
+public abstract class ITEModuleSystem : Module, IInitiable, ITickable, IExitable
+{
+    protected virtual void Awake()
+    {
+        Initialize();
+    }
+
+    protected virtual void OnDestroy()
+    {
+        Exit();
+    }
+
+    protected virtual void Update()
+    {
+        Tick();
+    }
+
+    public abstract void Initialize();
+    public abstract void Tick();
+    public abstract void Exit();
+}
+

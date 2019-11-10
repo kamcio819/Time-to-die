@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventModuleSystem : ModuleSystem<TickUnit, ExitUnit>
+public class EventModuleSystem : IEModuleSystem
 {
-    [ContextMenu("Get all units")]
-    public void CollectUnits()
+    public override void Exit()
     {
-        base.GetUnits();
+    }
+
+    public override void Initialize()
+    {
     }
 }

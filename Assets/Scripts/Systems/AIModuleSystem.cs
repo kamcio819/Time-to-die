@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIModuleSystem : ModuleSystem<InitUnit, TickUnit, ExitUnit>
+public class AIModuleSystem : ITEModuleSystem
 {
-    [ContextMenu("Get all units")]
-    public void CollectUnits()
+    public override void Exit()
     {
-        base.GetUnits();
+    }
+
+    public override void Initialize()
+    {
+    }
+
+    public override void Tick()
+    {
     }
 }

@@ -1,15 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using DG.Tweening;
 using MapSystem;
-using DG.Tweening;
+using System;
+using UnityEngine;
 
-public class CameraController : MonoBehaviour {
+public class CameraController : MonoBehaviour
+{
 
     [SerializeField]
     public CameraData cameraData = default;
 
     [Space(20)]
+    [SerializeField]
+    private KeyboardInput keyboardInput = default;
+
+    [SerializeField]
+    private CursorInput cursorInput = default;
+
     [SerializeField]
     private MapData mapData = default;
 
@@ -28,46 +34,55 @@ public class CameraController : MonoBehaviour {
     private Quaternion swivel;
     private Vector3 stick;
 
-    private void Awake() {
+    private void Awake()
+    {
         swivel = transform.rotation;
-		stick = transform.position; 
+        stick = transform.position;
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         mapGenerator.MapsGenerated += GetInfoFromMap;
     }
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         mapGenerator.MapsGenerated -= GetInfoFromMap;
     }
 
-    private void Start () {
+    private void Start()
+    {
         transform.position = cameraData.centerTile.position + new Vector3(0, 4, 1);
-	}
-
-    private void Update() {
-        float zoomDelta = Input.GetAxis("Mouse ScrollWheel");
-
-		if (zoomDelta != 0f) {
-			AdjustZoom(zoomDelta);
-		}
-
-        float xDelta = Input.GetAxis("Horizontal");
-		float zDelta = Input.GetAxis("Vertical");
-
-		if (xDelta != 0f || zDelta != 0f) {
-			AdjustPosition(xDelta, zDelta);
-		}
     }
 
-    private void GetInfoFromMap() {
+    private void Update()
+    {
+        if (keyboardInput.zoomDelta != 0f)
+        {
+            AdjustZoom(keyboardInput.zoomDelta);
+        }
+        if (keyboardInput.xDelta != 0f || keyboardInput.zDelta != 0f)
+        {
+            AdjustPosition(keyboardInput.xDelta, keyboardInput.zDelta);
+        }
+        if(cursorInput.xEdgeScreen != 0f || cursorInput.yEdgeScreen != 0f)
+        {
+            AdjustPosition(cursorInput.xEdgeScreen, cursorInput.yEdgeScreen);
+        }
+    }
+
+    private void GetInfoFromMap()
+    {
         cameraData.focusedMap = mapGenerator.MapObject;
         cameraData.centerTile = mapGenerator.CenterTile;
     }
 
-    private bool ReachedHorizontalBorders(Vector3 position) {
-        if(position.z > cameraData.centerTile.position.z + leftCameraMovementOffset || position.z < cameraData.centerTile.position.z - rightCameraMovementOffset) {
-            if(position.x > cameraData.centerTile.position.x + leftCameraMovementOffset || position.x < cameraData.centerTile.position.x - rightCameraMovementOffset) {
+    private bool ReachedHorizontalBorders(Vector3 position)
+    {
+        if (position.z > cameraData.centerTile.position.z + leftCameraMovementOffset || position.z < cameraData.centerTile.position.z - rightCameraMovementOffset)
+        {
+            if (position.x > cameraData.centerTile.position.x + leftCameraMovementOffset || position.x < cameraData.centerTile.position.x - rightCameraMovementOffset)
+            {
                 return true;
             }
             return true;
@@ -75,45 +90,55 @@ public class CameraController : MonoBehaviour {
         return false;
     }
 
-    private bool ReachedVertcialBoders(Vector3 position) {
-        if(position.x > cameraData.centerTile.position.x + leftCameraMovementOffset || position.x < cameraData.centerTile.position.x - rightCameraMovementOffset) {
-               if(position.z > cameraData.centerTile.position.z + leftCameraMovementOffset || position.z < cameraData.centerTile.position.z - rightCameraMovementOffset) {
-                   return true;
-               }
-               return true;
+    private bool ReachedVertcialBoders(Vector3 position)
+    {
+        if (position.x > cameraData.centerTile.position.x + leftCameraMovementOffset || position.x < cameraData.centerTile.position.x - rightCameraMovementOffset)
+        {
+            if (position.z > cameraData.centerTile.position.z + leftCameraMovementOffset || position.z < cameraData.centerTile.position.z - rightCameraMovementOffset)
+            {
+                return true;
+            }
+            return true;
         }
         return false;
     }
 
-    private void AdjustZoom (float delta) {
-		zoom = Mathf.Clamp01(zoom + delta);
+    private void AdjustZoom(float delta)
+    {
+        zoom = Mathf.Clamp01(zoom + delta);
 
-		float distance = Mathf.Lerp(cameraData.StickMinZoom, cameraData.StickMaxZoom, zoom);
-		stick = new Vector3(transform.position.x, distance, transform.position.z);
+        float distance = Mathf.Lerp(cameraData.StickMinZoom, cameraData.StickMaxZoom, zoom);
+        stick = new Vector3(transform.position.x, distance, transform.position.z);
         transform.position = stick;
 
-		float angle = Mathf.Lerp(cameraData.SwivelMinZoom, cameraData.SwivelMaxZoom, zoom);
-		swivel = Quaternion.Euler(angle, transform.rotation.y, transform.rotation.z);
+        float angle = Mathf.Lerp(cameraData.SwivelMinZoom, cameraData.SwivelMaxZoom, zoom);
+        swivel = Quaternion.Euler(angle, transform.rotation.y, transform.rotation.z);
         transform.rotation = swivel;
-	}
+    }
 
-    private void AdjustPosition (float xDelta, float zDelta) {
-		Vector3 direction = new Vector3(xDelta, 0f, zDelta).normalized;
-		float distance = 2f * Time.deltaTime;
+    private void AdjustPosition(float xDelta, float zDelta)
+    {
+        Vector3 direction = new Vector3(xDelta, 0f, zDelta).normalized;
+        float distance = 2f * Time.deltaTime;
 
-		Vector3 position = transform.localPosition;
-		position += direction * distance;
-        if(!ReachedHorizontalBorders(position) && !ReachedVertcialBoders(position)) {
-		    transform.localPosition = position;
+        Vector3 position = transform.localPosition;
+        position += direction * distance;
+        if (!ReachedHorizontalBorders(position) && !ReachedVertcialBoders(position))
+        {
+            transform.localPosition = position;
         }
-	}
+    }
 
     public void SetCameraPosition(float xDiv, float zDiv)
     {
         Vector3 lastPos = transform.position;
         Vector3 newPos = new Vector3(mapData.tilesWidth * xDiv, transform.position.y, mapData.tilesHeight * zDiv);
-        float speed = (lastPos - newPos).sqrMagnitude;
         transform.DOMove(newPos, 0.4f);
     }
 
+    public Tuple<float, float> GetDivisions()
+    {
+        Tuple<float, float> div = new Tuple<float, float>(transform.position.x / mapData.tilesWidth, transform.position.z / mapData.tilesHeight);
+        return div;
+    }
 }

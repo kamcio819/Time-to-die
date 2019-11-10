@@ -1,9 +1,9 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
-
-public class CursorInput : MonoBehaviour,
+public class MinimapCursor : MonoBehaviour,
     IPointerUpHandler,
     IPointerDownHandler
 {
@@ -31,15 +31,23 @@ public class CursorInput : MonoBehaviour,
         mouseOver = false;
     }
 
-    private void Update()
+    public void Update()
     {
+        UpdateMinimapCursorPosition();
         if(mouseOver && MouseInMinimap(Input.mousePosition))
         {
             RectTransformUtility.ScreenPointToLocalPointInRectangle(miniMap, Input.mousePosition, cam, out pos);
             cursorRange.localPosition = pos;
-            Vector2 div = cursorRange.localPosition / miniMap.sizeDelta;
-            cameraController.SetCameraPosition(Math.Abs(div.x), Math.Abs(div.y));
+            Vector2 divRange = cursorRange.localPosition / miniMap.sizeDelta;
+            cameraController.SetCameraPosition(Math.Abs(divRange.x), Math.Abs(divRange.y));
         }
+    }
+
+    private void UpdateMinimapCursorPosition()
+    {
+        var div = cameraController.GetDivisions();
+        Vector3 newPos = new Vector3(miniMap.sizeDelta.x * div.Item1, miniMap.sizeDelta.y * div.Item2, 0);
+        cursorRange.DOLocalMove(newPos, 0.1f);
     }
 
     private bool MouseInMinimap(Vector3 mousePosition)
