@@ -29,7 +29,7 @@ public class MaterialsModuleSystem : ITEModuleSystem
     }
 
     [SerializeField]
-    private MaterialsData materialsData;
+    private MaterialsData materialsData; 
 
     public override void Exit()
     {

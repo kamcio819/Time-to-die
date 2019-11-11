@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipDataUpgrader : MonoBehaviour
 {
     [SerializeField]
-    private List<ShipData> shipsData;
+    private List<ShipData> shipsData = default;
 
     public void UpgradeHealth()
     {

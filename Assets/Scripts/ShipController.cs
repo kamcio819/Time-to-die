@@ -3,10 +3,10 @@
 public class ShipController : MonoBehaviour
 {
     [SerializeField]
-    private ShipData shipData;
+    private ShipData shipData = default;
 
     [SerializeField]
-    private Animator animator;
+    private Animator animator = default;
 
     private bool selected = true;
 
