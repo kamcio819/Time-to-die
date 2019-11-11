@@ -310,6 +310,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4defa4f8b5fecfd4d962a5b5a6c544d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materialsData:
+    gold: 0
+    oil: 0
+    iron: 0
 --- !u!1 &4441737581389123102
 GameObject:
   m_ObjectHideFlags: 0
