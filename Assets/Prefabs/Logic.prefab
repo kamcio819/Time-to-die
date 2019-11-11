@@ -30,6 +30,7 @@ Transform:
   m_Children:
   - {fileID: 6719479554905761637}
   - {fileID: 3631090306758341101}
+  - {fileID: 538657154781508746}
   m_Father: {fileID: 4401355784542045947}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48,6 +49,55 @@ MonoBehaviour:
   shipModuleFactory: {fileID: 5257609364994839330}
   shipPlacer: {fileID: 1979201075821459041}
   ships: []
+--- !u!1 &479869799408818294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 538657154781508746}
+  - component: {fileID: 5668310954921157507}
+  m_Layer: 0
+  m_Name: ShipDataUpgrader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &538657154781508746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479869799408818294}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8481919539909414120}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5668310954921157507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479869799408818294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e0fe37bb2d31b4fa0e51eac401d589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipsData:
+  - {fileID: 11400000, guid: 6f172fc0cd2d7ab4ea46d3b195d2354c, type: 2}
+  - {fileID: 11400000, guid: a5ce7c0eaeba36a48ac9f9a0cce372f3, type: 2}
+  - {fileID: 11400000, guid: 76eff30e1381a604a99a7f2a4cb2fb48, type: 2}
+  - {fileID: 11400000, guid: 0b521a596bd27cf479dbefdc66df53b9, type: 2}
+  - {fileID: 11400000, guid: 8dff6c773afb5aa4a94322cb484b7856, type: 2}
 --- !u!1 &1033662907412394012
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +220,7 @@ Transform:
   - {fileID: 3834511564413058000}
   - {fileID: 3471869349965941522}
   - {fileID: 8481919539909414120}
+  - {fileID: 5444830878112980106}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -494,6 +545,36 @@ MonoBehaviour:
   xDelta: 0
   zDelta: 0
   yDeltaShip: 0
+--- !u!1 &7407022315087541378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5444830878112980106}
+  m_Layer: 0
+  m_Name: BuildingsModuleSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5444830878112980106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7407022315087541378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4401355784542045947}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7747950855677967220
 GameObject:
   m_ObjectHideFlags: 0

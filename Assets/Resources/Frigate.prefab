@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 5915173116196508990}
   - component: {fileID: 5924269433114538256}
   - component: {fileID: 5944956145141171172}
+  - component: {fileID: 2527511494228609096}
   m_Layer: 0
   m_Name: FrigateModel
   m_TagString: Untagged
@@ -659,6 +660,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300030, guid: 46cd524120389ad418423045618d2621, type: 3}
+--- !u!95 &2527511494228609096
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5937843297281640746}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4759649d38ad8f45ad3ee8a6d087486, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5937892889877607752
 GameObject:
   m_ObjectHideFlags: 0

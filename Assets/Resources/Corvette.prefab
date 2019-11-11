@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 5674003852685361966}
   - component: {fileID: 5664208834599688644}
   - component: {fileID: 5633303456626674872}
+  - component: {fileID: 4716448391002436252}
   m_Layer: 0
   m_Name: CorvetteModel
   m_TagString: Untagged
@@ -412,6 +413,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300008, guid: 46cd524120389ad418423045618d2621, type: 3}
+--- !u!95 &4716448391002436252
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5678173571017733850}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4759649d38ad8f45ad3ee8a6d087486, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5678366998823833722
 GameObject:
   m_ObjectHideFlags: 0
