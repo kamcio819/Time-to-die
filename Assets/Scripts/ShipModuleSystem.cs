@@ -6,12 +6,15 @@ using UnityEngine;
 public class ShipModuleSystem : ITEModuleSystem
 {
     [SerializeField]
-    private ShipModuleFactory shipModuleFactory;
+    private ShipModuleFactory shipModuleFactory = default;
+
+    [SerializeField]
+    private ShipPlacer shipPlacer;
 
     private ShipButton[] shipButtons;
 
     [SerializeField]
-    private List<GameObject> ships;
+    private List<GameObject> ships = default;
 
     private void OnEnable()
     {
@@ -32,6 +35,7 @@ public class ShipModuleSystem : ITEModuleSystem
     private void InstantiateShip(ShipType obj)
     {
         ships.Add(shipModuleFactory.ConstructShip(obj));
+        shipPlacer.SetCurrentShip(ships[ships.Count - 1]);
     }
 
     public override void Exit() {}
@@ -41,5 +45,8 @@ public class ShipModuleSystem : ITEModuleSystem
         shipButtons = FindObjectsOfType<ShipButton>();
     }
 
-    public override void Tick() {}
+    public override void Tick()
+    {
+        shipPlacer.OnUpdate();
+    }
 }

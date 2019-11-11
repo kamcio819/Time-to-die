@@ -5,10 +5,10 @@ using UnityEngine;
 public class InputModuleSystem : TModuleSystem
 {
     [SerializeField]
-    private CursorInput cursorInput;
+    private CursorInput cursorInput = default;
 
     [SerializeField]
-    private KeyboardInput keyboardInput;
+    private KeyboardInput keyboardInput = default;
 
     public override void Tick()
     {

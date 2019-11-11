@@ -15,7 +15,7 @@ public enum ShipType
 public class ShipButton : MonoBehaviour
 {
     [SerializeField]
-    private ShipType shipType;
+    private ShipType shipType = default;
 
     public Action<ShipType> CreateShip;
 
