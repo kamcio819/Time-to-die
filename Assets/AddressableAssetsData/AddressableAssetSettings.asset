@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
   m_DefaultGroup: b16c1a3331b6b3841be05cc7679bf1e3
+  m_CachedHash:
+    m_u32_0: 0
+    m_u32_1: 0
+    m_u32_2: 0
+    m_u32_3: 0
+  m_IsTemporary: 0
   m_BuildRemoteCatalog: 0
   m_UniqueBundleIds: 0
   m_RemoteCatalogBuildPath:
@@ -20,9 +26,7 @@ MonoBehaviour:
   m_RemoteCatalogLoadPath:
     m_Id: 
   m_overridePlayerVersion: 
-  m_GroupAssets:
-  - {fileID: 11400000, guid: c60f313bd52937440a09e64ce9165f37, type: 2}
-  - {fileID: 11400000, guid: 148671f087466fd49aa9f6037a204940, type: 2}
+  m_GroupAssets: []
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -71,6 +75,7 @@ MonoBehaviour:
   m_CertificateHandlerType:
     m_AssemblyName: 
     m_ClassName: 
+    <ValueChanged>k__BackingField: 0
   m_ActivePlayerDataBuilderIndex: 3
   m_DataBuilders:
   - {fileID: 11400000, guid: dfdd5043de5d09d44b18877293818b75, type: 2}
@@ -83,3 +88,4 @@ MonoBehaviour:
     m_Settings: {fileID: 11400000}
     m_NextInstanceId: 0
     m_RegisteredServiceTypeRefs: []
+  m_DefaultGroupTemplateName: Packed Assets

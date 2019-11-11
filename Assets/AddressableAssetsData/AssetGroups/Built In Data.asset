@@ -21,12 +21,25 @@ MonoBehaviour:
     m_Address: EditorSceneList
     m_ReadOnly: 1
     m_SerializedLabels: []
+    <BundleFileId>k__BackingField: 
+    <IsInResources>k__BackingField: 0
+    <IsInSceneList>k__BackingField: 0
+    <IsSubAsset>k__BackingField: 0
+    m_CheckedIsScene: 0
+    m_IsScene: 0
+    m_cachedAssetPath: 
   - m_GUID: Resources
     m_Address: Resources
     m_ReadOnly: 1
     m_SerializedLabels: []
+    <BundleFileId>k__BackingField: 
+    <IsInResources>k__BackingField: 0
+    <IsInSceneList>k__BackingField: 0
+    <IsSubAsset>k__BackingField: 0
+    m_CheckedIsScene: 0
+    m_IsScene: 0
+    m_cachedAssetPath: 
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 5960cde33c389ec468281d81da1654f0, type: 2}
   m_SchemaSet:
-    m_Schemas:
-    - {fileID: 11400000, guid: c777521e0adc5b54b8527a17ce40933f, type: 2}
+    m_Schemas: []
