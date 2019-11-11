@@ -9,7 +9,6 @@ public class BattleshipCreator : ShipCreator
     {
         GameObject ship = Resources.Load<GameObject>("Battleship");
         GameObject newShip = Instantiate(ship);
-        newShip.AddComponent<ShipController>();
         return newShip;
     }
 }

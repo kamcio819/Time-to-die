@@ -8,7 +8,6 @@ public class FrigateCreator : ShipCreator
     {
         GameObject ship = Resources.Load<GameObject>("Frigate");
         GameObject newShip = Instantiate(ship);
-        newShip.AddComponent<ShipController>();
         return newShip;
     }
 }

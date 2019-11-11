@@ -8,7 +8,6 @@ public class CruiserCreator : ShipCreator
     {
         GameObject ship = Resources.Load<GameObject>("Cruiser");
         GameObject newShip = Instantiate(ship);
-        newShip.AddComponent<ShipController>();
         return newShip;
     }
 }
