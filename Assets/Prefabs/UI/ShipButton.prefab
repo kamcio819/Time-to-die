@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 4945610659361336009}
   - component: {fileID: 3350826611394786386}
   - component: {fileID: 5336811285363122558}
+  - component: {fileID: 5875661540813791500}
   m_Layer: 5
   m_Name: ShipButton
   m_TagString: Untagged
@@ -193,7 +194,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4945610659361336009}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5875661540813791500}
+        m_MethodName: SelectShip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &5336811285363122558
@@ -211,3 +223,16 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &5875661540813791500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056056094630829568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f62eadce463714c85bec7c2b72e59e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipType: 0
