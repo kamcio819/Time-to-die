@@ -9,7 +9,7 @@ public class ShipModuleSystem : ITEModuleSystem
     private ShipModuleFactory shipModuleFactory = default;
 
     [SerializeField]
-    private ShipPlacer shipPlacer;
+    private ObjectPlacer shipPlacer;
 
     private ShipButton[] shipButtons;
 
@@ -20,7 +20,7 @@ public class ShipModuleSystem : ITEModuleSystem
     {
         for(int i = 0; i < shipButtons.Length; ++i)
         {
-            shipButtons[i].CreateShip += InstantiateShip;
+            shipButtons[i].ButtonPressed += InstantiateShip;
         }
     }
 
@@ -28,14 +28,14 @@ public class ShipModuleSystem : ITEModuleSystem
     {
         for (int i = 0; i < shipButtons.Length; ++i)
         {
-            shipButtons[i].CreateShip -= InstantiateShip;
+            shipButtons[i].ButtonPressed -= InstantiateShip;
         }
     }
 
     private void InstantiateShip(ShipType obj)
     {
         ships.Add(shipModuleFactory.ConstructShip(obj));
-        shipPlacer.SetCurrentShip(ships[ships.Count - 1]);
+        shipPlacer.SetCurentObj(ships[ships.Count - 1]);
     }
 
     public override void Exit() {}

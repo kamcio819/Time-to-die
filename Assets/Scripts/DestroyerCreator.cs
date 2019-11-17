@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyerCreator : ShipCreator
+public class DestroyerCreator : FactoryCreator
 {
-    public override GameObject ConstructShip()
+    public override GameObject ConstructObject()
     {
         GameObject ship = Resources.Load<GameObject>("Destroyer");
         GameObject newShip = Instantiate(ship);

@@ -177,6 +177,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2913045980885591444}
+  - component: {fileID: 5587115722914754958}
+  - component: {fileID: 2174614338342213188}
   m_Layer: 0
   m_Name: IronMine
   m_TagString: Untagged
@@ -200,6 +202,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -75, z: 0}
+--- !u!114 &5587115722914754958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2913045980885591451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce2820e075c80f42a25bf19e03f2dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goodAmount: 0
+--- !u!65 &2174614338342213188
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2913045980885591451}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.61, y: 1.33, z: 0.81}
+  m_Center: {x: 0, y: 1.03, z: 0.14}
 --- !u!1 &4713903329845136345
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7493901532309648891}
   m_LocalRotation: {x: -0, y: 0.13398886, z: -0, w: 0.99098283}
-  m_LocalPosition: {x: -0.371, y: 0.65, z: 0.47}
+  m_LocalPosition: {x: -0.371, y: 0.13, z: 0.47}
   m_LocalScale: {x: 0.099704765, y: 0.3191359, z: 0.11215836}
   m_Children:
   - {fileID: 1322202767418564790}
@@ -605,7 +633,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f02d3e3d270a3114f812c5117d57a25b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.61
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f02d3e3d270a3114f812c5117d57a25b,
         type: 3}
@@ -667,11 +695,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.3003707
       objectReference: {fileID: 0}
-    - target: {fileID: 428567482099359277, guid: f02d3e3d270a3114f812c5117d57a25b,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 24830518b4af7664ba8cd37271b38f44, type: 2}
     - target: {fileID: 4230845935189420295, guid: f02d3e3d270a3114f812c5117d57a25b,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -697,6 +720,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 428567482099359277, guid: f02d3e3d270a3114f812c5117d57a25b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 24830518b4af7664ba8cd37271b38f44, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f02d3e3d270a3114f812c5117d57a25b, type: 3}
 --- !u!4 &2506950218488424278 stripped

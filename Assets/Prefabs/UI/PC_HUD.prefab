@@ -2020,12 +2020,17 @@ PrefabInstance:
     - target: {fileID: 1260559779090539153, guid: b2d1e334a098b364aa891f9da8b48ee7,
         type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260559779090539153, guid: b2d1e334a098b364aa891f9da8b48ee7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.14901961
       objectReference: {fileID: 0}
     - target: {fileID: 1260559779090539153, guid: b2d1e334a098b364aa891f9da8b48ee7,
         type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.14901961
       objectReference: {fileID: 0}
     - target: {fileID: 1260559779090539153, guid: b2d1e334a098b364aa891f9da8b48ee7,
         type: 3}
@@ -2165,7 +2170,7 @@ PrefabInstance:
     - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpgradeHealth
+      value: HidePopUpMenu
       objectReference: {fileID: 0}
     - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
@@ -2483,7 +2488,7 @@ PrefabInstance:
     - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpgradeMove
+      value: HidePopUpMenu
       objectReference: {fileID: 0}
     - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
@@ -2952,7 +2957,7 @@ PrefabInstance:
     - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpgradeDamage
+      value: HidePopUpMenu
       objectReference: {fileID: 0}
     - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
@@ -3006,6 +3011,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6262301603922041060}
     m_Modifications:
+    - target: {fileID: 5170669160054021217, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3280716742381799344, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_Name
@@ -3115,6 +3125,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127220273425149410, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6558453087440426147}
+    - target: {fileID: 9127220273425149410, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HidePopUpMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127220273425149410, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6652277557289262520, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
@@ -3717,7 +3742,7 @@ PrefabInstance:
     - target: {fileID: 9116624549860506298, guid: 4f3cae91ac43a784e8df266000f4ef4c,
         type: 3}
       propertyPath: m_Name
-      value: MaterialElement (2)
+      value: IronElement
       objectReference: {fileID: 0}
     - target: {fileID: 9065623009326745386, guid: 4f3cae91ac43a784e8df266000f4ef4c,
         type: 3}
@@ -3845,6 +3870,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6262301603922041060}
     m_Modifications:
+    - target: {fileID: 5170669160054021217, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3280716742381799344, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_Name
@@ -3955,6 +3985,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9127220273425149410, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6558453087440426147}
+    - target: {fileID: 9127220273425149410, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HidePopUpMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127220273425149410, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6652277557289262520, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_Sprite
@@ -3985,7 +4030,7 @@ PrefabInstance:
     - target: {fileID: 9116624549860506298, guid: 4f3cae91ac43a784e8df266000f4ef4c,
         type: 3}
       propertyPath: m_Name
-      value: MaterialElement (1)
+      value: OilElement
       objectReference: {fileID: 0}
     - target: {fileID: 9065623009326745386, guid: 4f3cae91ac43a784e8df266000f4ef4c,
         type: 3}
@@ -4908,6 +4953,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -1.574997
       objectReference: {fileID: 0}
+    - target: {fileID: 9127220273425149410, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6558453087440426147}
+    - target: {fileID: 9127220273425149410, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HidePopUpMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127220273425149410, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8729296837820297099, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_Text
@@ -5299,12 +5359,17 @@ PrefabInstance:
     - target: {fileID: 1260559779090539153, guid: b2d1e334a098b364aa891f9da8b48ee7,
         type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.1509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260559779090539153, guid: b2d1e334a098b364aa891f9da8b48ee7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.1509434
       objectReference: {fileID: 0}
     - target: {fileID: 1260559779090539153, guid: b2d1e334a098b364aa891f9da8b48ee7,
         type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.1509434
       objectReference: {fileID: 0}
     - target: {fileID: 1260559779090539153, guid: b2d1e334a098b364aa891f9da8b48ee7,
         type: 3}
@@ -5404,7 +5469,7 @@ PrefabInstance:
     - target: {fileID: 31459724491674429, guid: d0d073388d0c2504da07e06f91e5cb85,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -650
+      value: -800
       objectReference: {fileID: 0}
     - target: {fileID: 31459724491674429, guid: d0d073388d0c2504da07e06f91e5cb85,
         type: 3}
@@ -5751,6 +5816,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 7426793437742631213, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+        type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367036585708381131, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+        type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259129931371523648, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+        type: 3}
+      propertyPath: type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 347542831114476462, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+        type: 3}
+      propertyPath: type
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d87a55e734dcae4f93a49b70cc4b298, type: 3}
 --- !u!1001 &8873965349187782290
@@ -5763,7 +5848,7 @@ PrefabInstance:
     - target: {fileID: 9116624549860506298, guid: 4f3cae91ac43a784e8df266000f4ef4c,
         type: 3}
       propertyPath: m_Name
-      value: MaterialElement
+      value: GoldElement
       objectReference: {fileID: 0}
     - target: {fileID: 9065623009326745386, guid: 4f3cae91ac43a784e8df266000f4ef4c,
         type: 3}

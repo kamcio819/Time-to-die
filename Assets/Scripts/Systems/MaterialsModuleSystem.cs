@@ -29,7 +29,40 @@ public class MaterialsModuleSystem : ITEModuleSystem
     }
 
     [SerializeField]
-    private MaterialsData materialsData; 
+    private MaterialsData materialsData = default;
+
+    [SerializeField]
+    private MineModuleFactory mineModuleFactory = default;
+
+    private MineButton[] mineButtons;
+
+    [SerializeField]
+    private List<GameObject> mines = default;
+
+    [SerializeField]
+    private ObjectPlacer minePlacer;
+
+    private void OnEnable()
+    {
+        for (int i = 0; i < mineButtons.Length; ++i)
+        {
+            mineButtons[i].ButtonPressed += InstantiateMine;
+        }
+    }
+
+    private void OnDisable()
+    {
+        for (int i = 0; i < mineButtons.Length; ++i)
+        {
+            mineButtons[i].ButtonPressed -= InstantiateMine;
+        }
+    }
+
+    private void InstantiateMine(MineType obj)
+    {
+        mines.Add(mineModuleFactory.ConstructShip(obj));
+        minePlacer.SetCurentObj(mines[mines.Count - 1]);
+    }
 
     public override void Exit()
     {
@@ -37,9 +70,11 @@ public class MaterialsModuleSystem : ITEModuleSystem
 
     public override void Initialize()
     {
+        mineButtons = FindObjectsOfType<MineButton>();
     }
 
     public override void Tick()
     {
+        minePlacer.OnUpdate();
     }
 }

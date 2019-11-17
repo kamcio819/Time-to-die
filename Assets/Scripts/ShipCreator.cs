@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public abstract class ShipCreator : MonoBehaviour
+public abstract class FactoryCreator : MonoBehaviour
 {
-    public abstract GameObject ConstructShip();
+    public abstract GameObject ConstructObject();
 }
