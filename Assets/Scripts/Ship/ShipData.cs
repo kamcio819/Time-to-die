@@ -39,10 +39,9 @@ public class ShipData :  ScriptableObject
 
 
     [SerializeField]
-    private Data shipData;
+    public Data ShipDataContainer;
 
     [SerializeField]
     private ParticleSystem damageParticle;
 
-    public Data ShipDataContainer { get => shipData; set => shipData = value; }
 }

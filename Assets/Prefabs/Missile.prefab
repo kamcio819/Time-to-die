@@ -5313,6 +5313,7 @@ GameObject:
   - component: {fileID: 3094493810269763143}
   - component: {fileID: 2985958575458974780}
   - component: {fileID: 6446350795554881709}
+  - component: {fileID: 9032493307360858677}
   - component: {fileID: 2887531923419077210}
   m_Layer: 0
   m_Name: Missile
@@ -5365,8 +5366,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.19, z: 2.58}
-  m_Center: {x: -0.03, y: 0.03, z: 0}
+  m_Size: {x: 0.25, y: 0.19, z: 1.48}
+  m_Center: {x: -0.03, y: 0.03, z: 0.65}
+--- !u!65 &9032493307360858677
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7666265596320518675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.41, y: 0.43, z: 1.22}
+  m_Center: {x: 0, y: 0.03, z: -0.71}
 --- !u!114 &2887531923419077210
 MonoBehaviour:
   m_ObjectHideFlags: 0

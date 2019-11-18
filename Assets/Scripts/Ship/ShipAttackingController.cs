@@ -37,7 +37,7 @@ public class ShipAttackingController : MonoBehaviour, ITurnable
             float height = dir.y;
             dir.y = 0;
             float dist = dir.magnitude;
-            float a = 50 * Mathf.Deg2Rad;
+            float a = 40 * Mathf.Deg2Rad;
             dir.y = dist * Mathf.Tan(a);
             dist += height / Mathf.Tan(a);
 
