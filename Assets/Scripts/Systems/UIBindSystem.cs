@@ -10,15 +10,24 @@ public class UIBindSystem : TModuleSystem
     [SerializeField]
     private MaterialsModuleSystem materialsModuleSystem;
 
-    public override void Execute()
+    [SerializeField]
+    private InformationUISystem informationUISystem;
+
+    private int turnCount = 1;
+
+    public override void TurnFinishUnit()
     {
+        turnCount++;
         materialsUISystem.Notify<IronUIBinder>(materialsModuleSystem.MatData.GetIron().ToString());
         materialsUISystem.Notify<GoldUIBinder>(materialsModuleSystem.MatData.GetGold().ToString());
         materialsUISystem.Notify<OilUIBinder>(materialsModuleSystem.MatData.GetOil().ToString());
+        informationUISystem.Notify<InfoUIBinder>("Day " + turnCount.ToString());
     }
 
     public override void Tick()
     {
-        
+        materialsUISystem.Notify<IronUIBinder>(materialsModuleSystem.MatData.GetIron().ToString());
+        materialsUISystem.Notify<GoldUIBinder>(materialsModuleSystem.MatData.GetGold().ToString());
+        materialsUISystem.Notify<OilUIBinder>(materialsModuleSystem.MatData.GetOil().ToString());
     }
 }

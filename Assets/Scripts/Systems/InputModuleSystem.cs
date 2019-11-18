@@ -10,7 +10,7 @@ public class InputModuleSystem : TModuleSystem
     [SerializeField]
     private KeyboardInput keyboardInput = default;
 
-    public override void Execute()
+    public override void TurnFinishUnit()
     {
         
     }

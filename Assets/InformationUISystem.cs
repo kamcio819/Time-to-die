@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ITurnable
+public class InformationUISystem : UISystem
 {
-    void TurnFinishUnit();
+    
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 public class TurnModuleSystem : ITEModuleSystem
 {
@@ -27,16 +28,21 @@ public class TurnModuleSystem : ITEModuleSystem
         
     }
 
+    public static void RemoveCommand(ITurnable command)
+    {
+        turnables.Remove(command);
+    }
+
     public void EndTurn()
     {
         for (int i = 0; i < turnables.Count; ++i)
         {
             ITurnable c = turnables[i];
-            c.Execute();
+            c.TurnFinishUnit();
         }
     }
 
-    public override void Execute()
+    public override void TurnFinishUnit()
     {
     }
 }

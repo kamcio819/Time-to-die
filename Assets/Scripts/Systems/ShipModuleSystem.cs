@@ -34,8 +34,11 @@ public class ShipModuleSystem : ITEModuleSystem
 
     private void InstantiateShip(ShipType obj)
     {
-        ships.Add(shipModuleFactory.ConstructShip(obj));
-        shipPlacer.SetCurentObj(ships[ships.Count - 1]);
+        if (ResourcesCheckerModuleSystem.CheckResources(obj))
+        {
+            ships.Add(shipModuleFactory.ConstructShip(obj));
+            shipPlacer.SetCurentObj(ships[ships.Count - 1]);
+        }
     }
 
     public override void Exit() {}
@@ -50,7 +53,7 @@ public class ShipModuleSystem : ITEModuleSystem
         shipPlacer.OnUpdate();
     }
 
-    public override void Execute()
+    public override void TurnFinishUnit()
     {
     }
 }

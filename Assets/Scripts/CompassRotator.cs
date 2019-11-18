@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class CompassRotator : MonoBehaviour {
 
+    [SerializeField]
+    private TurnModuleSystem turnModuleSystem;
 
 	[Range(5, 15)]
 	public float roationSpeed = 10f;
 
-	// Use this for initialization
-	void Start () {
-		transform.rotation = Quaternion.identity;
-		
+	private void Awake () {
+		transform.rotation = Quaternion.identity;		
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	private void Update () {
 		transform.RotateAround(transform.position, Vector3.back, roationSpeed * Time.deltaTime);
+        if(transform.rotation.z % 360 == 0)
+        {
+            turnModuleSystem.EndTurn();
+        }
 	}
 }

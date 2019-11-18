@@ -29,19 +29,22 @@ public class UpgradeModuleSystem : ITEModuleSystem
 
     private void UpgradeShip(UpgradeType obj)
     {
-        switch(obj)
+        if (ResourcesCheckerModuleSystem.CheckResources(obj))
         {
-            case UpgradeType.DAMAGE:
-                shipDataUpgrader.UpgradeDamage(10f);
-                break;
-            case UpgradeType.HEALTH:
-                shipDataUpgrader.UpgradeHealth(20f);
-                break;
-            case UpgradeType.RANGE:
-                shipDataUpgrader.UpgradeMove(1);
-                break;
-            default:
-                break;
+            switch (obj)
+            {
+                case UpgradeType.DAMAGE:
+                    shipDataUpgrader.UpgradeDamage(10f);
+                    break;
+                case UpgradeType.HEALTH:
+                    shipDataUpgrader.UpgradeHealth(20f);
+                    break;
+                case UpgradeType.RANGE:
+                    shipDataUpgrader.UpgradeMove(1);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
@@ -60,7 +63,7 @@ public class UpgradeModuleSystem : ITEModuleSystem
         
     }
 
-    public override void Execute()
+    public override void TurnFinishUnit()
     {
     }
 }

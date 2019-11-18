@@ -18,7 +18,7 @@ public class MineModuleFactory : IModuleSystem
         return factories[obj].ConstructObject();
     }
 
-    public override void Execute()
+    public override void TurnFinishUnit()
     {
         
     }

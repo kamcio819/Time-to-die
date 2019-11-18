@@ -63,8 +63,11 @@ public class MaterialsModuleSystem : ITEModuleSystem
 
     private void InstantiateMine(MineType obj)
     {
-        mines.Add(mineModuleFactory.ConstructMine(obj));
-        minePlacer.SetCurentObj(mines[mines.Count - 1]);
+        if(ResourcesCheckerModuleSystem.CheckResources(obj))
+        {
+            mines.Add(mineModuleFactory.ConstructMine(obj));
+            minePlacer.SetCurentObj(mines[mines.Count - 1]);
+        }   
     }
 
     public override void Exit()
@@ -81,7 +84,7 @@ public class MaterialsModuleSystem : ITEModuleSystem
         minePlacer.OnUpdate();
     }
 
-    public override void Execute()
+    public override void TurnFinishUnit()
     {
         for(int i = 0; i < mines.Count; ++i)
         {
@@ -93,5 +96,12 @@ public class MaterialsModuleSystem : ITEModuleSystem
     {
         var specificMine = mine.GetComponent<MineController>();
         specificMine.ProduceMaterial(ref materialsData);
+    }
+
+    public void RemoveResources(Tuple<int, int, int> tuple)
+    {
+        materialsData.AddGold(-tuple.Item1);
+        materialsData.AddOil(-tuple.Item2);
+        materialsData.AddIron(-tuple.Item3);
     }
 }

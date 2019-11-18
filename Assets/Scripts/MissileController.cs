@@ -26,11 +26,16 @@ public class MissileController : MonoBehaviour
             explosion[i].Play();
         }
 
-        
-        Destroy(gameObject, 0.5f);
+        StartCoroutine(DelayDeactivateObject());
     }
 
-    void Update()
+    private IEnumerator DelayDeactivateObject()
+    {
+        yield return new WaitForSeconds(0.5f);
+        gameObject.SetActive(false);
+    }
+
+    private void Update()
     {
         transform.DORotateQuaternion(Quaternion.LookRotation(rg.velocity), 0.5f);
     }
