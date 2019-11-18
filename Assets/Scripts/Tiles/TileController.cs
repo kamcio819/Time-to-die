@@ -66,7 +66,7 @@ public class TileController : MonoBehaviour
         }
     }
 
-    private void ResetTileColor()
+    public void ResetTileColor()
     {
         meshRenderer.materials[0].color = prevColor;
     }

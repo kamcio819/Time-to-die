@@ -23,6 +23,11 @@ public class ShipController : MonoBehaviour
     void OnMouseDown()
     {
         uIShipController.ToggleUIPanel();
+        if(uIShipController.Selected)
+        {
+            DrawMovementRange(false);
+            DrawAttackRange(false);
+        }
     }
 
     private void Awake()
@@ -31,37 +36,54 @@ public class ShipController : MonoBehaviour
         cursorInput = FindObjectOfType<CursorInput>();
     }
 
-    public void DrawMovementRange()
+    public void ProcessMovement()
     {
-        // draws range
-
-        Collider[] tiles = Physics.OverlapSphere(transform.position, shipDataController.ShipData.ShipDataContainer.GetMovementRange());
-        for(int i = 0; i < tiles.Length; ++i)
-        {
-            TileController tileController = tiles[i].GetComponent<TileController>();
-            HexTile hexTile = tiles[i].GetComponent<HexTile>();
-            if (tileController && hexTile && hexTile.tileType == MapSystem.Type.SEA)
-                tileController.ChangeColorOfTile(Color.gray);
-        }
+        DrawMovementRange(true);
 
         catchMovement = true;
         catchAttack = false;
     }
 
-    public void DrawAttackRange()
+    public void DrawMovementRange(bool flag)
     {
-        // draws range
+        Collider[] tiles = Physics.OverlapSphere(transform.position, shipDataController.ShipData.ShipDataContainer.GetMovementRange());
+        for (int i = 0; i < tiles.Length; ++i)
+        {
+            TileController tileController = tiles[i].GetComponent<TileController>();
+            HexTile hexTile = tiles[i].GetComponent<HexTile>();
+            if (tileController && hexTile && hexTile.tileType == MapSystem.Type.SEA)
+            {
+                if (flag)
+                    tileController.ChangeColorOfTile(Color.gray);
+                else
+                    tileController.ResetTileColor();
+            }
+                
+        }
+    }
 
+    public void ProcessAttack()
+    {
+        DrawAttackRange(true);
+
+        catchAttack = true;
+        catchMovement = false;
+    }
+
+    public void DrawAttackRange(bool flag)
+    {
         Collider[] tiles = Physics.OverlapSphere(transform.position, shipDataController.ShipData.ShipDataContainer.GetAttackRange());
         for (int i = 0; i < tiles.Length; ++i)
         {
             TileController tileController = tiles[i].GetComponent<TileController>();
             if (tileController)
-                tileController.ChangeColorOfTile(Color.yellow);
+            {
+                if (flag)
+                    tileController.ChangeColorOfTile(Color.yellow);
+                else
+                    tileController.ResetTileColor();
+            }
         }
-
-        catchAttack = true;
-        catchMovement = false;
     }
 
     private void Update()
@@ -87,6 +109,7 @@ public class ShipController : MonoBehaviour
             if (hit.transform.GetComponent<HexTile>())
             {
                 shipAttackingController.AttackPosition(hit.transform.position, 10f);
+                DrawAttackRange(false);
                 catchAttack = false;
                 uIShipController.ToggleUIPanel();
             }
@@ -104,6 +127,7 @@ public class ShipController : MonoBehaviour
             if (hexTile)
             {
                 shipMovementController.MoveToPosition(hexTile.transform.position, 10f);
+                DrawMovementRange(false);
                 catchMovement = false;
                 uIShipController.ToggleUIPanel();
             }

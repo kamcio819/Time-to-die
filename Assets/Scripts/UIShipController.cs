@@ -9,6 +9,8 @@ public class UIShipController : MonoBehaviour
 
     private bool selected = true;
 
+    public bool Selected { get => selected; }
+
     public void ToggleUIPanel()
     {
         selected = !selected;
