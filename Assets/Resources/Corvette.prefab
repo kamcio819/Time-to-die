@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1548499460736544183}
   - component: {fileID: 9124844247334300720}
   - component: {fileID: 2820319938861916940}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 1907013907143925148}
   - component: {fileID: 6302004086722369923}
   - component: {fileID: 8135796191328871419}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5676411680679147390}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Weapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 5629664021478859366}
   - component: {fileID: 5629994360027310498}
   - component: {fileID: 5630093193301289546}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 5664208834599688644}
   - component: {fileID: 5633303456626674872}
   - component: {fileID: 4716448391002436252}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CorvetteModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 5673848681998670794}
   - component: {fileID: 5664250803195795610}
   - component: {fileID: 5633771270483398378}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 5674096885823626254}
   - component: {fileID: 5664277783627510180}
   - component: {fileID: 5633737464374197132}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,6 +621,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7746972746652378594, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746972746652378594, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746972746652378594, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746972746652378594, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746972746652378594, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3104973430842540470, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4502725375519877780, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
         type: 3}
       propertyPath: m_Name
@@ -787,6 +817,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8554418156742814815, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: shipData
+      value: 
+      objectReference: {fileID: 11400000, guid: a5ce7c0eaeba36a48ac9f9a0cce372f3,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d03c5beb1787ff4ea763a6557eeb0df, type: 3}
 --- !u!4 &4103940428792143143 stripped

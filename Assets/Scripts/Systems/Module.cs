@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Module : MonoBehaviour
+public abstract class Module : MonoBehaviour, ITurnable
 {
-    
+    public abstract void Execute();
 }

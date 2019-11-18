@@ -21,6 +21,11 @@ public class ShipModuleFactory : IModuleSystem
         return factories[obj].ConstructObject();
     }
 
+    public override void Execute()
+    {
+        
+    }
+
     public override void Initialize()
     {
         factories = new Dictionary<ShipType, FactoryCreator>

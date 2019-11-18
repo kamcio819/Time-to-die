@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4899142694563278}
   - component: {fileID: 33592117133600894}
   - component: {fileID: 23567726333579566}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tree4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 114951424530701400}
   - component: {fileID: 65828148898121612}
   - component: {fileID: 114618474564848698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnviroSeaTile1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 4698094155287448}
   - component: {fileID: 33946728691586962}
   - component: {fileID: 23125175477379622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 4932646845846326}
   - component: {fileID: 33266590224864142}
   - component: {fileID: 23606137482131062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tree3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 4420945309221576}
   - component: {fileID: 33593148538915930}
   - component: {fileID: 23727933146419158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

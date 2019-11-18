@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class AIModuleSystem : ITEModuleSystem
 {
+    public override void Execute()
+    {
+    }
+
     public override void Exit()
     {
     }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7817998997114803444}
   - component: {fileID: 6963158622619354712}
   - component: {fileID: 7197330839387583039}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 1787055414179885152}
   - component: {fileID: 8247060632619201004}
   - component: {fileID: 2880131244518383348}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 7639296169489374691}
   - component: {fileID: 411845747572781745}
   - component: {fileID: 3873228739053977562}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Medium Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 251549669317744115}
   - component: {fileID: 6074073842647346910}
   - component: {fileID: 871359189999853165}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5896213026495875651}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Weapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 5877595477200213521}
   - component: {fileID: 5845694972150434793}
   - component: {fileID: 1003398914383526867}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CruiserModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 5889421404676848257}
   - component: {fileID: 5877256380071955759}
   - component: {fileID: 5848446599645159815}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 5887650148605532187}
   - component: {fileID: 5877645321412356747}
   - component: {fileID: 5848985244680988805}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -731,7 +731,7 @@ GameObject:
   - component: {fileID: 5887854896625261895}
   - component: {fileID: 5879234879685374997}
   - component: {fileID: 5846845352140337045}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 5887996807366192245}
   - component: {fileID: 5877623074234153167}
   - component: {fileID: 5848656831174280117}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 5888075393869203591}
   - component: {fileID: 5877668834071098455}
   - component: {fileID: 5848550039761941769}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Medium Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +1004,7 @@ GameObject:
   - component: {fileID: 5887632257528536437}
   - component: {fileID: 5877228265963082617}
   - component: {fileID: 5846969265669507849}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1095,7 +1095,7 @@ GameObject:
   - component: {fileID: 5889402922609706459}
   - component: {fileID: 5877302757946092089}
   - component: {fileID: 5848368117802155355}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Large Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1197,7 +1197,7 @@ GameObject:
   - component: {fileID: 5846877577063839043}
   - component: {fileID: 5846821461028542195}
   - component: {fileID: 5847083352628051175}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1399,7 +1399,7 @@ GameObject:
   - component: {fileID: 5888092790240567253}
   - component: {fileID: 5877532525263516127}
   - component: {fileID: 5848740652896101907}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1490,7 +1490,7 @@ GameObject:
   - component: {fileID: 5887582582919409245}
   - component: {fileID: 5879277119565330513}
   - component: {fileID: 5848824359307817829}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Medium Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1582,7 +1582,7 @@ GameObject:
   - component: {fileID: 5887808334232795267}
   - component: {fileID: 5877536152994702709}
   - component: {fileID: 5848929957568151983}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Large Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1673,7 +1673,7 @@ GameObject:
   - component: {fileID: 5887950243827626065}
   - component: {fileID: 5877308590449753921}
   - component: {fileID: 5846815524198426067}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1765,7 +1765,7 @@ GameObject:
   - component: {fileID: 5887552112836380849}
   - component: {fileID: 5877399127004591713}
   - component: {fileID: 5848957514779461525}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1857,7 +1857,7 @@ GameObject:
   - component: {fileID: 5889386949538265169}
   - component: {fileID: 5879199961704546649}
   - component: {fileID: 5849028020226122041}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Medium Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1948,7 +1948,7 @@ GameObject:
   - component: {fileID: 5888039920106410911}
   - component: {fileID: 5877804668553475429}
   - component: {fileID: 5848389871831696319}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2141,6 +2141,12 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8554418156742814815, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: shipData
+      value: 
+      objectReference: {fileID: 11400000, guid: 76eff30e1381a604a99a7f2a4cb2fb48,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d03c5beb1787ff4ea763a6557eeb0df, type: 3}
 --- !u!4 &5114517896245066241 stripped

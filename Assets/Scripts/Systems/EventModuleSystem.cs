@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class EventModuleSystem : IEModuleSystem
 {
+    public override void Execute()
+    {
+        
+    }
+
     public override void Exit()
     {
     }

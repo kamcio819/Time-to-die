@@ -6,13 +6,13 @@ public class TileController : MonoBehaviour
     private Color prevColor;
     private MeshRenderer meshRenderer;
 
-    void Awake()
+    private void Awake()
     {
         prevColor = GetComponent<MeshRenderer>().materials[0].color;
         meshRenderer = GetComponent<MeshRenderer>();
     }
 
-    void OnMouseEnter()
+    private void OnMouseEnter()
     {
         if (!EventSystem.current.IsPointerOverGameObject())
         {
@@ -20,7 +20,7 @@ public class TileController : MonoBehaviour
         }
     }
 
-    void OnMouseExit()
+    private void OnMouseExit()
     {
         if (!EventSystem.current.IsPointerOverGameObject())
         {
@@ -28,7 +28,7 @@ public class TileController : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
+    private void OnMouseDown()
     {
         if (!EventSystem.current.IsPointerOverGameObject())
         {
@@ -39,28 +39,34 @@ public class TileController : MonoBehaviour
         }
     }
 
-    void ChangeTileAlpha()
+    private void ChangeTileAlpha()
     {
         meshRenderer.materials[0].SetFloat("_Metallic", 0.05f);
     }
 
-    void ResetTileAlpha()
+    private void ResetTileAlpha()
     {
         meshRenderer.materials[0].SetFloat("_Metallic", 0.7f);
     }
 
-    void HighlightTileAlpha()
+    public void ChangeColorOfTile(Color color)
     {
-        if (meshRenderer.materials[0].color == Color.red)
+        meshRenderer.materials[0].color = color;
+    }
+
+    private void HighlightTileAlpha()
+    {
+        if (meshRenderer.materials[0].color != prevColor)
         {
             ResetTileColor();
-        } else
+        } 
+        else
         {
             meshRenderer.materials[0].color = Color.red;
         }
     }
 
-    void ResetTileColor()
+    private void ResetTileColor()
     {
         meshRenderer.materials[0].color = prevColor;
     }

@@ -22,6 +22,8 @@ public class ObjectPlacer : MonoBehaviour
     private Vector3 offset = new Vector3(0f, 0.1f, 0f);
 
     private float timer = 0f;
+    public bool ShipPlacer = false;
+    public bool BuildingPlacer = false;
 
     public void SetCurentObj(GameObject cs)
     {
@@ -55,9 +57,28 @@ public class ObjectPlacer : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, layerMask))
         {
-            if(hit.transform.GetComponent<HexTile>())
+            HexTile tile = hit.transform.GetComponent<HexTile>();
+            if (tile)
             {
-                currentObj.transform.position = hit.transform.position + offset;
+                PlaceObject(tile);
+            }
+        }
+    }
+
+    private void PlaceObject(HexTile tile)
+    {
+        if(ShipPlacer)
+        {
+            if(tile.tileType == MapSystem.Type.SEA && tile.availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES)
+            {
+                currentObj.transform.position = tile.transform.position + offset;
+            }
+        }
+        if(BuildingPlacer)
+        {
+            if (tile.tileType == MapSystem.Type.SIMPLE && tile.availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES)
+            {
+                currentObj.transform.position = tile.transform.position + offset;
             }
         }
     }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4639894889995396}
   - component: {fileID: 33793974660023344}
   - component: {fileID: 23196501448961118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowPoly - Fence A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4039311574575838}
   - component: {fileID: 33712669309226640}
   - component: {fileID: 23798635090550426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowPoly - FirTree A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 4912173335436198}
   - component: {fileID: 33627872025030314}
   - component: {fileID: 23938106724834478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tree2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 23151074669775266}
   - component: {fileID: 65157169921851952}
   - component: {fileID: 114656202262997568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnviroSimpleTile3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 4120466646618550}
   - component: {fileID: 33098038537687878}
   - component: {fileID: 23644847910887404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowPoly - Grass B (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 4169989512269120}
   - component: {fileID: 33697670099832828}
   - component: {fileID: 23768184288699822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tree1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 4767261401296808}
   - component: {fileID: 33395317015557596}
   - component: {fileID: 23197376403221582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowPoly - Fence A (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 4431830940844220}
   - component: {fileID: 33733877458156984}
   - component: {fileID: 23145454902816364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tree1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 4791564686423598}
   - component: {fileID: 33256181006382378}
   - component: {fileID: 23204203029451514}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -753,7 +753,7 @@ GameObject:
   - component: {fileID: 4097408257292324}
   - component: {fileID: 33254042173199452}
   - component: {fileID: 23062529651205178}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowPoly - Grass B (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

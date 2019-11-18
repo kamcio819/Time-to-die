@@ -14,12 +14,12 @@ GameObject:
   - component: {fileID: 65042377192603524}
   - component: {fileID: 114101658211093580}
   - component: {fileID: 114878000259988928}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: SimpleTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967291
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4637805868140016
 Transform:

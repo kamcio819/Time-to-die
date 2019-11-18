@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4347329594936128}
   - component: {fileID: 33823435524848390}
   - component: {fileID: 23378802647979204}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowPoly - Grass B (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4869494129969010}
   - component: {fileID: 33155859314388044}
   - component: {fileID: 23603135933277200}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowPoly - Grass B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 4737230796324190}
   - component: {fileID: 33678424111572752}
   - component: {fileID: 23358169641632112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: box (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 4229098916588644}
   - component: {fileID: 33625561364635006}
   - component: {fileID: 23359106353109612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stone1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 4550321359557276}
   - component: {fileID: 33669009192718836}
   - component: {fileID: 23351785495236750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 4324371565347748}
   - component: {fileID: 33803371348382628}
   - component: {fileID: 23578614872063686}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 4390466515565710}
   - component: {fileID: 33791874382071696}
   - component: {fileID: 23251596213976156}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowPoly - Grass B (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 23009606155504690}
   - component: {fileID: 65097317074999228}
   - component: {fileID: 114188406320870798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnviroSimpleTile5
   m_TagString: Untagged
   m_Icon: {fileID: 0}

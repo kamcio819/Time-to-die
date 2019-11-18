@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 9219679469276821795}
   - component: {fileID: 9219679469276821794}
   - component: {fileID: 9219679469276821789}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: MountainTile2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,6 +210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 84cd05fd846d1fe4ebc60056f778738f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 84cd05fd846d1fe4ebc60056f778738f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.152
@@ -272,6 +276,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
       propertyPath: m_Name
       value: stone2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -348,6 +356,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadSignTile
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 46a5c68cc9ad72b47990bcd31579700c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 46a5c68cc9ad72b47990bcd31579700c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.162
@@ -411,6 +423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1c12639e24205d41a559025fd97db28, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1c12639e24205d41a559025fd97db28, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.312
@@ -473,6 +489,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
       propertyPath: m_Name
       value: stone3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
       propertyPath: m_LocalPosition.x
@@ -549,6 +569,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone3
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -624,6 +648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.1819992
@@ -698,6 +726,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
       propertyPath: m_Name
       value: stone2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
       propertyPath: m_LocalPosition.x

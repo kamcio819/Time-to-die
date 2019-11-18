@@ -1,33 +1,34 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public struct MaterialsData
+{
+    [SerializeField]
+    [Range(0, 100)]
+    private int gold;
+
+    [SerializeField]
+    [Range(0, 100)]
+    private int oil;
+
+    [SerializeField]
+    [Range(0, 100)]
+    private int iron;
+
+    public int GetGold() { return gold; }
+    public int GetOil() { return oil; }
+    public int GetIron() { return iron; }
+
+    public void AddGold(int count) { gold += count; }
+    public void AddOil(int count) { oil += count; }
+    public void AddIron(int count) { iron += count; }
+}
+
 public class MaterialsModuleSystem : ITEModuleSystem
 {
-    [System.Serializable]
-    public struct MaterialsData
-    {
-        [SerializeField]
-        [Range(0, 100)]
-        private int gold;
-
-        [SerializeField]
-        [Range(0, 100)]
-        private int oil;
-
-        [SerializeField]
-        [Range(0, 100)]
-        private int iron;
-
-        public int GetGold() { return gold; }
-        public int GetOil() { return oil; }
-        public int GetIron() { return iron; }
-
-        public void AddGold(int count) { gold += count; }
-        public void AddOil(int count) { oil += count; }
-        public void AddIron(int count) { iron += count; }
-    }
-
     [SerializeField]
     private MaterialsData materialsData = default;
 
@@ -41,6 +42,8 @@ public class MaterialsModuleSystem : ITEModuleSystem
 
     [SerializeField]
     private ObjectPlacer minePlacer;
+
+    public MaterialsData MatData { get => materialsData; }
 
     private void OnEnable()
     {
@@ -60,7 +63,7 @@ public class MaterialsModuleSystem : ITEModuleSystem
 
     private void InstantiateMine(MineType obj)
     {
-        mines.Add(mineModuleFactory.ConstructShip(obj));
+        mines.Add(mineModuleFactory.ConstructMine(obj));
         minePlacer.SetCurentObj(mines[mines.Count - 1]);
     }
 
@@ -76,5 +79,19 @@ public class MaterialsModuleSystem : ITEModuleSystem
     public override void Tick()
     {
         minePlacer.OnUpdate();
+    }
+
+    public override void Execute()
+    {
+        for(int i = 0; i < mines.Count; ++i)
+        {
+            UpdateMaterials(mines[i]);
+        }
+    }
+
+    private void UpdateMaterials(GameObject mine)
+    {
+        var specificMine = mine.GetComponent<MineController>();
+        specificMine.ProduceMaterial(ref materialsData);
     }
 }

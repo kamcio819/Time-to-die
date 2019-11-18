@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4907016148686645980}
   - component: {fileID: 4627494094670340626}
   - component: {fileID: 1889877557734220179}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 1625636877727960754}
   - component: {fileID: 3291546776618305358}
   - component: {fileID: 8540371515766982331}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Large Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 434026965207663355}
   - component: {fileID: 6871308722248438614}
   - component: {fileID: 2603317193313122230}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 8970903358368192809}
   - component: {fileID: 1271144505004872749}
   - component: {fileID: 5043669092103245428}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Medium Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 1627352432216498857}
   - component: {fileID: 6121247031621803590}
   - component: {fileID: 7699851503961362591}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Large Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 7352158511973259301}
   - component: {fileID: 3059990631502334379}
   - component: {fileID: 7565780086357600045}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Medium Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +573,7 @@ GameObject:
   - component: {fileID: 2367840333984940694}
   - component: {fileID: 7347252050433564643}
   - component: {fileID: 4563597636834444753}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -664,7 +664,7 @@ GameObject:
   - component: {fileID: 6945392813148693973}
   - component: {fileID: 7346277849853095103}
   - component: {fileID: 5496304341382396895}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Medium Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 7541364628935662671}
   - component: {fileID: 4013330170272631619}
   - component: {fileID: 1252786797122778321}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Medium Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -847,7 +847,7 @@ GameObject:
   - component: {fileID: 7866299170711985067}
   - component: {fileID: 5350422401070858330}
   - component: {fileID: 5208986939203251398}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Medium Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -938,7 +938,7 @@ GameObject:
   - component: {fileID: 7991297862345713399}
   - component: {fileID: 3363694158454479554}
   - component: {fileID: 2969800096784108697}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1029,7 +1029,7 @@ GameObject:
   - component: {fileID: 6029787299404633805}
   - component: {fileID: 6744270434658216600}
   - component: {fileID: 7153179711629989621}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1120,7 @@ GameObject:
   - component: {fileID: 3143214622752454134}
   - component: {fileID: 1477346019295300970}
   - component: {fileID: 5244943829212499735}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1211,7 +1211,7 @@ GameObject:
   - component: {fileID: 8724270265450609450}
   - component: {fileID: 3201578828742927943}
   - component: {fileID: 1017674160417374369}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Large Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1303,7 +1303,7 @@ GameObject:
   - component: {fileID: 5491292244711368902}
   - component: {fileID: 2624611378836008840}
   - component: {fileID: 5170486692321375398}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Large Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1395,7 +1395,7 @@ GameObject:
   - component: {fileID: 8360288690840647874}
   - component: {fileID: 4106220342096403445}
   - component: {fileID: 7143234232575031132}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Large Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1486,7 +1486,7 @@ GameObject:
   - component: {fileID: 4421138541724282246}
   - component: {fileID: 7673799403463914290}
   - component: {fileID: 148890043526273295}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1578,7 +1578,7 @@ GameObject:
   - component: {fileID: 3453047231546753015}
   - component: {fileID: 6904889444887440964}
   - component: {fileID: 4298911745708950227}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1670,7 +1670,7 @@ GameObject:
   - component: {fileID: 1661737743424846784}
   - component: {fileID: 3452253698825858720}
   - component: {fileID: 3274101513176444430}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Large Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1762,7 +1762,7 @@ GameObject:
   - component: {fileID: 1107002767298704692}
   - component: {fileID: 5364570769942338342}
   - component: {fileID: 2696357295622091202}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1853,7 +1853,7 @@ GameObject:
   - component: {fileID: 3862033904328727634}
   - component: {fileID: 6953435178118355116}
   - component: {fileID: 5764983241003791912}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Medium Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1945,7 +1945,7 @@ GameObject:
   - component: {fileID: 2678096165159620400}
   - component: {fileID: 2174416896473894511}
   - component: {fileID: 7666525632517020795}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BattleshipModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2061,7 +2061,7 @@ GameObject:
   - component: {fileID: 7791040321700253574}
   - component: {fileID: 7772946265970490455}
   - component: {fileID: 2419585252005395934}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2153,7 +2153,7 @@ GameObject:
   - component: {fileID: 640475597437033819}
   - component: {fileID: 4653376477350739703}
   - component: {fileID: 8634515071876764531}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Large Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2241,7 +2241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8902543357133871241}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Weapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2290,7 +2290,7 @@ GameObject:
   - component: {fileID: 1603564971122786205}
   - component: {fileID: 2089237974328797046}
   - component: {fileID: 6278590273619164314}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2382,7 +2382,7 @@ GameObject:
   - component: {fileID: 9165084870461211586}
   - component: {fileID: 1044966136081545528}
   - component: {fileID: 8157748496555466460}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2474,7 +2474,7 @@ GameObject:
   - component: {fileID: 2780153670307349233}
   - component: {fileID: 4568663548375989584}
   - component: {fileID: 1402585903340209541}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Medium Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2566,7 +2566,7 @@ GameObject:
   - component: {fileID: 8832577701397378862}
   - component: {fileID: 53104995814311918}
   - component: {fileID: 4297249214800511515}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2658,7 +2658,7 @@ GameObject:
   - component: {fileID: 1769044321062102373}
   - component: {fileID: 7275733845610507717}
   - component: {fileID: 3078932020215802497}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2750,7 +2750,7 @@ GameObject:
   - component: {fileID: 1362433658746329809}
   - component: {fileID: 7573066556181276604}
   - component: {fileID: 7321435593500619345}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2842,7 +2842,7 @@ GameObject:
   - component: {fileID: 5434366600787467854}
   - component: {fileID: 2753355971398387263}
   - component: {fileID: 2270815725740663789}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Large Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2934,7 +2934,7 @@ GameObject:
   - component: {fileID: 1213032709003133727}
   - component: {fileID: 1874595267466978780}
   - component: {fileID: 868252263889307282}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3035,7 +3035,7 @@ GameObject:
   - component: {fileID: 7400885066458187879}
   - component: {fileID: 4044320427314912094}
   - component: {fileID: 8263611407378458090}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3237,7 +3237,7 @@ GameObject:
   - component: {fileID: 7537258330910449056}
   - component: {fileID: 1388696596785210377}
   - component: {fileID: 6573432508844139890}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Medium Cannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3409,6 +3409,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: 8554418156742814815, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: shipData
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f172fc0cd2d7ab4ea46d3b195d2354c,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d03c5beb1787ff4ea763a6557eeb0df, type: 3}
 --- !u!1 &1486477544797266356 stripped

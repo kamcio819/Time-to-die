@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4114580567576344}
   - component: {fileID: 33564039280073612}
   - component: {fileID: 23932617141023500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stone2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4156599060145980}
   - component: {fileID: 33857978948853844}
   - component: {fileID: 23722582125922190}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stone2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 4161301427533104}
   - component: {fileID: 33342826389875640}
   - component: {fileID: 23435696392461196}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 4326468150865780}
   - component: {fileID: 33930292284783160}
   - component: {fileID: 23071529311780560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 4175108721604134}
   - component: {fileID: 33945631914113344}
   - component: {fileID: 23955655152407184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stone2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 114910141730491498}
   - component: {fileID: 65750621550779100}
   - component: {fileID: 114546201060319562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnviroSeaTile3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 4608267555762664}
   - component: {fileID: 33993381616976156}
   - component: {fileID: 23493109488044094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tree4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -607,7 +607,7 @@ GameObject:
   - component: {fileID: 4928218372751760}
   - component: {fileID: 33129842265886328}
   - component: {fileID: 23099749993945112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stone2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 4081815937669604}
   - component: {fileID: 33004045366743552}
   - component: {fileID: 23213702391359940}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stone2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 4312627631251664}
   - component: {fileID: 33662980236953730}
   - component: {fileID: 23587897096303358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tree4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3878667267310918374}
   - component: {fileID: 1133766122414221546}
   - component: {fileID: 2557424251085828845}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 4030634606467358969}
   - component: {fileID: 4440226223131364187}
   - component: {fileID: 2793585501673748786}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Box003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 2913045980885591444}
   - component: {fileID: 5587115722914754958}
   - component: {fileID: 2174614338342213188}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: IronMine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce2820e075c80f42a25bf19e03f2dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goodAmount: 0
+  goodAmount: 2
 --- !u!65 &2174614338342213188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 275151524035737338}
   - component: {fileID: 8508150602075286900}
   - component: {fileID: 8332219451539504281}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1322202767418564790}
   - component: {fileID: 324701551194767448}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MineCartBottem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 2337203997366647935}
   - component: {fileID: 5524407885357322031}
   - component: {fileID: 8507152907827713416}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CartMetal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5294085599500380532}
   - component: {fileID: 7638211943468154719}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Minecart_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2215899222432628881}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MineCart (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +534,7 @@ GameObject:
   - component: {fileID: 5409720272058553755}
   - component: {fileID: 7830797036542513467}
   - component: {fileID: 428537342753230361}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,6 +624,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ConstructionTower_AO
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f02d3e3d270a3114f812c5117d57a25b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362468272372247643, guid: f02d3e3d270a3114f812c5117d57a25b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f02d3e3d270a3114f812c5117d57a25b,
         type: 3}
