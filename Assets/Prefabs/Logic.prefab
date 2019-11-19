@@ -618,6 +618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4401355784542045947}
+  - component: {fileID: 5316542446210274345}
   m_Layer: 0
   m_Name: Logic
   m_TagString: Untagged
@@ -649,6 +650,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5316542446210274345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4401355784542045946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9586a468a49b3484fba2e9998f57d6f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iteModules:
+  - {fileID: 423970253868001341}
+  - {fileID: 4401355785342313990}
+  - {fileID: 7721854098009382892}
+  - {fileID: 5316591235357916203}
+  - {fileID: 5195129307825040307}
+  - {fileID: 4203077140239228424}
+  - {fileID: 7936147062656723996}
+  itModules: []
+  teModules: []
+  tModules:
+  - {fileID: 140666403367573791}
+  - {fileID: 7277162007969277323}
 --- !u!1 &4401355785275684390
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +821,7 @@ MonoBehaviour:
   yDelta: 0
   xEdgeScreen: 0
   yEdgeScreen: 0
+  selectedShip: {fileID: 0}
 --- !u!1 &4641019798206184323
 GameObject:
   m_ObjectHideFlags: 0

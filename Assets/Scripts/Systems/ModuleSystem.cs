@@ -25,11 +25,6 @@ public abstract class EModuleSystem : Module, IExitable
 
 public abstract class TModuleSystem : Module, ITickable
 {
-    protected virtual void Update()
-    {
-        Tick();
-    }
-
     public abstract void Tick();
 }
 
@@ -56,11 +51,6 @@ public abstract class ITModuleSystem : Module, IInitiable, ITickable
         Initialize();
     }
 
-    protected virtual void Update()
-    {
-        Tick();
-    }
-
     public abstract void Initialize();
     public abstract void Tick();
 }
@@ -70,11 +60,6 @@ public abstract class TEModuleSystem : Module, ITickable, IExitable
     protected virtual void OnDestroy()
     {
         Exit();
-    }
-
-    protected virtual void Update()
-    {
-        Tick();
     }
 
     public abstract void Tick();
@@ -91,11 +76,6 @@ public abstract class ITEModuleSystem : Module, IInitiable, ITickable, IExitable
     protected virtual void OnDestroy()
     {
         Exit();
-    }
-
-    protected virtual void Update()
-    {
-        Tick();
     }
 
     public abstract void Initialize();
