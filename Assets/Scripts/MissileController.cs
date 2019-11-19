@@ -37,6 +37,6 @@ public class MissileController : MonoBehaviour
 
     private void Update()
     {
-        transform.DORotateQuaternion(Quaternion.LookRotation(rg.velocity), 0.5f);
+        transform.rotation = Quaternion.LookRotation(rg.velocity);
     }
 }

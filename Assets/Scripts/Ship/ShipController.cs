@@ -24,12 +24,12 @@ public class ShipController : MonoBehaviour
     {
         HandleUIPanel();
 
-        uIShipController.ToggleUIPanel();
         if (uIShipController.Selected)
         {
             DrawMovementRange(false);
             DrawAttackRange(false);
         }
+        uIShipController.ToggleUIPanel();
     }
 
     private void HandleUIPanel()

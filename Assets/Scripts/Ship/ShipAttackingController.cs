@@ -15,7 +15,7 @@ public class ShipAttackingController : MonoBehaviour, ITurnable
     [Range(20, 70)]
     public float angle = 40f;
 
-    private Vector3 position = new Vector3(0, 37.84f, -5.4f);
+    private Vector3 position = new Vector3(0, 70f, -5.4f);
     private Vector3 rotation = new Vector3(-90, 0, 0);
 
     private void Awake()
@@ -45,10 +45,11 @@ public class ShipAttackingController : MonoBehaviour, ITurnable
         transform.DOLookAt(targetXZPos, speed);
 
         yield return new WaitForSeconds(speed);
-        SetMissile();
 
         float R, G, tanAlpha, H;
         CalculateProjectileMotion(point, projectileXZPos, targetXZPos, out R, out G, out tanAlpha, out H);
+
+        SetMissile();
 
         Vector3 globalVelocity = SetVelocity(R, G, tanAlpha, H);
 
