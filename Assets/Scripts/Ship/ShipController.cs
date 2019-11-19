@@ -20,14 +20,25 @@ public class ShipController : MonoBehaviour
     private Camera cam;
     private CursorInput cursorInput;
 
-    void OnMouseDown()
+    private void OnMouseDown()
     {
+        HandleUIPanel();
+
         uIShipController.ToggleUIPanel();
-        if(uIShipController.Selected)
+        if (uIShipController.Selected)
         {
             DrawMovementRange(false);
             DrawAttackRange(false);
         }
+    }
+
+    private void HandleUIPanel()
+    {
+        if (cursorInput.selectedShip && cursorInput.selectedShip != gameObject)
+        {
+            cursorInput.selectedShip.GetComponentInChildren<UIShipController>().HideUIPanel();
+        }
+        cursorInput.selectedShip = gameObject;
     }
 
     private void Awake()
@@ -38,6 +49,7 @@ public class ShipController : MonoBehaviour
 
     public void ProcessMovement()
     {
+        DrawAttackRange(false);
         DrawMovementRange(true);
 
         catchMovement = true;
@@ -64,6 +76,7 @@ public class ShipController : MonoBehaviour
 
     public void ProcessAttack()
     {
+        DrawMovementRange(false);
         DrawAttackRange(true);
 
         catchAttack = true;

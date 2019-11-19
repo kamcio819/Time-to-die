@@ -7,13 +7,12 @@ public class UIShipController : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
-    private bool selected = true;
+    public bool selected = true;
 
     public bool Selected { get => selected; }
 
     public void ToggleUIPanel()
     {
-        selected = !selected;
         if (!selected)
         {
             animator.SetTrigger("ShowPanel");
@@ -21,5 +20,16 @@ public class UIShipController : MonoBehaviour
         {
             animator.SetTrigger("HidePanel");
         }
+        selected = !selected;
+    }
+
+    public void HideUIPanel()
+    {
+        if(!selected)
+        {
+            return;
+        }
+        selected = false;
+        animator.SetTrigger("HidePanel");
     }
 }

@@ -15,6 +15,8 @@ public class CursorInput : MonoBehaviour
     public float xEdgeScreen;
     public float yEdgeScreen;
 
+    public GameObject selectedShip;
+
     public void OnUpdate()
     {
         leftMouseClicked = Input.GetMouseButton(0);
