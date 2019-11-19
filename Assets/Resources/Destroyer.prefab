@@ -1031,22 +1031,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3104973430842540470, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4502725375519877780, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
         type: 3}
       propertyPath: m_Name
       value: Destroyer
       objectReference: {fileID: 0}
-    - target: {fileID: 3671240768619615528, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
-        type: 3}
-      propertyPath: shipData
-      value: 
-      objectReference: {fileID: 11400000, guid: 0b521a596bd27cf479dbefdc66df53b9,
-        type: 2}
     - target: {fileID: 3580099131968842578, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1117,6 +1106,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 3671240768619615528, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: shipData
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b521a596bd27cf479dbefdc66df53b9,
+        type: 2}
     - target: {fileID: 4879886080864520361, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -1143,6 +1138,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 0b521a596bd27cf479dbefdc66df53b9,
         type: 2}
+    - target: {fileID: 3104973430842540470, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d03c5beb1787ff4ea763a6557eeb0df, type: 3}
 --- !u!1 &2536202304881999086 stripped

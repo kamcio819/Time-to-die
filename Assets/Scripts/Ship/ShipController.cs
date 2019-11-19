@@ -106,9 +106,13 @@ public class ShipController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.transform.GetComponent<HexTile>())
+            HexTile hexTile = hit.transform.GetComponent<HexTile>();
+            if (hexTile)
             {
-                shipAttackingController.AttackPosition(hit.transform.position, 10f);
+                if (HexInRange(hexTile, shipDataController.ShipData.ShipDataContainer.GetAttackRange()))
+                {
+                    shipAttackingController.AttackPosition(hexTile.transform.position, 6f);
+                }
                 DrawAttackRange(false);
                 catchAttack = false;
                 uIShipController.ToggleUIPanel();
@@ -126,12 +130,24 @@ public class ShipController : MonoBehaviour
             HexTile hexTile = hit.transform.GetComponent<HexTile>();
             if (hexTile)
             {
-                shipMovementController.MoveToPosition(hexTile.transform.position, 10f);
+                if (HexInRange(hexTile, shipDataController.ShipData.ShipDataContainer.GetMovementRange()))
+                {
+                    shipMovementController.MoveToPosition(hexTile.transform.position, 10f);
+                }
                 DrawMovementRange(false);
                 catchMovement = false;
                 uIShipController.ToggleUIPanel();
             }
         }
+    }
+
+    private bool HexInRange(HexTile hexTile, float range)
+    {
+        if(Mathf.Abs(hexTile.transform.position.x - transform.position.x) <= range && Mathf.Abs(hexTile.transform.position.z - transform.position.z) <= range)
+        {
+            return true;
+        }
+        return false;
     }
 
     private Ray CreateRayFromCamera()

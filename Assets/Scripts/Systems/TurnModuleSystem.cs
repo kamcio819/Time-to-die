@@ -5,6 +5,8 @@ public class TurnModuleSystem : ITEModuleSystem
 {
     private static List<ITurnable> turnables;
 
+    public Action EndTrun;
+
     public override void Exit()
     {
 
@@ -40,6 +42,7 @@ public class TurnModuleSystem : ITEModuleSystem
             ITurnable c = turnables[i];
             c.TurnFinishUnit();
         }
+        EndTrun?.Invoke();
     }
 
     public override void TurnFinishUnit()

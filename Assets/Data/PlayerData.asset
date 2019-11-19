@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a189bb168d8d90478a09ea08c2f3d72, type: 3}
-  m_Name: DefaultObject
+  m_Script: {fileID: 11500000, guid: cfb7623dd0aa72b4abd3b28e08ef2abb, type: 3}
+  m_Name: PlayerData
   m_EditorClassIdentifier: 
-  m_AddressableAssetSettingsGuid: 5960cde33c389ec468281d81da1654f0
+  points: 0
+  time: 0
+  shipsAmount: 0
+  shipsDestroyed: 0
