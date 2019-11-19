@@ -86,7 +86,8 @@ public class MaterialsModuleSystem : ITEModuleSystem
 
     public override void TurnFinishUnit()
     {
-        for(int i = 0; i < mines.Count; ++i)
+        AddLocalResources();
+        for (int i = 0; i < mines.Count; ++i)
         {
             UpdateMaterials(mines[i]);
         }
@@ -103,5 +104,12 @@ public class MaterialsModuleSystem : ITEModuleSystem
         materialsData.AddGold(-tuple.Item1);
         materialsData.AddOil(-tuple.Item2);
         materialsData.AddIron(-tuple.Item3);
+    }
+
+    public void AddLocalResources()
+    {
+        materialsData.AddGold(1);
+        materialsData.AddOil(1);
+        materialsData.AddIron(1);
     }
 }
