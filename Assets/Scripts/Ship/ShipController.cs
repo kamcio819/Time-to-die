@@ -39,6 +39,7 @@ public class ShipController : MonoBehaviour
         if (cursorInput.selectedShip && cursorInput.selectedShip != gameObject)
         {
             cursorInput.selectedShip.GetComponentInChildren<UIShipController>().HideUIPanel();
+            cursorInput.selectedShip.GetComponent<ShipController>().ResetActions();
         }
         cursorInput.selectedShip = gameObject;
     }
@@ -55,6 +56,14 @@ public class ShipController : MonoBehaviour
         DrawMovementRange(true);
 
         catchMovement = true;
+        catchAttack = false;
+    }
+
+    public void ResetActions()
+    {
+        DrawAttackRange(false);
+        DrawMovementRange(false);
+        catchMovement = false;
         catchAttack = false;
     }
 
