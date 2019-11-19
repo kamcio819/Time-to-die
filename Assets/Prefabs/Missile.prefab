@@ -5398,6 +5398,9 @@ MonoBehaviour:
   - {fileID: 5171424091531237277}
   - {fileID: 5171607519610912795}
   - {fileID: 5171670654507542515}
+  colliders:
+  - {fileID: 9032493307360858677}
+  - {fileID: 6446350795554881709}
 --- !u!1 &8694844850749448710
 GameObject:
   m_ObjectHideFlags: 0

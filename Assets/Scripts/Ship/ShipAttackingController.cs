@@ -13,9 +13,10 @@ public class ShipAttackingController : MonoBehaviour, ITurnable
     private ShipDataController shipDataController;
 
     [Range(20, 70)]
-    public float angle = 40f;
+    public float angle = 70f;
 
-    private Vector3 position = new Vector3(0, 70f, -5.4f);
+    [SerializeField]
+    private Vector3 beginPosition = new Vector3(0,0f, -5.4f);
     private Vector3 rotation = new Vector3(-90, 0, 0);
 
     private void Awake()
@@ -39,39 +40,13 @@ public class ShipAttackingController : MonoBehaviour, ITurnable
 
     private IEnumerator LaunchMissile(Vector3 point, float speed)
     {
-        Vector3 projectileXZPos = new Vector3(transform.position.x, 0.0f, transform.position.z);
         Vector3 targetXZPos = new Vector3(point.x, 0.0f, point.z);
-
         transform.DOLookAt(targetXZPos, speed);
 
         yield return new WaitForSeconds(speed);
 
-        float R, G, tanAlpha, H;
-        CalculateProjectileMotion(point, projectileXZPos, targetXZPos, out R, out G, out tanAlpha, out H);
-
         SetMissile();
-
-        Vector3 globalVelocity = SetVelocity(R, G, tanAlpha, H);
-
-        missile.velocity = globalVelocity;
-    }
-
-    private Vector3 SetVelocity(float R, float G, float tanAlpha, float H)
-    {
-        float Vz = Mathf.Sqrt(G * R * R / (2.0f * (H - R * tanAlpha)));
-        float Vy = tanAlpha * Vz;
-
-        Vector3 localVelocity = new Vector3(0f, Vy, Vz);
-        Vector3 globalVelocity = transform.TransformDirection(localVelocity);
-        return globalVelocity;
-    }
-
-    private void CalculateProjectileMotion(Vector3 point, Vector3 projectileXZPos, Vector3 targetXZPos, out float R, out float G, out float tanAlpha, out float H)
-    {
-        R = Vector3.Distance(projectileXZPos, targetXZPos);
-        G = Physics.gravity.y;
-        tanAlpha = Mathf.Tan(angle * Mathf.Deg2Rad);
-        H = point.y - transform.position.y;
+        missile.GetComponent<MissileController>().LaunchMissile(point, speed, angle);
     }
 
     private void SetMissile()
@@ -86,7 +61,7 @@ public class ShipAttackingController : MonoBehaviour, ITurnable
         missile.velocity = Vector3.zero;
         missile.gameObject.SetActive(false);
         missile.transform.SetParent(gameObject.transform);
-        missile.transform.localPosition = position;
+        missile.transform.localPosition = beginPosition;
         missile.transform.localEulerAngles = rotation;
     }
 }

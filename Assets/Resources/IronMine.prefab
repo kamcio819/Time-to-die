@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce2820e075c80f42a25bf19e03f2dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goodAmount: 2
+  goodAmount: 3
 --- !u!65 &2174614338342213188
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -20,6 +20,8 @@ public class ShipController : MonoBehaviour
     private Camera cam;
     private CursorInput cursorInput;
 
+    private Vector3 offset = new Vector3(0f, 0.1f, 0f);
+
     private void OnMouseDown()
     {
         HandleUIPanel();
@@ -124,7 +126,7 @@ public class ShipController : MonoBehaviour
             {
                 if (HexInRange(hexTile, shipDataController.ShipData.ShipDataContainer.GetAttackRange()))
                 {
-                    shipAttackingController.AttackPosition(hexTile.transform.position, 6f);
+                    shipAttackingController.AttackPosition(hexTile.transform.position + offset, 1f);
                 }
                 DrawAttackRange(false);
                 catchAttack = false;
