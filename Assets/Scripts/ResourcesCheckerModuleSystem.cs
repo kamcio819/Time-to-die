@@ -30,41 +30,42 @@ public class ResourcesCheckerModuleSystem : ITEModuleSystem
         {ShipType.Frigate, new Tuple<int, int, int>(6, 5, 5) },
     };
 
-    public static bool CheckResources(MineType mine)
+    public static bool CheckResources(MineType mine, bool removeResources)
     {
         bool flag = false;
-        if (CheckEnoughResources(materialsModuleSystem.PlayerMaterialData, minesCost[mine]))
+        if (CheckEnoughResources(materialsModuleSystem.PlayerMaterialData, minesCost[mine], removeResources))
         {
             flag = true;
         }
         return flag;
     }
 
-    public static bool CheckResources(UpgradeType upgrade)
+    public static bool CheckResources(UpgradeType upgrade, bool removeResources)
     {
         bool flag = false;
-        if (CheckEnoughResources(materialsModuleSystem.PlayerMaterialData, upgradesCost[upgrade]))
+        if (CheckEnoughResources(materialsModuleSystem.PlayerMaterialData, upgradesCost[upgrade], removeResources))
         {
             flag = true;
         }
         return flag;
     }
 
-    public static bool CheckResources(ShipType ship)
+    public static bool CheckResources(ShipType ship,bool removeResources)
     {
         bool flag = false;
-        if (CheckEnoughResources(materialsModuleSystem.PlayerMaterialData, shipsCost[ship]))
+        if (CheckEnoughResources(materialsModuleSystem.PlayerMaterialData, shipsCost[ship], removeResources))
         {
             flag = true;
         }
         return flag;
     }
 
-    private static bool CheckEnoughResources(MaterialsData matData, Tuple<int, int, int> tuple)
+    private static bool CheckEnoughResources(MaterialsData matData, Tuple<int, int, int> tuple, bool flag)
     {
         if(matData.GetGold() >= tuple.Item1 && matData.GetOil() >= tuple.Item2 && matData.GetIron() >= tuple.Item3)
         {
-            materialsModuleSystem.RemoveResources(tuple);
+            if(flag)
+                materialsModuleSystem.RemoveResources(tuple);
             return true;
         }
         return false;

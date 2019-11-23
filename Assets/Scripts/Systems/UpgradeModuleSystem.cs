@@ -8,7 +8,6 @@ public class UpgradeModuleSystem : ITEModuleSystem
     [SerializeField]
     private ShipDataUpgrader shipDataUpgrader = default;
 
-    [SerializeField]
     private UpgradeButton[] upgradeButtons;
 
     private void OnEnable()
@@ -29,7 +28,7 @@ public class UpgradeModuleSystem : ITEModuleSystem
 
     private void UpgradeShip(UpgradeType obj)
     {
-        if (ResourcesCheckerModuleSystem.CheckResources(obj))
+        if (ResourcesCheckerModuleSystem.CheckResources(obj, true))
         {
             switch (obj)
             {

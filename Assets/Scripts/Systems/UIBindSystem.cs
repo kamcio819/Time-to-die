@@ -17,6 +17,9 @@ public class UIBindSystem : TModuleSystem
     private InformationUISystem informationUISystem = default;
 
     [SerializeField]
+    private ButtonSpriteUISystem buttonSpriteUISystem = default;
+
+    [SerializeField]
     private StatsUISystem statsUISystem = default;
 
     private int turnCount = 1;
@@ -36,5 +39,9 @@ public class UIBindSystem : TModuleSystem
         materialsUISystem.Notify<IronUIBinder>(materialsModuleSystem.PlayerMaterialData.GetIron().ToString());
         materialsUISystem.Notify<GoldUIBinder>(materialsModuleSystem.PlayerMaterialData.GetGold().ToString());
         materialsUISystem.Notify<OilUIBinder>(materialsModuleSystem.PlayerMaterialData.GetOil().ToString());
+
+        buttonSpriteUISystem.Notify<ShipUIBinder>("x");
+        buttonSpriteUISystem.Notify<MineUIBinder>("x");
+        buttonSpriteUISystem.Notify<UpgradeUIBinder>("x");
     }
 }

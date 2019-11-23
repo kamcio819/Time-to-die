@@ -5,17 +5,17 @@ using UnityEngine;
 public abstract class UISystem : MonoBehaviour
 {
     [SerializeField]
-    protected List<UIObsever> uIMaterialsObservers;
+    protected List<UIObsever> uiObservers;
 
     public virtual void Notify<T>(string txt)
         where T : UIObsever
     {
-        var observer = uIMaterialsObservers.Find(x => x as T);
+        var observer = uiObservers.Find(x => x as T);
         observer.BindUI(txt);
     }
 
     public virtual void AddObserver(UIObsever observer)
     {
-        uIMaterialsObservers.Add(observer);
+        uiObservers.Add(observer);
     }
 }

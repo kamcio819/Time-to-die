@@ -45,7 +45,7 @@ public class ShipModuleSystem : ITEModuleSystem
 
     private void InstantiateShip(ShipType obj)
     {
-        if (ResourcesCheckerModuleSystem.CheckResources(obj))
+        if (ResourcesCheckerModuleSystem.CheckResources(obj, true))
         {
             GameObject ship = shipModuleFactory.ConstructShip(obj, PlayerType.PLAYER);
             playerShips.Add(ship);

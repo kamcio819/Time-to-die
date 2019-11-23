@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 9127220273425149410}
   - component: {fileID: 1890043862823352526}
   - component: {fileID: 5170669160054021217}
+  - component: {fileID: 8696315301108185366}
   m_Layer: 5
   m_Name: MineButton
   m_TagString: Untagged
@@ -365,6 +366,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+--- !u!114 &8696315301108185366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3280716742381799344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e408d7fb5ab55c842b87515c7da31ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  image: {fileID: 6652277557289262520}
 --- !u!1 &4698571530288527026
 GameObject:
   m_ObjectHideFlags: 0

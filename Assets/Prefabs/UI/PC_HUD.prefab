@@ -2052,10 +2052,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1068345124435524230}
     m_Modifications:
+    - target: {fileID: 2707559974386369146, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 559114900291688467, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
       propertyPath: m_Name
-      value: HealthUpgrade
+      value: HealthUpgradeButton
       objectReference: {fileID: 0}
     - target: {fileID: 5309422554527245684, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
@@ -2438,7 +2443,7 @@ PrefabInstance:
     - target: {fileID: 559114900291688467, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
       propertyPath: m_Name
-      value: MoveRangeUpgrade
+      value: MoveRangeUpgradeButton
       objectReference: {fileID: 0}
     - target: {fileID: 5309422554527245684, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
@@ -2988,10 +2993,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1068345124435524230}
     m_Modifications:
+    - target: {fileID: 2707559974386369146, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 559114900291688467, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
       propertyPath: m_Name
-      value: DamageUpgrade
+      value: DamageUpgradeButton
       objectReference: {fileID: 0}
     - target: {fileID: 5309422554527245684, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
@@ -3445,6 +3455,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696315301108185366, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99267278316612b4188a8c9a1008c4c3, type: 3}
@@ -4379,6 +4394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696315301108185366, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99267278316612b4188a8c9a1008c4c3, type: 3}
@@ -6292,12 +6312,42 @@ PrefabInstance:
     - target: {fileID: 3497278583271280192, guid: 4d87a55e734dcae4f93a49b70cc4b298,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.00039141544
+      objectReference: {fileID: 0}
+    - target: {fileID: 6404546481148330612, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+        type: 3}
+      propertyPath: m_Value
+      value: 1.0000007
       objectReference: {fileID: 0}
     - target: {fileID: 5259609026595715196, guid: 4d87a55e734dcae4f93a49b70cc4b298,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063866666698919246, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+        type: 3}
+      propertyPath: m_Name
+      value: BattleShipButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393401326876908743, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+        type: 3}
+      propertyPath: m_Name
+      value: CruiserButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419621780136408609, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+        type: 3}
+      propertyPath: m_Name
+      value: CorvetteButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2951441456836240546, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+        type: 3}
+      propertyPath: m_Name
+      value: FrigatteButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674318819171504460, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+        type: 3}
+      propertyPath: m_Name
+      value: DestroyerButton
       objectReference: {fileID: 0}
     - target: {fileID: 7426793437742631213, guid: 4d87a55e734dcae4f93a49b70cc4b298,
         type: 3}
@@ -6318,6 +6368,26 @@ PrefabInstance:
         type: 3}
       propertyPath: type
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533725123985459127, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+        type: 3}
+      propertyPath: type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090344135163740114, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+        type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5306403159593661017, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+        type: 3}
+      propertyPath: type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562217852330513716, guid: 4d87a55e734dcae4f93a49b70cc4b298,
+        type: 3}
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d87a55e734dcae4f93a49b70cc4b298, type: 3}

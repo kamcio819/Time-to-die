@@ -78,7 +78,7 @@ public class MaterialsModuleSystem : ITEModuleSystem
 
     private void InstantiateMine(MineType obj)
     {
-        if(ResourcesCheckerModuleSystem.CheckResources(obj))
+        if(ResourcesCheckerModuleSystem.CheckResources(obj, true))
         {
             GameObject mine = mineModuleFactory.ConstructMine(obj, PlayerType.PLAYER);
             playerMines.Add(mine);

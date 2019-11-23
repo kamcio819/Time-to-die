@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 3350826611394786386}
   - component: {fileID: 5336811285363122558}
   - component: {fileID: 5875661540813791500}
+  - component: {fileID: 2537165541166316821}
   m_Layer: 5
   m_Name: ShipButton
   m_TagString: Untagged
@@ -236,3 +237,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+--- !u!114 &2537165541166316821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056056094630829568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e10cc0f6150008a4aba350c0c14ec6d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  image: {fileID: 899385422522926088}
