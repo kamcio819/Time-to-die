@@ -18,6 +18,7 @@ public class PlayerDataHandler : ITEModuleSystem
 
     public override void Initialize()
     {
+        playerData.ResetData();
     }
 
     public override void Tick()
@@ -27,13 +28,13 @@ public class PlayerDataHandler : ITEModuleSystem
 
     public override void TurnFinishUnit()
     {
-        playerData.AddTime((int)timer);
+        playerData.SetTime((int)timer);
         playerData.AddShipsAmount(shipModuleSystem.GetCreatedShips());
         timer = 0f;
     }
 
     public float GetPoints()
     {
-        return playerData.ShipsDestroyed * 2f + playerData.ShipsAmount - playerData.Time * 0.35f;
+        return playerData.ShipsDestroyed/15f + playerData.ShipsAmount/30f + (playerData.Time * -0.025f) + 3.75f;
     }
 }

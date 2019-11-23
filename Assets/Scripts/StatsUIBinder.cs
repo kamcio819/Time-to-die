@@ -11,6 +11,8 @@ public class StatsUIBinder : UIObsever
 
     public override void BindUI(string _text)
     {
-        text.text = _text;
+        float value = float.Parse(text.text);
+        value += float.Parse(_text);
+        text.text = value.ToString();
     }
 }

@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb7623dd0aa72b4abd3b28e08ef2abb, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  points: 0
   time: 0
   shipsAmount: 0
   shipsDestroyed: 0

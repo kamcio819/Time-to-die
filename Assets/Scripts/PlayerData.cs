@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,9 +17,17 @@ public class PlayerData : ScriptableObject
 
     public float Time { get => time; }
     public int ShipsAmount { get => shipsAmount; }
+
+    public void ResetData()
+    {
+        time = 0f;
+        shipsAmount = 0;
+        shipsDestroyed = 0;
+    }
+
     public int ShipsDestroyed { get => shipsDestroyed; }
 
-    public void AddTime(int _amount) { time += _amount; }
+    public void SetTime(int _amount) { time = _amount; }
     public void AddShipsAmount(int _amount) { shipsAmount += _amount; }
     public void AddShipsDestroyed(int _amount) { shipsDestroyed += _amount; }
 }
