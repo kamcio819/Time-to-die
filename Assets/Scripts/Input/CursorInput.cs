@@ -15,6 +15,8 @@ public class CursorInput : MonoBehaviour
     public float xEdgeScreen;
     public float yEdgeScreen;
 
+    public Vector3 mousePosition;
+
     public GameObject selectedShip;
 
     public void OnUpdate()
@@ -26,6 +28,8 @@ public class CursorInput : MonoBehaviour
         scrollWheelInput = Input.GetAxis("Mouse ScrollWheel");
         xDelta = Input.GetAxis("Mouse X");
         yDelta = Input.GetAxis("Mouse Y");
+
+        mousePosition = Input.mousePosition;
 
         CheckForEdge();
     }

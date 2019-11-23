@@ -33,7 +33,7 @@ public class ResourcesCheckerModuleSystem : ITEModuleSystem
     public static bool CheckResources(MineType mine)
     {
         bool flag = false;
-        if (CheckEnoughResources(materialsModuleSystem.MatData, minesCost[mine]))
+        if (CheckEnoughResources(materialsModuleSystem.PlayerMaterialData, minesCost[mine]))
         {
             flag = true;
         }
@@ -43,7 +43,7 @@ public class ResourcesCheckerModuleSystem : ITEModuleSystem
     public static bool CheckResources(UpgradeType upgrade)
     {
         bool flag = false;
-        if (CheckEnoughResources(materialsModuleSystem.MatData, upgradesCost[upgrade]))
+        if (CheckEnoughResources(materialsModuleSystem.PlayerMaterialData, upgradesCost[upgrade]))
         {
             flag = true;
         }
@@ -53,7 +53,7 @@ public class ResourcesCheckerModuleSystem : ITEModuleSystem
     public static bool CheckResources(ShipType ship)
     {
         bool flag = false;
-        if (CheckEnoughResources(materialsModuleSystem.MatData, shipsCost[ship]))
+        if (CheckEnoughResources(materialsModuleSystem.PlayerMaterialData, shipsCost[ship]))
         {
             flag = true;
         }

@@ -7,7 +7,7 @@ using TMPro;
 public class GoldUIBinder : UIObsever
 {
     [SerializeField]
-    private TextMeshProUGUI text;
+    private TextMeshProUGUI text = default;
 
     public override void BindUI(string _text)
     {

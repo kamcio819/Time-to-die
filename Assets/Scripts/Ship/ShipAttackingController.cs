@@ -7,10 +7,10 @@ using DG.Tweening;
 public class ShipAttackingController : MonoBehaviour, ITurnable
 {
     [SerializeField]
-    private Rigidbody missile;
+    private Rigidbody missile = default;
 
     [SerializeField]
-    private ShipDataController shipDataController;
+    private ShipDataController shipDataController = default;
 
     [Range(20, 70)]
     public float angle = 70f;

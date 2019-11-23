@@ -16,6 +16,7 @@ public class TurnModuleSystem : ITEModuleSystem
     {
         turnables = new List<ITurnable>();
 
+        AddCommand(FindObjectOfType<PlayerDataHandler>());
         AddCommand(FindObjectOfType<UIBindSystem>());
         AddCommand(FindObjectOfType<MaterialsModuleSystem>());
     }

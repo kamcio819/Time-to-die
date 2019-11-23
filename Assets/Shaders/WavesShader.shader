@@ -36,7 +36,7 @@
 				float k = 2 * UNITY_PI / _Wavelength;
 				float f = k * (p.x - _Speed * _Time.y);
 
-				p.z += _Amplitude * sin(k * (p.x - _Speed * _Time.y));
+				p.z += _Amplitude * sin(f);
 				p.x += _Amplitude * cos(f);
 
 				vertexData.vertex.xyz = p;

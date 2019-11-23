@@ -5,16 +5,16 @@ using UnityEngine;
 public class LogicModulesManager : MonoBehaviour
 {
     [SerializeField]
-    private List<ITEModuleSystem> iteModules;
+    private List<ITEModuleSystem> iteModules = default;
 
     [SerializeField]
-    private List<ITModuleSystem> itModules;
+    private List<ITModuleSystem> itModules = default;
 
     [SerializeField]
-    private List<TEModuleSystem> teModules;
+    private List<TEModuleSystem> teModules = default;
 
     [SerializeField]
-    private List<TModuleSystem> tModules;
+    private List<TModuleSystem> tModules = default;
 
     private void Update()
     {

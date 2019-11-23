@@ -13,9 +13,9 @@ public class MineModuleFactory : IModuleSystem
 {
     private Dictionary<MineType, FactoryCreator> factories;
 
-    public GameObject ConstructMine(MineType obj)
+    public GameObject ConstructMine(MineType obj, PlayerType pT)
     {
-        return factories[obj].ConstructObject();
+        return factories[obj].ConstructObject(pT);
     }
 
     public override void TurnFinishUnit()
@@ -27,9 +27,9 @@ public class MineModuleFactory : IModuleSystem
     {
         factories = new Dictionary<MineType, FactoryCreator>
         {
-            { MineType.GOLD, new  GoldMineCreator() },
-            { MineType.IRON, new IronMineCreator() },
-            { MineType.OIL, new OilMineCreator() },
+            { MineType.GOLD, gameObject.AddComponent<GoldMineCreator>() },
+            { MineType.IRON, gameObject.AddComponent<IronMineCreator>() },
+            { MineType.OIL, gameObject.AddComponent<OilMineCreator>() },
         };
     }
 }

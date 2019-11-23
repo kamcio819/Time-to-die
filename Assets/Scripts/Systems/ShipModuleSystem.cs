@@ -5,16 +5,27 @@ using UnityEngine;
 
 public class ShipModuleSystem : ITEModuleSystem
 {
+    [Header("Controllers")]
     [SerializeField]
     private ShipModuleFactory shipModuleFactory = default;
 
     [SerializeField]
-    private ObjectPlacer shipPlacer;
+    private ObjectPlacer shipPlacer = default;
 
-    private ShipButton[] shipButtons;
+    private ShipButton[] shipButtons = default;
+
+    [Header("Holders")]
+    [Space(20)]
+    [SerializeField]
+    private List<GameObject> playerShips = default;
 
     [SerializeField]
-    private List<GameObject> ships = default;
+    private List<GameObject> allShips = default;
+
+    [SerializeField]
+    private List<GameObject> enemyShips = default;
+
+    private int createdShipsIndex = 0;
 
     private void OnEnable()
     {
@@ -36,9 +47,17 @@ public class ShipModuleSystem : ITEModuleSystem
     {
         if (ResourcesCheckerModuleSystem.CheckResources(obj))
         {
-            ships.Add(shipModuleFactory.ConstructShip(obj));
-            shipPlacer.SetCurentObj(ships[ships.Count - 1]);
+            GameObject ship = shipModuleFactory.ConstructShip(obj, PlayerType.PLAYER);
+            playerShips.Add(ship);
+            allShips.Add(ship);
+            shipPlacer.SetCurentObj(playerShips[playerShips.Count - 1]);
+            createdShipsIndex++;
         }
+    }
+
+    public int GetCreatedShips()
+    {
+        return createdShipsIndex;
     }
 
     public override void Exit() {}
@@ -55,5 +74,6 @@ public class ShipModuleSystem : ITEModuleSystem
 
     public override void TurnFinishUnit()
     {
+        createdShipsIndex = 0;
     }
 }

@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerModuleSystem : ITEModuleSystem
 {
     [SerializeField]
-    private PlayerDataController playerDataController;
+    private PlayerDataHandler playerDataHandler = default;
 
-    public PlayerDataController PlayerDataController { get => playerDataController; }
+    public PlayerDataHandler PlayerDataHandler { get => playerDataHandler; }
 
     public override void Exit()
     {

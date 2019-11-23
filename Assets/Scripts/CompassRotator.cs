@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CompassRotator : MonoBehaviour {
+public class CompassRotator : MonoBehaviour
+{
+    [SerializeField]
+    private TurnModuleSystem turnModuleSystem  = default;
 
     [SerializeField]
-    private TurnModuleSystem turnModuleSystem;
-
-    [SerializeField]
-    private Image fill;
+    private Image fill = default;
 
 	[Range(5, 15)]
 	public float roationSpeed = 10f;

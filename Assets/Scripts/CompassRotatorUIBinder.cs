@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CompassRotatorUIBinder : UIObsever
 {
     [SerializeField]
-    private Text text;
+    private Text text = default;
 
     public override void BindUI(string _text)
     {

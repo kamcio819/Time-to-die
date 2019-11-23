@@ -16,6 +16,9 @@ public class MinimapCursor : MonoBehaviour,
     [SerializeField]
     private CameraController cameraController = default;
 
+    [SerializeField]
+    private CursorInput cursorInput = default;
+
     private bool mouseOver;
     private Vector2 pos;
     private Camera cam;
@@ -34,9 +37,9 @@ public class MinimapCursor : MonoBehaviour,
     public void Update()
     {
         UpdateMinimapCursorPosition();
-        if(mouseOver && MouseInMinimap(Input.mousePosition))
+        if(mouseOver && MouseInMinimap(cursorInput.mousePosition))
         {
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(miniMap, Input.mousePosition, cam, out pos);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(miniMap, cursorInput.mousePosition, cam, out pos);
             cursorRange.localPosition = pos;
             Vector2 divRange = cursorRange.localPosition / miniMap.sizeDelta;
             cameraController.SetCameraPosition(Math.Abs(divRange.x), Math.Abs(divRange.y));

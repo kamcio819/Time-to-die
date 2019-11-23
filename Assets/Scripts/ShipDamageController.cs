@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class ShipDamageController : MonoBehaviour
 {
     [SerializeField]
-    private ShipDataController shipDataController;
+    private ShipDataController shipDataController = default;
 
     [SerializeField]
-    private Image healthBar;
+    private Image healthBar = default;
 
     public void DamageShip(float damage)
     {

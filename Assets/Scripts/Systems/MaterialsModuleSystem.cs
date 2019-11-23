@@ -29,21 +29,36 @@ public struct MaterialsData
 
 public class MaterialsModuleSystem : ITEModuleSystem
 {
+    [Header("Materials Data")]
     [SerializeField]
-    private MaterialsData materialsData = default;
+    private MaterialsData playerMaterialData = default;
 
+    [SerializeField]
+    private MaterialsData enemyMaterialData = default;
+
+    [Header("Controllers")]
+    [Space(20)]
     [SerializeField]
     private MineModuleFactory mineModuleFactory = default;
 
+    [SerializeField]
+    private ObjectPlacer minePlacer = default;
+
     private MineButton[] mineButtons;
 
+    [Header("Holders")]
+    [Space(20)]
     [SerializeField]
-    private List<GameObject> mines = default;
+    private List<GameObject> playerMines = default;
 
     [SerializeField]
-    private ObjectPlacer minePlacer;
+    private List<GameObject> allMines = default;
 
-    public MaterialsData MatData { get => materialsData; }
+    [SerializeField]
+    private List<GameObject> enemyMines = default;
+
+    public MaterialsData PlayerMaterialData { get => playerMaterialData; }
+    public MaterialsData EnemyMaterialData { get => enemyMaterialData; }
 
     private void OnEnable()
     {
@@ -65,8 +80,10 @@ public class MaterialsModuleSystem : ITEModuleSystem
     {
         if(ResourcesCheckerModuleSystem.CheckResources(obj))
         {
-            mines.Add(mineModuleFactory.ConstructMine(obj));
-            minePlacer.SetCurentObj(mines[mines.Count - 1]);
+            GameObject mine = mineModuleFactory.ConstructMine(obj, PlayerType.PLAYER);
+            playerMines.Add(mine);
+            allMines.Add(mine);
+            minePlacer.SetCurentObj(playerMines[playerMines.Count - 1]);
         }   
     }
 
@@ -87,29 +104,29 @@ public class MaterialsModuleSystem : ITEModuleSystem
     public override void TurnFinishUnit()
     {
         AddLocalResources();
-        for (int i = 0; i < mines.Count; ++i)
+        for (int i = 0; i < playerMines.Count; ++i)
         {
-            UpdateMaterials(mines[i]);
+            UpdateMaterials(playerMines[i]);
         }
     }
 
     private void UpdateMaterials(GameObject mine)
     {
         var specificMine = mine.GetComponent<MineController>();
-        specificMine.ProduceMaterial(ref materialsData);
+        specificMine.ProduceMaterial(ref playerMaterialData);
     }
 
     public void RemoveResources(Tuple<int, int, int> tuple)
     {
-        materialsData.AddGold(-tuple.Item1);
-        materialsData.AddOil(-tuple.Item2);
-        materialsData.AddIron(-tuple.Item3);
+        playerMaterialData.AddGold(-tuple.Item1);
+        playerMaterialData.AddOil(-tuple.Item2);
+        playerMaterialData.AddIron(-tuple.Item3);
     }
 
     public void AddLocalResources()
     {
-        materialsData.AddGold(1);
-        materialsData.AddOil(1);
-        materialsData.AddIron(1);
+        playerMaterialData.AddGold(1);
+        playerMaterialData.AddOil(1);
+        playerMaterialData.AddIron(1);
     }
 }

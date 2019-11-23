@@ -4,16 +4,19 @@ using UnityEngine;
 public class ShipController : MonoBehaviour
 {
     [SerializeField]
-    private UIShipController uIShipController;
+    private UIShipController uIShipController = default;
 
     [SerializeField]
-    private ShipDataController shipDataController;
+    private ShipDataController shipDataController = default;
 
     [SerializeField]
-    private ShipMovementController shipMovementController;
+    private ShipMovementController shipMovementController = default;
 
     [SerializeField]
-    private ShipAttackingController shipAttackingController;
+    private ShipAttackingController shipAttackingController = default;
+
+    [SerializeField]
+    private PlayerType playerType;
 
     private bool catchMovement = false;
     private bool catchAttack = false;
@@ -176,7 +179,13 @@ public class ShipController : MonoBehaviour
 
     private Ray CreateRayFromCamera()
     {
-        return cam.ScreenPointToRay(Input.mousePosition);
+        return cam.ScreenPointToRay(cursorInput.mousePosition);
     }
+
+    public void SetOwner(PlayerType _playerType)
+    {
+        playerType = _playerType;
+    }
+
 }
 

@@ -7,11 +7,11 @@ using System;
 public class MissileController : MonoBehaviour
 {
     [SerializeField]
-    private Rigidbody rg;
+    private Rigidbody rg = default;
     [SerializeField]
-    private List<ParticleSystem> explosion;
+    private List<ParticleSystem> explosion = default;
     [SerializeField]
-    private List<Collider> colliders;
+    private List<Collider> colliders = default;
 
     private float damage;
 
@@ -64,12 +64,12 @@ public class MissileController : MonoBehaviour
 
     public void LaunchMissile(Vector3 point, float speed, float angle)
     {
-        Vector3 projectileXZPos = new Vector3(transform.position.x, 0.0f, transform.position.z);
+        Vector3 projectile = new Vector3(transform.position.x, 0.0f, transform.position.z);
 
-        float R, G, tanAlpha, H;
-        CalculateProjectileMotion(point, projectileXZPos, point, out R, out G, out tanAlpha, out H, angle);
+        float R, G, tanA, H;
+        CalculateProjectileMotion(point, projectile, point, out R, out G, out tanA, out H, angle);
 
-        rg.velocity = SetVelocity(R, G, tanAlpha, H);
+        rg.velocity = SetVelocity(R, G, tanA, H);
     }
 
     private Vector3 SetVelocity(float R, float G, float tanAlpha, float H)

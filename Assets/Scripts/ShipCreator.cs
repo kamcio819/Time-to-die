@@ -6,5 +6,5 @@ using UnityEngine;
 
 public abstract class FactoryCreator : MonoBehaviour
 {
-    public abstract GameObject ConstructObject();
+    public abstract GameObject ConstructObject(PlayerType pT);
 }

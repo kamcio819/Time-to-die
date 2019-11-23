@@ -7,7 +7,7 @@ using TMPro;
 public class OilUIBinder : UIObsever
 {
     [SerializeField]
-    private TextMeshProUGUI text;
+    private TextMeshProUGUI text = default;
 
     public override void BindUI(string _text)
     {

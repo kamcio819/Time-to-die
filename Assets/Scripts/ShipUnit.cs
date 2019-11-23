@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public abstract class ShipUnit : MonoBehaviour
 {
     [SerializeField]
-    private UnityEvent OnPressed;
+    private UnityEvent OnPressed = default;
 
     protected void OnMouseDown()
     {

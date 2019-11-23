@@ -6,9 +6,9 @@ using UnityEngine;
 public class Button<T> : MonoBehaviour
 {
     [SerializeField]
-    private T type;
+    private T type = default;
 
-    public Action<T> ButtonPressed;
+    public Action<T> ButtonPressed = default;
 
     public void Select()
     {

@@ -6,7 +6,7 @@ using UnityEngine;
 public class InfoUIBinder : UIObsever
 {
     [SerializeField]
-    private TextMeshProUGUI text;
+    private TextMeshProUGUI text = default;
 
     public override void BindUI(string _text)
     {

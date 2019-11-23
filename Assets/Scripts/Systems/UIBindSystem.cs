@@ -5,37 +5,36 @@ using UnityEngine;
 public class UIBindSystem : TModuleSystem
 {
     [SerializeField]
-    private MaterialsUISystem materialsUISystem;
+    private MaterialsUISystem materialsUISystem = default;
 
     [SerializeField]
-    private MaterialsModuleSystem materialsModuleSystem;
+    private MaterialsModuleSystem materialsModuleSystem  = default;
 
     [SerializeField]
-    private PlayerModuleSystem playerModuleSystem;
+    private PlayerModuleSystem playerModuleSystem = default;
 
     [SerializeField]
-    private InformationUISystem informationUISystem;
+    private InformationUISystem informationUISystem = default;
 
     [SerializeField]
-    private StatsUISystem statsUISystem;
+    private StatsUISystem statsUISystem = default;
 
     private int turnCount = 1;
 
     public override void TurnFinishUnit()
     {
         turnCount++;
-        materialsUISystem.Notify<IronUIBinder>(materialsModuleSystem.MatData.GetIron().ToString());
-        materialsUISystem.Notify<GoldUIBinder>(materialsModuleSystem.MatData.GetGold().ToString());
-        materialsUISystem.Notify<OilUIBinder>(materialsModuleSystem.MatData.GetOil().ToString());
-        statsUISystem.Notify<StatsUIBinder>(playerModuleSystem.PlayerDataController.GetPoints().ToString());
+        materialsUISystem.Notify<IronUIBinder>(materialsModuleSystem.PlayerMaterialData.GetIron().ToString());
+        materialsUISystem.Notify<GoldUIBinder>(materialsModuleSystem.PlayerMaterialData.GetGold().ToString());
+        materialsUISystem.Notify<OilUIBinder>(materialsModuleSystem.PlayerMaterialData.GetOil().ToString());
+        statsUISystem.Notify<StatsUIBinder>(playerModuleSystem.PlayerDataHandler.GetPoints().ToString());
         informationUISystem.Notify<InfoUIBinder>("Day " + turnCount.ToString());
     }
 
     public override void Tick()
     {
-        materialsUISystem.Notify<IronUIBinder>(materialsModuleSystem.MatData.GetIron().ToString());
-        materialsUISystem.Notify<GoldUIBinder>(materialsModuleSystem.MatData.GetGold().ToString());
-        materialsUISystem.Notify<OilUIBinder>(materialsModuleSystem.MatData.GetOil().ToString());
-        statsUISystem.Notify<StatsUIBinder>(playerModuleSystem.PlayerDataController.GetPoints().ToString());
+        materialsUISystem.Notify<IronUIBinder>(materialsModuleSystem.PlayerMaterialData.GetIron().ToString());
+        materialsUISystem.Notify<GoldUIBinder>(materialsModuleSystem.PlayerMaterialData.GetGold().ToString());
+        materialsUISystem.Notify<OilUIBinder>(materialsModuleSystem.PlayerMaterialData.GetOil().ToString());
     }
 }

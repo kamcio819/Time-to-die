@@ -16,7 +16,7 @@ public class ObjectPlacer : MonoBehaviour
     private Camera cam = default;
 
     [SerializeField]
-    private LayerMask layerMask;
+    private LayerMask layerMask = default;
 
     private GameObject currentObj;
     private Vector3 offset = new Vector3(0f, 0.1f, 0f);
@@ -53,7 +53,7 @@ public class ObjectPlacer : MonoBehaviour
     private void UpdatePosition()
     {
         RaycastHit hit;
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        Ray ray = cam.ScreenPointToRay(cursorInput.mousePosition);
 
         if (Physics.Raycast(ray, out hit, layerMask))
         {

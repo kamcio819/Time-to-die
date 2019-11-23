@@ -8,7 +8,7 @@ public class ShipMovementController : MonoBehaviour
     private Vector3 offset = new Vector3(0f, 0.1f, 0f);
 
     [SerializeField]
-    private ShipDataController shipDataController;
+    private ShipDataController shipDataController = default;
 
     public void MoveToPosition(Vector3 position, float duration)
     {

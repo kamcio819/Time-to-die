@@ -5,7 +5,7 @@ using UnityEngine;
 public class UIShipController : MonoBehaviour
 {
     [SerializeField]
-    private Animator animator;
+    private Animator animator = default;
 
     public bool selected = true;
 

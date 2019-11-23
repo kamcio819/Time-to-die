@@ -2182,6 +2182,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -100
       objectReference: {fileID: 0}
+    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8747681474680263172}
+    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HidePopUpMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6052497355677867249, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -2221,21 +2236,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
-      objectReference: {fileID: 0}
-    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8747681474680263172}
-    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HidePopUpMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6008262932216131624, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
@@ -2585,6 +2585,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -100
       objectReference: {fileID: 0}
+    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8747681474680263172}
+    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HidePopUpMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613162267923785732, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6052497355677867249, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -2624,26 +2644,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
-      objectReference: {fileID: 0}
-    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8747681474680263172}
-    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HidePopUpMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5613162267923785732, guid: 1503a29fc9235224580c7430bd654ca1,
-        type: 3}
-      propertyPath: type
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6008262932216131624, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
@@ -3128,6 +3128,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -100
       objectReference: {fileID: 0}
+    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8747681474680263172}
+    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HidePopUpMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613162267923785732, guid: 1503a29fc9235224580c7430bd654ca1,
+        type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6052497355677867249, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -3167,26 +3187,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
-      objectReference: {fileID: 0}
-    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8747681474680263172}
-    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HidePopUpMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 6120238029931311681, guid: 1503a29fc9235224580c7430bd654ca1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5613162267923785732, guid: 1503a29fc9235224580c7430bd654ca1,
-        type: 3}
-      propertyPath: type
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6008262932216131624, guid: 1503a29fc9235224580c7430bd654ca1,
         type: 3}
@@ -3339,6 +3339,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 166.66666
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -37.75
+      objectReference: {fileID: 0}
     - target: {fileID: 9127220273425149410, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3358,18 +3378,6 @@ PrefabInstance:
         type: 3}
       propertyPath: type
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6652277557289262520, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e81f9844a30e46842b3b692ac7b4b6c0,
-        type: 3}
-    - target: {fileID: 8729296837820297099, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_Text
-      value: "\rThe oil refinery produces 2 barrels of oil every turn, oil can be
-        used to upgrade ships movement range"
       objectReference: {fileID: 0}
     - target: {fileID: 2825234896123653827, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
@@ -3391,11 +3399,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -37.75
       objectReference: {fileID: 0}
-    - target: {fileID: 355462417963907165, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_Text
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1571802391603554810, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -3416,32 +3419,29 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -37.75
       objectReference: {fileID: 0}
+    - target: {fileID: 6652277557289262520, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e81f9844a30e46842b3b692ac7b4b6c0,
+        type: 3}
+    - target: {fileID: 8729296837820297099, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_Text
+      value: "\rThe oil refinery produces 2 barrels of oil every turn, oil can be
+        used to upgrade ships movement range"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432095514538240751, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_Text
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2960741810611509735, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_Text
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 166.66666
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -37.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7432095514538240751, guid: 99267278316612b4188a8c9a1008c4c3,
+    - target: {fileID: 355462417963907165, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_Text
       value: 5
@@ -4273,6 +4273,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 166.66666
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -37.75
+      objectReference: {fileID: 0}
     - target: {fileID: 9127220273425149410, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4292,18 +4312,6 @@ PrefabInstance:
         type: 3}
       propertyPath: type
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6652277557289262520, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 453fc3529b13494469132e3e2a146c64,
-        type: 3}
-    - target: {fileID: 8729296837820297099, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_Text
-      value: "\rThe steel mine produces 3 steel every turn, steel can be used to upgrade
-        ships damage"
       objectReference: {fileID: 0}
     - target: {fileID: 2825234896123653827, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
@@ -4325,11 +4333,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -37.75
       objectReference: {fileID: 0}
-    - target: {fileID: 355462417963907165, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_Text
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 1571802391603554810, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -4350,32 +4353,29 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -37.75
       objectReference: {fileID: 0}
+    - target: {fileID: 6652277557289262520, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 453fc3529b13494469132e3e2a146c64,
+        type: 3}
+    - target: {fileID: 8729296837820297099, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_Text
+      value: "\rThe steel mine produces 3 steel every turn, steel can be used to upgrade
+        ships damage"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432095514538240751, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_Text
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2960741810611509735, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_Text
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 166.66666
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -37.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7432095514538240751, guid: 99267278316612b4188a8c9a1008c4c3,
+    - target: {fileID: 355462417963907165, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_Text
       value: 4
@@ -5366,6 +5366,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -1.574997
       objectReference: {fileID: 0}
+    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 166.66666
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -37.75
+      objectReference: {fileID: 0}
     - target: {fileID: 9127220273425149410, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5380,12 +5400,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8729296837820297099, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_Text
-      value: "\rThe gold mine produces 4 gold bars every turn, gold can be used to
-        upgrade ships health"
       objectReference: {fileID: 0}
     - target: {fileID: 2825234896123653827, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
@@ -5407,11 +5421,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -37.75
       objectReference: {fileID: 0}
-    - target: {fileID: 355462417963907165, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_Text
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1571802391603554810, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -5432,35 +5441,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -37.75
       objectReference: {fileID: 0}
-    - target: {fileID: 2960741810611509735, guid: 99267278316612b4188a8c9a1008c4c3,
+    - target: {fileID: 8729296837820297099, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_Text
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 166.66666
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899137429921652505, guid: 99267278316612b4188a8c9a1008c4c3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -37.75
+      value: "\rThe gold mine produces 4 gold bars every turn, gold can be used to
+        upgrade ships health"
       objectReference: {fileID: 0}
     - target: {fileID: 7432095514538240751, guid: 99267278316612b4188a8c9a1008c4c3,
         type: 3}
       propertyPath: m_Text
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960741810611509735, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_Text
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 355462417963907165, guid: 99267278316612b4188a8c9a1008c4c3,
+        type: 3}
+      propertyPath: m_Text
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99267278316612b4188a8c9a1008c4c3, type: 3}
