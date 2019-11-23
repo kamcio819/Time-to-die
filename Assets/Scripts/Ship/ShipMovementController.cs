@@ -18,7 +18,7 @@ public class ShipMovementController : MonoBehaviour
             Vector3 dir = position - transform.position;
             dir.y = 0;
             transform.DORotateQuaternion(Quaternion.LookRotation(dir), duration);
-            transform.DOMove(position + offset, duration);
+            transform.DOMove(position + offset, duration * (transform.position - position).magnitude);
         }
     }
 }

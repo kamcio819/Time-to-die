@@ -159,7 +159,7 @@ public class ShipController : MonoBehaviour
             {
                 if (HexInRange(hexTile, shipDataController.ShipData.ShipDataContainer.GetMovementRange()))
                 {
-                    shipMovementController.MoveToPosition(hexTile.transform.position, 10f);
+                    shipMovementController.MoveToPosition(hexTile.transform.position, 4f);
                 }
                 DrawMovementRange(false);
                 catchMovement = false;
