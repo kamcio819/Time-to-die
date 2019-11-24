@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class AIModuleSystem : ITEModuleSystem
 {
+    [SerializeField]
+    private MaterialsModuleSystem materialsModuleSystem;
+
+    [SerializeField]
+    private ShipModuleSystem shipModuleSystem;
+
+    [SerializeField]
+    private UpgradeModuleSystem upgradeModuleSystem;
+
     public override void TurnFinishUnit()
     {
     }

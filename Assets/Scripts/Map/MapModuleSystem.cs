@@ -4,7 +4,7 @@ using UnityEngine;
 using MapSystem;
 using System;
 
-public class MapGenerator : MonoBehaviour {
+public class MapModuleSystem : IModuleSystem {
 
 	public Action MapsGenerated;
 
@@ -19,7 +19,7 @@ public class MapGenerator : MonoBehaviour {
     public Transform CenterTile { get => centerTile; }
     public GameObject MapObject { get => mapObject; }
 
-    void Awake () {
+    public override void Initialize() {
 
 		for (int z = 0, i = 0; z < mapData.mapHeight; z++) {
 			for (int x = 0; x < mapData.mapWidth; x++) {
@@ -31,8 +31,13 @@ public class MapGenerator : MonoBehaviour {
 			MapsGenerated();
 		}	
 	}
-	
-	void CreateCell (int x, int z, int i, GameObject map) {
+
+    public override void TurnFinishUnit()
+    {
+        
+    }
+
+    void CreateCell (int x, int z, int i, GameObject map) {
 
 		Vector3 position;
 		position.x = (x + z * 0.5f - z / 2) * (HexMetrics.INNER_RADIUS * 4f);

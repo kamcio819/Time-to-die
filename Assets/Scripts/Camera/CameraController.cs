@@ -20,7 +20,7 @@ public class CameraController : MonoBehaviour
     private MapData mapData = default;
 
     [SerializeField]
-    private MapGenerator mapGenerator = default;
+    private MapModuleSystem mapGenerator = default;
 
     [SerializeField]
     [Range(10f, 13f)]

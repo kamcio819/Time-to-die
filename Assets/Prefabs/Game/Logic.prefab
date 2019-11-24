@@ -759,6 +759,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49451ab203696c4b9fa3f0b7ac0e9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materialsModuleSystem: {fileID: 4401355785342313990}
+  shipModuleSystem: {fileID: 5195129307825040307}
+  upgradeModuleSystem: {fileID: 7936147062656723996}
 --- !u!1 &4401355785342313984
 GameObject:
   m_ObjectHideFlags: 0
