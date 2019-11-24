@@ -11,7 +11,7 @@ public class UIAnimationController : MonoBehaviour
         PauseMenu,
         BuildingsMenu,
         UpgradeMenu,
-        ShipsMenu
+        ShipsMenu,
     }
 
     [SerializeField]

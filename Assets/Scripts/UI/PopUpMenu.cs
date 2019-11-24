@@ -15,11 +15,14 @@ public class PopUpMenu : MonoBehaviour
     [SerializeField]
     private float x = default;
 
+    [SerializeField]
+    private float xBegin = default;
+
     public void TogglePopUpMenu()
     {
         if(active)
         {
-            rectTransform.DOAnchorPos(new Vector3(-900f, 0f, 0f), 0.3f);
+            rectTransform.DOAnchorPos(new Vector3(xBegin, 0f, 0f), 0.3f);
             active = false;
         }
         else
@@ -31,7 +34,7 @@ public class PopUpMenu : MonoBehaviour
 
     public void HidePopUpMenu()
     {
-        rectTransform.DOAnchorPos(new Vector3(-900f, 0f, 0f), 0.3f);
+        rectTransform.DOAnchorPos(new Vector3(xBegin, 0f, 0f), 0.3f);
         active = false;
     }
 }
