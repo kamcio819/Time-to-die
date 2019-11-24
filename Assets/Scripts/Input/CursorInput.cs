@@ -26,6 +26,7 @@ public class CursorInput : MonoBehaviour
         rightMouseClicked = Input.GetMouseButton(1);
 
         scrollWheelInput = Input.GetAxis("Mouse ScrollWheel");
+
         xDelta = Input.GetAxis("Mouse X");
         yDelta = Input.GetAxis("Mouse Y");
 

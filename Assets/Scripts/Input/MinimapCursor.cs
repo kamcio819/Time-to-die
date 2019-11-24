@@ -21,7 +21,10 @@ public class MinimapCursor : MonoBehaviour,
 
     private bool mouseOver;
     private Vector2 pos;
+    private Vector2 sizeModifier = Vector2.zero;
     private Camera cam;
+
+    private const float sizeScaleModifier = 42f;
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -37,12 +40,24 @@ public class MinimapCursor : MonoBehaviour,
     public void Update()
     {
         UpdateMinimapCursorPosition();
+        UpdateMinimapSize();
         if(mouseOver && MouseInMinimap(cursorInput.mousePosition))
         {
             RectTransformUtility.ScreenPointToLocalPointInRectangle(miniMap, cursorInput.mousePosition, cam, out pos);
             cursorRange.localPosition = pos;
             Vector2 divRange = cursorRange.localPosition / miniMap.sizeDelta;
             cameraController.SetCameraPosition(Math.Abs(divRange.x), Math.Abs(divRange.y));
+        }
+    }
+
+    private void UpdateMinimapSize()
+    {
+        if (cursorInput.scrollWheelInput != 0)
+        {
+            sizeModifier.x = Mathf.Clamp(cursorRange.sizeDelta.x + -cursorInput.scrollWheelInput * sizeScaleModifier, 60, 110);
+            sizeModifier.y = Mathf.Clamp(cursorRange.sizeDelta.y + -cursorInput.scrollWheelInput * sizeScaleModifier, 30, 40);
+
+            cursorRange.sizeDelta = sizeModifier;
         }
     }
 
