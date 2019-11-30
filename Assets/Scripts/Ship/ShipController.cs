@@ -16,6 +16,9 @@ public class ShipController : MonoBehaviour
     private ShipAttackingController shipAttackingController = default;
 
     [SerializeField]
+    private ShipTileController shipTileController = default;
+
+    [SerializeField]
     private PlayerType playerType;
 
     private bool catchMovement = false;
@@ -77,7 +80,7 @@ public class ShipController : MonoBehaviour
         {
             TileController tileController = tiles[i].GetComponent<TileController>();
             HexTile hexTile = tiles[i].GetComponent<HexTile>();
-            if (tileController && hexTile && hexTile.tileType == MapSystem.Type.SEA)
+            if (tileController && hexTile && hexTile.tileType == MapSystem.Type.SEA && CheckForTileAvailability(hexTile))
             {
                 if (flag)
                     tileController.ChangeColorOfTile(Color.gray);
@@ -85,6 +88,25 @@ public class ShipController : MonoBehaviour
                     tileController.ResetTileColor();
             }
                 
+        }
+    }
+
+    private bool CheckForTileAvailability(HexTile hexTile)
+    {
+        if(shipTileController.OccupiedTiles.Contains(hexTile))
+        {
+            return true;
+        }
+        else
+        {
+            if (hexTile.availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 
@@ -157,7 +179,7 @@ public class ShipController : MonoBehaviour
             HexTile hexTile = hit.transform.GetComponent<HexTile>();
             if (hexTile)
             {
-                if (HexInRange(hexTile, shipDataController.ShipData.ShipDataContainer.GetMovementRange()))
+                if (HexInRange(hexTile, shipDataController.ShipData.ShipDataContainer.GetMovementRange()) && CheckForTileAvailability(hexTile))
                 {
                     shipMovementController.MoveToPosition(hexTile.transform.position, 4f);
                 }
