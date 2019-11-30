@@ -13,8 +13,16 @@ public class AIModuleSystem : ITEModuleSystem
     [SerializeField]
     private UpgradeModuleSystem upgradeModuleSystem;
 
+    [SerializeField]
+    private AIRuleDecision aIRuleDecision;
+
+    [SerializeField]
+    private AIGameTree aIGameTree;
+
     public override void TurnFinishUnit()
     {
+        aIRuleDecision.Process();
+        aIGameTree.Process();
     }
 
     public override void Exit()

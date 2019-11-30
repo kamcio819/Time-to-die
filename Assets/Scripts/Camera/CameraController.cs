@@ -57,17 +57,17 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        if (keyboardInput.zoomDelta != 0f)
+        if (keyboardInput.ZoomDelta != 0f)
         {
-            AdjustZoom(keyboardInput.zoomDelta);
+            AdjustZoom(keyboardInput.ZoomDelta);
         }
-        if (keyboardInput.xDelta != 0f || keyboardInput.zDelta != 0f)
+        if (keyboardInput.XDelta != 0f || keyboardInput.ZDelta != 0f)
         {
-            AdjustPosition(keyboardInput.xDelta, keyboardInput.zDelta);
+            AdjustPosition(keyboardInput.XDelta, keyboardInput.ZDelta);
         }
-        if(cursorInput.xEdgeScreen != 0f || cursorInput.yEdgeScreen != 0f)
+        if(cursorInput.XEdgeScreen != 0f || cursorInput.YEdgeScreen != 0f)
         {
-            AdjustPosition(cursorInput.xEdgeScreen, cursorInput.yEdgeScreen);
+            AdjustPosition(cursorInput.XEdgeScreen, cursorInput.YEdgeScreen);
         }
     }
 

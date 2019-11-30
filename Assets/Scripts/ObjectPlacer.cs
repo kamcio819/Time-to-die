@@ -36,8 +36,8 @@ public class ObjectPlacer : MonoBehaviour
         {
             timer += 0.15f;
             UpdatePosition();
-            currentObj.transform.RotateAround(currentObj.transform.position, Vector3.up, keyboardInput.yDeltaShip * Time.deltaTime);
-            if (timer > 0.5f && cursorInput.leftMouseClicked && CorrectPosition())
+            currentObj.transform.RotateAround(currentObj.transform.position, Vector3.up, keyboardInput.YDeltaShip * Time.deltaTime);
+            if (timer > 0.5f && cursorInput.LeftMouseClicked && CorrectPosition())
             {
                 timer = 0f;
                 currentObj = null;
@@ -53,7 +53,7 @@ public class ObjectPlacer : MonoBehaviour
     private void UpdatePosition()
     {
         RaycastHit hit;
-        Ray ray = cam.ScreenPointToRay(cursorInput.mousePosition);
+        Ray ray = cam.ScreenPointToRay(cursorInput.MousePosition);
 
         if (Physics.Raycast(ray, out hit, layerMask))
         {

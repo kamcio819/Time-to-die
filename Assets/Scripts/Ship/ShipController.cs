@@ -39,12 +39,12 @@ public class ShipController : MonoBehaviour
 
     private void HandleUIPanel()
     {
-        if (cursorInput.selectedShip && cursorInput.selectedShip != gameObject)
+        if (cursorInput.SelectedObject && cursorInput.SelectedObject != gameObject)
         {
-            cursorInput.selectedShip.GetComponentInChildren<UIShipController>().HideUIPanel();
-            cursorInput.selectedShip.GetComponent<ShipController>().ResetActions();
+            cursorInput.SelectedObject.GetComponentInChildren<UIShipController>().HideUIPanel();
+            cursorInput.SelectedObject.GetComponent<ShipController>().ResetActions();
         }
-        cursorInput.selectedShip = gameObject;
+        cursorInput.SelectedObject = gameObject;
     }
 
     private void Awake()
@@ -115,12 +115,12 @@ public class ShipController : MonoBehaviour
 
     private void Update()
     {
-        if(catchMovement && cursorInput.leftMouseClicked)
+        if(catchMovement && cursorInput.LeftMouseClicked)
         {
             UpdateShipPosition();
         }
 
-        if(catchAttack && cursorInput.leftMouseClicked)
+        if(catchAttack && cursorInput.LeftMouseClicked)
         {
             AttackPosition();
         }
@@ -179,7 +179,7 @@ public class ShipController : MonoBehaviour
 
     private Ray CreateRayFromCamera()
     {
-        return cam.ScreenPointToRay(cursorInput.mousePosition);
+        return cam.ScreenPointToRay(cursorInput.MousePosition);
     }
 
     public void SetOwner(PlayerType _playerType)

@@ -5,31 +5,38 @@ using System;
 
 public class KeyboardInput : MonoBehaviour {
 
-    public float zoomDelta;
-    public float xDelta;
-    public float zDelta;
+    public float ZoomDelta;
+    public float XDelta;
+    public float ZDelta;
 
-    public float yDeltaShip;
+    public float YDeltaShip;
 
 	public void OnUpdate()
     {
-        zoomDelta = Input.GetAxis("Mouse ScrollWheel");
-        xDelta = Input.GetAxis("Horizontal");
-        zDelta = Input.GetAxis("Vertical");
-        ShipRotation();
+        GetKeyboardInput();
+        ObjectRotation();
     }
 
-    private void ShipRotation()
+    private void GetKeyboardInput()
+    {
+        ZoomDelta = Input.GetAxis("Mouse ScrollWheel");
+        XDelta = Input.GetAxis("Horizontal");
+        ZDelta = Input.GetAxis("Vertical");
+    }
+
+    private void ObjectRotation()
     {
         if (Input.GetKey(KeyCode.Q))
         {
-            yDeltaShip = -40f;
-        } else if (Input.GetKey(KeyCode.E))
+            YDeltaShip = -40f;
+        } 
+        else if (Input.GetKey(KeyCode.E))
         {
-            yDeltaShip = 40f;
-        } else
+            YDeltaShip = 40f;
+        } 
+        else
         {
-            yDeltaShip = 0f;
+            YDeltaShip = 0f;
         }
     }
 }

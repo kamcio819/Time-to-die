@@ -12,43 +12,46 @@ public class AIModuleData : ScriptableObject
     [SerializeField]
     private GameTreeData gameTreeData;
 
+    public RuleInductionData RuleInductionData { get => ruleInductionData; }
+    public GameTreeData GameTreeData { get => gameTreeData; }
+
     public void SetPureness(float val)
     {
-        ruleInductionData.SetPureness(val);
+        RuleInductionData.SetPureness(val);
     }
 
     public void SetSampleRatio(float val)
     {
-        ruleInductionData.SetSampleRatio(val);
+        RuleInductionData.SetSampleRatio(val);
     }
 
     public void SetMinimalPruneBenefit(float val)
     {
-        ruleInductionData.SetMinimalPruneBenefit(val);
+        RuleInductionData.SetMinimalPruneBenefit(val);
     }
 
     public void SetMinimalLeafSize(float val)
     {
-        gameTreeData.SetMinimalLeafSize(val);
+        GameTreeData.SetMinimalLeafSize(val);
     }
 
     public void SetMinimalSizeForSplit(float val)
     {
-        gameTreeData.SetMinimalSizeForSplit(val);
+        GameTreeData.SetMinimalSizeForSplit(val);
     }
 
     public void SetMaximalDepth(float val)
     {
-        gameTreeData.SetMaximalDepth(val);
+        GameTreeData.SetMaximalDepth(val);
     }
 
     public void SetConfidence(float val)
     {
-        gameTreeData.SetConfidence(val);
+        GameTreeData.SetConfidence(val);
     }
 
     public void SetMinimalGain(float val)
     {
-        gameTreeData.SetMinimalGain(val);
+        GameTreeData.SetMinimalGain(val);
     }
 }
