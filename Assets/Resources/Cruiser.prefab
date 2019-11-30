@@ -2241,6 +2241,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 76eff30e1381a604a99a7f2a4cb2fb48,
         type: 2}
+    - target: {fileID: 8461316082604355849, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: meshRenderer
+      value: 
+      objectReference: {fileID: 5877595477200213521}
     - target: {fileID: 3023847891103796839, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
         type: 3}
       propertyPath: m_AnchoredPosition.x

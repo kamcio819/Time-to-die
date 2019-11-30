@@ -3531,6 +3531,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6f172fc0cd2d7ab4ea46d3b195d2354c,
         type: 2}
+    - target: {fileID: 8461316082604355849, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: meshRenderer
+      value: 
+      objectReference: {fileID: 2678096165159620400}
     - target: {fileID: 3023847891103796839, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
         type: 3}
       propertyPath: m_LocalScale.y
