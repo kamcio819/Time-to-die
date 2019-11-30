@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class UIBindSystem : TModuleSystem
 {
-    [SerializeField]
-    private MaterialsUISystem materialsUISystem = default;
-
+    [Header("Controllers")]
     [SerializeField]
     private MaterialsModuleSystem materialsModuleSystem  = default;
 
     [SerializeField]
     private PlayerModuleSystem playerModuleSystem = default;
 
+    [Header("UI Binds")]
+    [Space(20)]
     [SerializeField]
     private InformationUISystem informationUISystem = default;
 
     [SerializeField]
     private ButtonSpriteUISystem buttonSpriteUISystem = default;
+
+    [SerializeField]
+    private MaterialsUISystem materialsUISystem = default;
 
     [SerializeField]
     private StatsUISystem statsUISystem = default;

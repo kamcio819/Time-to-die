@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AIModuleSystem : ITEModuleSystem
 {
+    [Header("Controllers")]
     [SerializeField]
     private MaterialsModuleSystem materialsModuleSystem;
 
@@ -13,6 +14,8 @@ public class AIModuleSystem : ITEModuleSystem
     [SerializeField]
     private UpgradeModuleSystem upgradeModuleSystem;
 
+    [Header("AI Modules")]
+    [Space(20)]
     [SerializeField]
     private AIRuleDecision aIRuleDecision;
 
