@@ -125,6 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826b15a8a58de1b48b943f553100eb2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 23119730298666808}
+  hexTile: {fileID: 114232247102238226}
+  ClickedColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &6000682250782935048
 GameObject:
   m_ObjectHideFlags: 0

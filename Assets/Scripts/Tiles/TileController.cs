@@ -3,12 +3,19 @@ using UnityEngine.EventSystems;
 
 public class TileController : MonoBehaviour
 {
-    private Color prevColor;
+    [SerializeField]
     private MeshRenderer meshRenderer;
+
+    [SerializeField]
+    private HexTile hexTile;
+
+    public Color ClickedColor = Color.red;
+
+    private Color prevColor;
 
     private void Awake()
     {
-        prevColor = GetComponent<MeshRenderer>().materials[0].color;
+        prevColor = meshRenderer.materials[0].color;
         meshRenderer = GetComponent<MeshRenderer>();
     }
 
@@ -32,7 +39,7 @@ public class TileController : MonoBehaviour
     {
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            if (GetComponent<HexTile>().availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES)
+            if (hexTile.availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES)
             {
                 HighlightTileAlpha();
             }
@@ -62,7 +69,7 @@ public class TileController : MonoBehaviour
         } 
         else
         {
-            meshRenderer.materials[0].color = Color.red;
+            meshRenderer.materials[0].color = ClickedColor;
         }
     }
 
