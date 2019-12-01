@@ -14,7 +14,7 @@ public class UpgradeModuleSystem : ITEModuleSystem
     {
         for (int i = 0; i < upgradeButtons.Length; ++i)
         {
-            upgradeButtons[i].ButtonPressed += UpgradeShip;
+            upgradeButtons[i].ButtonPressed += UpgradePlayerShip;
         }
     }
 
@@ -22,24 +22,24 @@ public class UpgradeModuleSystem : ITEModuleSystem
     {
         for (int i = 0; i < upgradeButtons.Length; ++i)
         {
-            upgradeButtons[i].ButtonPressed += UpgradeShip;
+            upgradeButtons[i].ButtonPressed += UpgradePlayerShip;
         }
     }
 
-    private void UpgradeShip(UpgradeType obj)
+    private void UpgradePlayerShip(UpgradeType obj)
     {
-        if (ResourcesCheckerModuleSystem.CheckResources(obj, true))
+        if (ResourcesCheckerModuleSystem.CheckResources(obj, true, PlayerType.PLAYER))
         {
             switch (obj)
             {
                 case UpgradeType.DAMAGE:
-                    shipDataUpgrader.UpgradeDamage(10f);
+                    shipDataUpgrader.UpgradeDamage(10f, PlayerType.PLAYER);
                     break;
                 case UpgradeType.HEALTH:
-                    shipDataUpgrader.UpgradeHealth(20f);
+                    shipDataUpgrader.UpgradeHealth(20f, PlayerType.PLAYER);
                     break;
                 case UpgradeType.RANGE:
-                    shipDataUpgrader.UpgradeMove(1);
+                    shipDataUpgrader.UpgradeMove(1, PlayerType.PLAYER);
                     break;
                 default:
                     break;
@@ -47,22 +47,35 @@ public class UpgradeModuleSystem : ITEModuleSystem
         }
     }
 
-    public override void Exit()
+    public void UpgradeCPUShip(UpgradeType obj)
     {
-        
+        if (ResourcesCheckerModuleSystem.CheckResources(obj, true, PlayerType.CPU))
+        {
+            switch (obj)
+            {
+                case UpgradeType.DAMAGE:
+                    shipDataUpgrader.UpgradeDamage(10f, PlayerType.CPU);
+                    break;
+                case UpgradeType.HEALTH:
+                    shipDataUpgrader.UpgradeHealth(20f, PlayerType.CPU);
+                    break;
+                case UpgradeType.RANGE:
+                    shipDataUpgrader.UpgradeMove(1, PlayerType.CPU);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
+
+    public override void Exit() {}
 
     public override void Initialize()
     {
         upgradeButtons = FindObjectsOfType<UpgradeButton>();
     }
 
-    public override void Tick()
-    {
-        
-    }
+    public override void Tick() {}
 
-    public override void TurnFinishUnit()
-    {
-    }
+    public override void TurnFinishUnit() {}
 }

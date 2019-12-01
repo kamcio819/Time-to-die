@@ -28,16 +28,21 @@ public class ShipController : MonoBehaviour
 
     private Vector3 offset = new Vector3(0f, 0.1f, 0f);
 
+    public PlayerType PlayerType { get => playerType; }
+
     private void OnMouseDown()
     {
-        HandleUIPanel();
-
-        if (uIShipController.Selected)
+        if (playerType == PlayerType.PLAYER)
         {
-            DrawMovementRange(false);
-            DrawAttackRange(false);
+            HandleUIPanel();
+
+            if (uIShipController.Selected)
+            {
+                DrawMovementRange(false);
+                DrawAttackRange(false);
+            }
+            uIShipController.ToggleUIPanel();
         }
-        uIShipController.ToggleUIPanel();
     }
 
     private void HandleUIPanel()
@@ -207,6 +212,7 @@ public class ShipController : MonoBehaviour
     public void SetOwner(PlayerType _playerType)
     {
         playerType = _playerType;
+        shipDataController.SetData(playerType);
     }
 
 }

@@ -17,10 +17,12 @@ public class ShipDamageController : MonoBehaviour
 
     private Material[] objectMaterials;
     private Color color;
+    private WaitForSeconds wfs;
 
     private void Awake()
     {
         objectMaterials = meshRenderer.materials;
+        wfs = new WaitForSeconds(0.05f);
     }
 
     public void DamageShip(float damage)
@@ -36,12 +38,12 @@ public class ShipDamageController : MonoBehaviour
 
     private IEnumerator GiveDamageVisual()
     {
-        for (float i = 0f; i < 1.5f; i += Time.deltaTime)
+        for (float i = 0f; i < 1f; i += Time.deltaTime)
         {
             ToggleMaterials(0f);
-            yield return null;
+            yield return wfs;
             ToggleMaterials(1f);
-            yield return null;
+            yield return wfs;
         }
         ToggleMaterials(1f);
     }

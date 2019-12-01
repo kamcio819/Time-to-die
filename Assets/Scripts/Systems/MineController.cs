@@ -11,7 +11,7 @@ public abstract class MineController : MonoBehaviour
     [SerializeField]
     private PlayerType playerType;
 
-    public abstract int ProduceMaterial(ref MaterialsData matData);
+    public abstract int ProduceMaterial(MaterialsData matData);
 
     public void SetOwner(PlayerType _playerType)
     {

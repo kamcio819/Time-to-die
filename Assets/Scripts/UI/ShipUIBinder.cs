@@ -14,7 +14,7 @@ public class ShipUIBinder : UIObsever
     {
         for(int i = 0; i < shipButtons.Count; ++i)
         {
-            if(ResourcesCheckerModuleSystem.CheckResources(shipButtons[i].Type, false))
+            if(ResourcesCheckerModuleSystem.CheckResources(shipButtons[i].Type, false, PlayerType.PLAYER))
             {
                 shipButtons[i].TurnOnUI(turnedOnUI);
 

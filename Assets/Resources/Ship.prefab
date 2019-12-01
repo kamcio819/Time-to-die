@@ -402,7 +402,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcc93371e58e03545a20e54d72355cc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipData: {fileID: 0}
+  playerShipData: {fileID: 0}
+  enemyShipData: {fileID: 0}
+  shipController: {fileID: 3671240768619615528}
   health: 100
   movePoints: 1
   attackPoints: 1
@@ -422,6 +424,7 @@ MonoBehaviour:
   shipDataController: {fileID: 8554418156742814815}
   shipMovementController: {fileID: 5721111779952997546}
   shipAttackingController: {fileID: 4416873471869958738}
+  shipTileController: {fileID: 0}
   playerType: 0
 --- !u!114 &5721111779952997546
 MonoBehaviour:
@@ -466,6 +469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipDataController: {fileID: 8554418156742814815}
   healthBar: {fileID: 2594936293447786415}
+  meshRenderer: {fileID: 0}
 --- !u!1 &5217591626961117331
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,7 +488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5843534894031354444
 Transform:
   m_ObjectHideFlags: 0
@@ -685,7 +689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &248713322002467941
 Transform:
   m_ObjectHideFlags: 0
@@ -807,7 +811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7981632890405587878
 Transform:
   m_ObjectHideFlags: 0

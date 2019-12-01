@@ -30,30 +30,30 @@ public class ResourcesCheckerModuleSystem : ITEModuleSystem
         {ShipType.Frigate, new Tuple<int, int, int>(6, 5, 5) },
     };
 
-    public static bool CheckResources(MineType mine, bool removeResources)
+    public static bool CheckResources(MineType mine, bool removeResources, PlayerType playerType)
     {
         bool flag = false;
-        if (CheckEnoughResources(materialsModuleSystem.PlayerMaterialData, minesCost[mine], removeResources))
+        if (CheckEnoughResources(materialsModuleSystem.MaterialsData[playerType], minesCost[mine], removeResources))
         {
             flag = true;
         }
         return flag;
     }
 
-    public static bool CheckResources(UpgradeType upgrade, bool removeResources)
+    public static bool CheckResources(UpgradeType upgrade, bool removeResources, PlayerType playerType)
     {
         bool flag = false;
-        if (CheckEnoughResources(materialsModuleSystem.PlayerMaterialData, upgradesCost[upgrade], removeResources))
+        if (CheckEnoughResources(materialsModuleSystem.MaterialsData[playerType], upgradesCost[upgrade], removeResources))
         {
             flag = true;
         }
         return flag;
     }
 
-    public static bool CheckResources(ShipType ship,bool removeResources)
+    public static bool CheckResources(ShipType ship, bool removeResources, PlayerType playerType)
     {
         bool flag = false;
-        if (CheckEnoughResources(materialsModuleSystem.PlayerMaterialData, shipsCost[ship], removeResources))
+        if (CheckEnoughResources(materialsModuleSystem.MaterialsData[playerType], shipsCost[ship], removeResources))
         {
             flag = true;
         }
@@ -65,7 +65,7 @@ public class ResourcesCheckerModuleSystem : ITEModuleSystem
         if(matData.GetGold() >= tuple.Item1 && matData.GetOil() >= tuple.Item2 && matData.GetIron() >= tuple.Item3)
         {
             if(flag)
-                materialsModuleSystem.RemoveResources(tuple);
+                materialsModuleSystem.RemoveResources(matData, tuple);
             return true;
         }
         return false;

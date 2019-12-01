@@ -3531,6 +3531,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6f172fc0cd2d7ab4ea46d3b195d2354c,
         type: 2}
+    - target: {fileID: 8554418156742814815, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: playerShipData
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f172fc0cd2d7ab4ea46d3b195d2354c,
+        type: 2}
+    - target: {fileID: 8554418156742814815, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: enemyShipData
+      value: 
+      objectReference: {fileID: 11400000, guid: 11ef6300373d23147ac33b03b53ce357,
+        type: 2}
     - target: {fileID: 8461316082604355849, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
         type: 3}
       propertyPath: meshRenderer

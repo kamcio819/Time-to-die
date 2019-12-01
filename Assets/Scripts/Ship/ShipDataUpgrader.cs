@@ -5,23 +5,41 @@ using UnityEngine;
 public class ShipDataUpgrader : MonoBehaviour
 {
     [SerializeField]
-    private List<ShipData> shipsData = default;
+    private ShipDataController shipDataController;
 
-    public void UpgradeHealth(float health)
+    [SerializeField]
+    private List<ShipData> playerShipsData = default;
+
+    [SerializeField]
+    private List<ShipData> enemyShipsData = default;
+
+    private Dictionary<PlayerType, List<ShipData>> UpgradeData = new Dictionary<PlayerType, List<ShipData>>();
+
+    private void Awake()
     {
-        ShipData sd = shipsData[Random.Range(0, shipsData.Count - 1)];
-        sd.ShipDataContainer.AddMaxHealth(health);
+        UpgradeData.Add(PlayerType.CPU, enemyShipsData);
+        UpgradeData.Add(PlayerType.PLAYER, playerShipsData);
     }
 
-    public void UpgradeMove(int range)
+    public void UpgradeHealth(float health, PlayerType playerType)
     {
-        ShipData sd = shipsData[Random.Range(0, shipsData.Count - 1)];
+        List<ShipData> shipData = UpgradeData[playerType];
+        ShipData sd = shipData[Random.Range(0, playerShipsData.Count - 1)];
+        sd.ShipDataContainer.AddMaxHealth(health);
+        shipDataController.health = (shipDataController.health * sd.ShipDataContainer.GetMaxHealth()) / 100;
+    }
+
+    public void UpgradeMove(int range, PlayerType playerType)
+    {
+        List<ShipData> shipData = UpgradeData[playerType];
+        ShipData sd = shipData[Random.Range(0, playerShipsData.Count - 1)];
         sd.ShipDataContainer.AddMovementRange(range);
     }
 
-    public void UpgradeDamage(float damage)
+    public void UpgradeDamage(float damage, PlayerType playerType)
     {
-        ShipData sd = shipsData[Random.Range(0, shipsData.Count - 1)];
+        List<ShipData> shipData = UpgradeData[playerType];
+        ShipData sd = shipData[Random.Range(0, playerShipsData.Count - 1)];
         sd.ShipDataContainer.AddDamage(damage);
     }
 }

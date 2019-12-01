@@ -14,7 +14,7 @@ public class MineUIBinder : UIObsever
     {
         for (int i = 0; i < mineUIButton.Count; ++i)
         {
-            if (ResourcesCheckerModuleSystem.CheckResources(mineUIButton[i].Type, false))
+            if (ResourcesCheckerModuleSystem.CheckResources(mineUIButton[i].Type, false, PlayerType.PLAYER))
             {
                 mineUIButton[i].TurnOnUI(turnedOnUI);
 

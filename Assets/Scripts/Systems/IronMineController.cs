@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IronMineController : MineController
 {
-    public override int ProduceMaterial(ref MaterialsData matData)
+    public override int ProduceMaterial(MaterialsData matData)
     {
         matData.AddIron(goodAmount);
         return goodAmount;

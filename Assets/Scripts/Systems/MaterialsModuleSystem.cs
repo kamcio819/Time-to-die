@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public struct MaterialsData
+public class MaterialsData
 {
     [SerializeField]
     [Range(0, 100)]
@@ -57,8 +57,12 @@ public class MaterialsModuleSystem : ITEModuleSystem
     [SerializeField]
     private List<GameObject> enemyMines = default;
 
-    public MaterialsData PlayerMaterialData { get => playerMaterialData; }
-    public MaterialsData EnemyMaterialData { get => enemyMaterialData; }
+    public Dictionary<PlayerType, MaterialsData> MaterialsData = new Dictionary<PlayerType, MaterialsData>();
+
+    protected override void Awake()
+    {
+        base.Awake();
+    }
 
     private void OnEnable()
     {
@@ -78,13 +82,23 @@ public class MaterialsModuleSystem : ITEModuleSystem
 
     private void InstantiateMine(MineType obj)
     {
-        if(ResourcesCheckerModuleSystem.CheckResources(obj, true))
+        if(ResourcesCheckerModuleSystem.CheckResources(obj, true, PlayerType.PLAYER))
         {
             GameObject mine = mineModuleFactory.ConstructMine(obj, PlayerType.PLAYER);
             playerMines.Add(mine);
             allMines.Add(mine);
             minePlacer.SetCurentObj(playerMines[playerMines.Count - 1]);
         }   
+    }
+
+    public void InstantiateCPUMine(MineType obj)
+    {
+        if (ResourcesCheckerModuleSystem.CheckResources(obj, true, PlayerType.CPU))
+        {
+            GameObject mine = mineModuleFactory.ConstructMine(obj, PlayerType.CPU);
+            enemyMines.Add(mine);
+            allMines.Add(mine);
+        }
     }
 
     public override void Exit()
@@ -94,6 +108,9 @@ public class MaterialsModuleSystem : ITEModuleSystem
     public override void Initialize()
     {
         mineButtons = FindObjectsOfType<MineButton>();
+
+        MaterialsData.Add(PlayerType.CPU, enemyMaterialData);
+        MaterialsData.Add(PlayerType.PLAYER, playerMaterialData);
     }
 
     public override void Tick()
@@ -106,27 +123,37 @@ public class MaterialsModuleSystem : ITEModuleSystem
         AddLocalResources();
         for (int i = 0; i < playerMines.Count; ++i)
         {
-            UpdateMaterials(playerMines[i]);
+            UpdateMaterials(playerMines[i], PlayerType.PLAYER);
+        }
+        for (int i = 0; i < playerMines.Count; ++i)
+        {
+            UpdateMaterials(enemyMines[i], PlayerType.CPU);
         }
     }
 
-    private void UpdateMaterials(GameObject mine)
+    private void UpdateMaterials(GameObject mine, PlayerType playerType)
     {
         var specificMine = mine.GetComponent<MineController>();
-        specificMine.ProduceMaterial(ref playerMaterialData);
+        specificMine.ProduceMaterial(MaterialsData[playerType]);
     }
 
-    public void RemoveResources(Tuple<int, int, int> tuple)
+    public void RemoveResources(MaterialsData matData, Tuple<int, int, int> tuple)
     {
-        playerMaterialData.AddGold(-tuple.Item1);
-        playerMaterialData.AddOil(-tuple.Item2);
-        playerMaterialData.AddIron(-tuple.Item3);
+        matData.AddGold(-tuple.Item1);
+        matData.AddOil(-tuple.Item2);
+        matData.AddIron(-tuple.Item3);
     }
 
     public void AddLocalResources()
     {
-        playerMaterialData.AddGold(1);
-        playerMaterialData.AddOil(1);
-        playerMaterialData.AddIron(1);
+        AddResources(PlayerType.PLAYER);
+        AddResources(PlayerType.CPU);
+    }
+
+    private void AddResources(PlayerType playerType)
+    {
+        MaterialsData[playerType].AddGold(1);
+        MaterialsData[playerType].AddOil(1);
+        MaterialsData[playerType].AddIron(1);
     }
 }

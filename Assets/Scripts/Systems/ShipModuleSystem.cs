@@ -31,7 +31,7 @@ public class ShipModuleSystem : ITEModuleSystem
     {
         for(int i = 0; i < shipButtons.Length; ++i)
         {
-            shipButtons[i].ButtonPressed += InstantiateShip;
+            shipButtons[i].ButtonPressed += InstantiatePlayerShip;
         }
     }
 
@@ -39,19 +39,29 @@ public class ShipModuleSystem : ITEModuleSystem
     {
         for (int i = 0; i < shipButtons.Length; ++i)
         {
-            shipButtons[i].ButtonPressed -= InstantiateShip;
+            shipButtons[i].ButtonPressed -= InstantiatePlayerShip;
         }
     }
 
-    private void InstantiateShip(ShipType obj)
+    private void InstantiatePlayerShip(ShipType obj)
     {
-        if (ResourcesCheckerModuleSystem.CheckResources(obj, true))
+        if (ResourcesCheckerModuleSystem.CheckResources(obj, true, PlayerType.PLAYER))
         {
             GameObject ship = shipModuleFactory.ConstructShip(obj, PlayerType.PLAYER);
             playerShips.Add(ship);
             allShips.Add(ship);
             shipPlacer.SetCurentObj(playerShips[playerShips.Count - 1]);
             createdShipsIndex++;
+        }
+    }
+
+    public void InstantiateCPUShip(ShipType obj)
+    {
+        if (ResourcesCheckerModuleSystem.CheckResources(obj, true, PlayerType.CPU))
+        {
+            GameObject ship = shipModuleFactory.ConstructShip(obj, PlayerType.CPU);
+            enemyShips.Add(ship);
+            allShips.Add(ship);
         }
     }
 

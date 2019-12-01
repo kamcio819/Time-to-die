@@ -19,6 +19,7 @@ public class TurnModuleSystem : ITEModuleSystem
         AddCommand(FindObjectOfType<PlayerDataHandler>());
         AddCommand(FindObjectOfType<UIBindSystem>());
         AddCommand(FindObjectOfType<MaterialsModuleSystem>());
+        AddCommand(FindObjectOfType<AIModuleSystem>());
     }
 
     public static void AddCommand(ITurnable command)

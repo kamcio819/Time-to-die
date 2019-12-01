@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4984488562179197530}
   - component: {fileID: 7721854098009382892}
   m_Layer: 0
-  m_Name: PlayerMolduleSystem
+  m_Name: PlayerModuleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,12 +183,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e0fe37bb2d31b4fa0e51eac401d589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipsData:
+  playerShipsData:
   - {fileID: 11400000, guid: 6f172fc0cd2d7ab4ea46d3b195d2354c, type: 2}
   - {fileID: 11400000, guid: a5ce7c0eaeba36a48ac9f9a0cce372f3, type: 2}
   - {fileID: 11400000, guid: 76eff30e1381a604a99a7f2a4cb2fb48, type: 2}
   - {fileID: 11400000, guid: 0b521a596bd27cf479dbefdc66df53b9, type: 2}
   - {fileID: 11400000, guid: 8dff6c773afb5aa4a94322cb484b7856, type: 2}
+  enemyShipsData:
+  - {fileID: 11400000, guid: 11ef6300373d23147ac33b03b53ce357, type: 2}
+  - {fileID: 11400000, guid: a4acb9041d474ba4db78e64c46ede235, type: 2}
+  - {fileID: 11400000, guid: 1e0a970da0d037640b42bcd54e3acc54, type: 2}
+  - {fileID: 11400000, guid: 2fab553b3c34b32429d7f3eae6f17ca4, type: 2}
+  - {fileID: 11400000, guid: 94274f408c4a96f4181e01d43d2edb61, type: 2}
 --- !u!1 &674526391959556790
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,11 +558,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6eddae1d8aab7545ac36831de7bbfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialsUISystem: {fileID: 4069839898865019336}
   materialsModuleSystem: {fileID: 4401355785342313990}
   playerModuleSystem: {fileID: 7721854098009382892}
   informationUISystem: {fileID: 3400549320093572686}
   buttonSpriteUISystem: {fileID: 1585749911839899745}
+  materialsUISystem: {fileID: 4069839898865019336}
   statsUISystem: {fileID: 5833907039003954108}
 --- !u!1 &3212462244672649057
 GameObject:
@@ -649,6 +655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AIModuleData: {fileID: 11400000, guid: af3d9a6839e452b41aea20290453b350, type: 2}
+  shipModuleSystem: {fileID: 5195129307825040307}
 --- !u!1 &4275395518332289454
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,16 +962,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efe525a223a24a42913fffe734523c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftMouseClicked: 0
-  rightMouseClicked: 0
-  scrollWheelClicked: 0
-  scrollWheelInput: 0
-  xDelta: 0
-  yDelta: 0
-  xEdgeScreen: 0
-  yEdgeScreen: 0
-  mousePosition: {x: 0, y: 0, z: 0}
-  selectedShip: {fileID: 0}
+  LeftMouseClicked: 0
+  RightMouseClicked: 0
+  ScrollWheelClicked: 0
+  ScrollWheelInput: 0
+  XInputDelta: 0
+  YInputDelta: 0
+  XEdgeScreen: 0
+  YEdgeScreen: 0
+  MousePosition: {x: 0, y: 0, z: 0}
+  SelectedObject: {fileID: 0}
 --- !u!1 &4641019798206184323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,10 +1361,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe18bc976be90840a063775a624808f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomDelta: 0
-  xDelta: 0
-  zDelta: 0
-  yDeltaShip: 0
+  ZoomDelta: 0
+  XDelta: 0
+  ZDelta: 0
+  YDeltaShip: 0
 --- !u!1 &6698770503286639709
 GameObject:
   m_ObjectHideFlags: 0

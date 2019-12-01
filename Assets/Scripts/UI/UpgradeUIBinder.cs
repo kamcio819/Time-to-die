@@ -14,7 +14,7 @@ public class UpgradeUIBinder : UIObsever
     {
         for (int i = 0; i < upgradeUIButton.Count; ++i)
         {
-            if (ResourcesCheckerModuleSystem.CheckResources(upgradeUIButton[i].Type, false))
+            if (ResourcesCheckerModuleSystem.CheckResources(upgradeUIButton[i].Type, false, PlayerType.PLAYER))
             {
                 upgradeUIButton[i].TurnOnUI(turnedOnUI);
 

@@ -30,18 +30,18 @@ public class UIBindSystem : TModuleSystem
     public override void TurnFinishUnit()
     {
         turnCount++;
-        materialsUISystem.Notify<IronUIBinder>(materialsModuleSystem.PlayerMaterialData.GetIron().ToString());
-        materialsUISystem.Notify<GoldUIBinder>(materialsModuleSystem.PlayerMaterialData.GetGold().ToString());
-        materialsUISystem.Notify<OilUIBinder>(materialsModuleSystem.PlayerMaterialData.GetOil().ToString());
+        materialsUISystem.Notify<IronUIBinder>(materialsModuleSystem.MaterialsData[PlayerType.PLAYER].GetIron().ToString());
+        materialsUISystem.Notify<GoldUIBinder>(materialsModuleSystem.MaterialsData[PlayerType.PLAYER].GetGold().ToString());
+        materialsUISystem.Notify<OilUIBinder>(materialsModuleSystem.MaterialsData[PlayerType.PLAYER].GetOil().ToString());
         statsUISystem.Notify<StatsUIBinder>(playerModuleSystem.PlayerDataHandler.GetPoints().ToString());
         informationUISystem.Notify<InfoUIBinder>("Day " + turnCount.ToString());
     }
 
     public override void Tick()
     {
-        materialsUISystem.Notify<IronUIBinder>(materialsModuleSystem.PlayerMaterialData.GetIron().ToString());
-        materialsUISystem.Notify<GoldUIBinder>(materialsModuleSystem.PlayerMaterialData.GetGold().ToString());
-        materialsUISystem.Notify<OilUIBinder>(materialsModuleSystem.PlayerMaterialData.GetOil().ToString());
+        materialsUISystem.Notify<IronUIBinder>(materialsModuleSystem.MaterialsData[PlayerType.PLAYER].GetIron().ToString());
+        materialsUISystem.Notify<GoldUIBinder>(materialsModuleSystem.MaterialsData[PlayerType.PLAYER].GetGold().ToString());
+        materialsUISystem.Notify<OilUIBinder>(materialsModuleSystem.MaterialsData[PlayerType.PLAYER].GetOil().ToString());
 
         buttonSpriteUISystem.Notify<ShipUIBinder>("x");
         buttonSpriteUISystem.Notify<MineUIBinder>("x");
