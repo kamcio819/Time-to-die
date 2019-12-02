@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AIRuleDecision : AIBehaviour
@@ -25,7 +26,7 @@ public class AIRuleDecision : AIBehaviour
 
         for (int i = 0; i < aIRuleHandlers.Count; ++i)
         {
-            elem = aIRuleHandlers[i].AIRules.Find((x) => x.Conditions.Equals(concl));
+            elem = aIRuleHandlers[i].AIRules.Find(x=>ListEqual(x, concl));
             if (elem != null)
             {
                 break;
@@ -37,6 +38,27 @@ public class AIRuleDecision : AIBehaviour
         }
 
         return elem;
+    }
+
+    private bool ListEqual(AIRuleData x, List<string> concl)
+    {
+        bool contains = false;
+
+        for(int i = 0; i < concl.Count; ++i)
+        {
+            if (x.Conditions.Contains(concl[i]))
+            {
+                contains = true;
+                continue;
+            } 
+            else
+            {
+                contains = false;
+                break;
+            }
+        }
+
+        return contains;
     }
 
     private void ExecuteRule(AIRuleData aIRule)

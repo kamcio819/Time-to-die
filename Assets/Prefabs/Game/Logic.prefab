@@ -139,7 +139,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b5e4f3dd34e3c44ab5e8ff4c2500b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aIRules: []
+  aIRules:
+  - conditions:
+    - TO FEW OIL
+    - TIME LESS THAN 5 MINUTES
+    conclusions:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4401355785342313990}
+          m_MethodName: InstantiateCPUMine
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - conditions:
+    - TO FEW GOLD
+    - TIME LESS THAN 5 MINUTES
+    conclusions:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4401355785342313990}
+          m_MethodName: InstantiateCPUMine
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - conditions:
+    - TO FEW IRON
+    - TIME LESS THAN 5 MINUTES
+    conclusions:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4401355785342313990}
+          m_MethodName: InstantiateCPUMine
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
 --- !u!1 &379090829659176409
 GameObject:
   m_ObjectHideFlags: 0

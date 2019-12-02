@@ -59,6 +59,9 @@ public class MaterialsModuleSystem : ITEModuleSystem
 
     public Dictionary<PlayerType, MaterialsData> MaterialsData = new Dictionary<PlayerType, MaterialsData>();
 
+    public List<GameObject> PlayerMines { get => playerMines; }
+    public List<GameObject> EnemyMines { get => enemyMines; }
+
     protected override void Awake()
     {
         base.Awake();
@@ -96,6 +99,16 @@ public class MaterialsModuleSystem : ITEModuleSystem
         if (ResourcesCheckerModuleSystem.CheckResources(obj, true, PlayerType.CPU))
         {
             GameObject mine = mineModuleFactory.ConstructMine(obj, PlayerType.CPU);
+            enemyMines.Add(mine);
+            allMines.Add(mine);
+        }
+    }
+
+    public void InstantiateCPUMine(int type)
+    {
+        if (ResourcesCheckerModuleSystem.CheckResources((MineType)type, true, PlayerType.CPU))
+        {
+            GameObject mine = mineModuleFactory.ConstructMine((MineType)type, PlayerType.CPU);
             enemyMines.Add(mine);
             allMines.Add(mine);
         }
