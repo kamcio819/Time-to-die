@@ -96,6 +96,50 @@ MonoBehaviour:
   playerShips: []
   allShips: []
   enemyShips: []
+--- !u!1 &375186048788345473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3545702192436541666}
+  - component: {fileID: 683299259987167386}
+  m_Layer: 0
+  m_Name: AIBuilding
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3545702192436541666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375186048788345473}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 710619032738461458}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &683299259987167386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375186048788345473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b5e4f3dd34e3c44ab5e8ff4c2500b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aIRules: []
 --- !u!1 &379090829659176409
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e0fe37bb2d31b4fa0e51eac401d589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipDataController: {fileID: 0}
   playerShipsData:
   - {fileID: 11400000, guid: 6f172fc0cd2d7ab4ea46d3b195d2354c, type: 2}
   - {fileID: 11400000, guid: a5ce7c0eaeba36a48ac9f9a0cce372f3, type: 2}
@@ -384,6 +429,50 @@ MonoBehaviour:
   - {fileID: 1509421488865121347}
   - {fileID: 8259239614688640385}
   - {fileID: 5644069268113557861}
+--- !u!1 &1520883646023663159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7842715178387257534}
+  - component: {fileID: 3827659293723836939}
+  m_Layer: 0
+  m_Name: AIUpgrade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7842715178387257534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520883646023663159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 710619032738461458}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3827659293723836939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520883646023663159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe22537607740924385f84926b450762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aIRules: []
 --- !u!1 &2396544179989510349
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 710619032738461458}
   - component: {fileID: 3313287004265882183}
+  - component: {fileID: 3638068032805700253}
   m_Layer: 0
   m_Name: AIRuleDecision
   m_TagString: Untagged
@@ -638,7 +728,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 3545702192436541666}
+  - {fileID: 7842715178387257534}
+  - {fileID: 6515047081300604945}
   m_Father: {fileID: 4401355785275684391}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -655,7 +748,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AIModuleData: {fileID: 11400000, guid: af3d9a6839e452b41aea20290453b350, type: 2}
+  AIDecisions: {fileID: 3638068032805700253}
+  aIRuleHandlers:
+  - {fileID: 683299259987167386}
+  - {fileID: 3827659293723836939}
+  - {fileID: 1435323549304021886}
+--- !u!114 &3638068032805700253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646438589020540471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5830de31b81bc445bee86ec968a740d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   shipModuleSystem: {fileID: 5195129307825040307}
+  materialsModuleSystem: {fileID: 4401355785342313990}
+  upgradeModuleSystem: {fileID: 7936147062656723996}
 --- !u!1 &4275395518332289454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,6 +1381,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
+--- !u!1 &5797136858474070074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6515047081300604945}
+  - component: {fileID: 1435323549304021886}
+  m_Layer: 0
+  m_Name: AIShip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6515047081300604945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5797136858474070074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 710619032738461458}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1435323549304021886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5797136858474070074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8028a52926afc0948bad5c325356d32d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aIRules: []
 --- !u!1 &6165748708035061863
 GameObject:
   m_ObjectHideFlags: 0
