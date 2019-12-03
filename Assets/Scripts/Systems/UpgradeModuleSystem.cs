@@ -10,7 +10,11 @@ public class UpgradeModuleSystem : ITEModuleSystem
 
     private UpgradeButton[] upgradeButtons;
 
-    public Dictionary<PlayerType, List<UpgradeType>> UpgradeData = new Dictionary<PlayerType, List<UpgradeType>>();
+    public Dictionary<PlayerType, List<UpgradeType>> UpgradeData = new Dictionary<PlayerType, List<UpgradeType>>()
+    {
+        {PlayerType.PLAYER, new List<UpgradeType>() },
+        {PlayerType.CPU, new List<UpgradeType>() }
+    };
 
     private void OnEnable()
     {

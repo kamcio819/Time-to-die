@@ -633,6 +633,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 32
+  mapModuleSystem: {fileID: 5263255526038226445}
   ShipPlacer: 0
   BuildingPlacer: 1
 --- !u!1 &2396609421664967626
@@ -1338,6 +1339,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 32
+  mapModuleSystem: {fileID: 5263255526038226445}
   ShipPlacer: 1
   BuildingPlacer: 0
 --- !u!1 &4987958623702275795
@@ -1429,6 +1431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapData: {fileID: 5263255526038226434}
   mapObject: {fileID: 0}
+  tiles: []
 --- !u!114 &5263255526038226434
 MonoBehaviour:
   m_ObjectHideFlags: 0

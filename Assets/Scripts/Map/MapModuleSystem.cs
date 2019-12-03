@@ -13,17 +13,21 @@ public class MapModuleSystem : IModuleSystem {
 
     [SerializeField]
     private GameObject mapObject = default;
+
+    [SerializeField]
+    private List<GameObject> tiles = default;
 	
     private Transform centerTile;
 
     public Transform CenterTile { get => centerTile; }
     public GameObject MapObject { get => mapObject; }
+    public List<GameObject> Tiles { get => tiles; }
 
     public override void Initialize() {
 
 		for (int z = 0, i = 0; z < mapData.mapHeight; z++) {
 			for (int x = 0; x < mapData.mapWidth; x++) {
-				CreateCell(x, z, i++, MapObject);
+                tiles.Add(CreateCell(x, z, i++, MapObject));
 			}
 		}
 		
@@ -37,7 +41,7 @@ public class MapModuleSystem : IModuleSystem {
         
     }
 
-    void CreateCell (int x, int z, int i, GameObject map) {
+    private GameObject CreateCell (int x, int z, int i, GameObject map) {
 
 		Vector3 position;
 		position.x = (x + z * 0.5f - z / 2) * (HexMetrics.INNER_RADIUS * 4f);
@@ -54,5 +58,7 @@ public class MapModuleSystem : IModuleSystem {
 		if(x * 2 == mapData.mapWidth && z * 2 == mapData.mapHeight) {
             centerTile = cell.transform;
 		}
+
+        return cell.gameObject;
 	}
 }

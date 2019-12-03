@@ -99,6 +99,7 @@ public class MaterialsModuleSystem : ITEModuleSystem
         if (ResourcesCheckerModuleSystem.CheckResources(obj, true, PlayerType.CPU))
         {
             GameObject mine = mineModuleFactory.ConstructMine(obj, PlayerType.CPU);
+            minePlacer.PlaceCPUMine(mine);
             enemyMines.Add(mine);
             allMines.Add(mine);
         }
@@ -109,6 +110,7 @@ public class MaterialsModuleSystem : ITEModuleSystem
         if (ResourcesCheckerModuleSystem.CheckResources((MineType)type, true, PlayerType.CPU))
         {
             GameObject mine = mineModuleFactory.ConstructMine((MineType)type, PlayerType.CPU);
+            minePlacer.PlaceCPUMine(mine);
             enemyMines.Add(mine);
             allMines.Add(mine);
         }

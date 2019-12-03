@@ -18,6 +18,9 @@ public class ObjectPlacer : MonoBehaviour
     [SerializeField]
     private LayerMask layerMask = default;
 
+    [SerializeField]
+    private MapModuleSystem mapModuleSystem = default;
+
     private GameObject currentObj;
     private Vector3 offset = new Vector3(0f, 0.1f, 0f);
 
@@ -81,5 +84,30 @@ public class ObjectPlacer : MonoBehaviour
                 currentObj.transform.position = tile.transform.position + offset;
             }
         }
+    }
+
+    public void PlaceCPUShip(GameObject ship)
+    {
+        List<GameObject> seaTiles = mapModuleSystem.Tiles.FindAll(x => CanPlaceOnTile(x, MapSystem.Type.SEA));
+        ship.transform.position = seaTiles[UnityEngine.Random.Range(0, seaTiles.Count - 1)].transform.position + offset;
+    }
+
+    public void PlaceCPUMine(GameObject mine)
+    {
+        List<GameObject> simpleTiles = mapModuleSystem.Tiles.FindAll(x => CanPlaceOnTile(x, MapSystem.Type.SIMPLE));
+        mine.transform.position = simpleTiles[UnityEngine.Random.Range(0, simpleTiles.Count - 1)].transform.position + offset;
+    }
+
+    private bool CanPlaceOnTile(GameObject x, MapSystem.Type type)
+    {
+        HexTile hexTile = x.GetComponent<HexTile>();
+        if(hexTile)
+        {
+            if(hexTile.tileType == type && hexTile.availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

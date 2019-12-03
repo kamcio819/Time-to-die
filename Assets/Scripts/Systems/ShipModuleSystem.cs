@@ -64,6 +64,7 @@ public class ShipModuleSystem : ITEModuleSystem
         if (ResourcesCheckerModuleSystem.CheckResources(obj, true, PlayerType.CPU))
         {
             GameObject ship = shipModuleFactory.ConstructShip(obj, PlayerType.CPU);
+            shipPlacer.PlaceCPUShip(ship);
             enemyShips.Add(ship);
             allShips.Add(ship);
         }
@@ -74,6 +75,7 @@ public class ShipModuleSystem : ITEModuleSystem
         if (ResourcesCheckerModuleSystem.CheckResources((ShipType)obj, true, PlayerType.CPU))
         {
             GameObject ship = shipModuleFactory.ConstructShip((ShipType)obj, PlayerType.CPU);
+            shipPlacer.PlaceCPUShip(ship);
             enemyShips.Add(ship);
             allShips.Add(ship);
         }
