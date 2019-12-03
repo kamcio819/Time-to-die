@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &2835565817749929999
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2536202304881999086}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 19.6, y: 24, z: 100}
-  m_Center: {x: 0, y: 9.5, z: 0}
 --- !u!65 &824963793626281416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25,6 +12,19 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 39.9, y: 24, z: 46.6}
+  m_Center: {x: 0, y: 9.5, z: 0}
+--- !u!65 &2835565817749929999
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2536202304881999086}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 19.6, y: 24, z: 100}
   m_Center: {x: 0, y: 9.5, z: 0}
 --- !u!1 &8869947971613997406
 GameObject:
@@ -1183,6 +1183,11 @@ PrefabInstance:
       propertyPath: shipOwnershipController
       value: 
       objectReference: {fileID: 2901604353192795945}
+    - target: {fileID: 3671240768619615528, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: shipType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5721111779952997546, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
         type: 3}
       propertyPath: shipTileController

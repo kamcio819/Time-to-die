@@ -773,6 +773,11 @@ PrefabInstance:
       propertyPath: shipOwnershipController
       value: 
       objectReference: {fileID: 940810802170117226}
+    - target: {fileID: 3671240768619615528, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: shipType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5721111779952997546, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
         type: 3}
       propertyPath: shipTileController

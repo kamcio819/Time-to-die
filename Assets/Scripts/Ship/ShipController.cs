@@ -22,10 +22,13 @@ public class ShipController : MonoBehaviour
     private ShipRangeDrawer shipRangeDrawer = default;
 
     [SerializeField]
+    private ShipOwnershipController shipOwnershipController;
+
+    [SerializeField]
     private PlayerType playerType;
 
     [SerializeField]
-    private ShipOwnershipController shipOwnershipController;
+    private ShipType shipType;
 
     private bool catchMovement = false;
     private bool catchAttack = false;
@@ -35,6 +38,7 @@ public class ShipController : MonoBehaviour
     private Vector3 offset = new Vector3(0f, 0.2f, 0f);
 
     public PlayerType PlayerType { get => playerType; }
+    public ShipType ShipType { get => shipType; }
 
     private void OnMouseDown()
     {

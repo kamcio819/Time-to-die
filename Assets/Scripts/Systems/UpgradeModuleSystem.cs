@@ -10,6 +10,8 @@ public class UpgradeModuleSystem : ITEModuleSystem
 
     private UpgradeButton[] upgradeButtons;
 
+    public Dictionary<PlayerType, List<UpgradeType>> UpgradeData = new Dictionary<PlayerType, List<UpgradeType>>();
+
     private void OnEnable()
     {
         for (int i = 0; i < upgradeButtons.Length; ++i)
@@ -34,12 +36,15 @@ public class UpgradeModuleSystem : ITEModuleSystem
             {
                 case UpgradeType.DAMAGE:
                     shipDataUpgrader.UpgradeDamage(10f, PlayerType.PLAYER);
+                    UpgradeData[PlayerType.PLAYER].Add(UpgradeType.DAMAGE);
                     break;
                 case UpgradeType.HEALTH:
                     shipDataUpgrader.UpgradeHealth(20f, PlayerType.PLAYER);
+                    UpgradeData[PlayerType.PLAYER].Add(UpgradeType.HEALTH);
                     break;
                 case UpgradeType.RANGE:
                     shipDataUpgrader.UpgradeMove(1, PlayerType.PLAYER);
+                    UpgradeData[PlayerType.PLAYER].Add(UpgradeType.RANGE);
                     break;
                 default:
                     break;
@@ -55,12 +60,15 @@ public class UpgradeModuleSystem : ITEModuleSystem
             {
                 case UpgradeType.DAMAGE:
                     shipDataUpgrader.UpgradeDamage(10f, PlayerType.CPU);
+                    UpgradeData[PlayerType.CPU].Add(UpgradeType.DAMAGE);
                     break;
                 case UpgradeType.HEALTH:
                     shipDataUpgrader.UpgradeHealth(20f, PlayerType.CPU);
+                    UpgradeData[PlayerType.CPU].Add(UpgradeType.HEALTH);
                     break;
                 case UpgradeType.RANGE:
                     shipDataUpgrader.UpgradeMove(1, PlayerType.CPU);
+                    UpgradeData[PlayerType.CPU].Add(UpgradeType.RANGE);
                     break;
                 default:
                     break;
@@ -76,12 +84,15 @@ public class UpgradeModuleSystem : ITEModuleSystem
             {
                 case UpgradeType.DAMAGE:
                     shipDataUpgrader.UpgradeDamage(10f, PlayerType.CPU);
+                    UpgradeData[PlayerType.CPU].Add(UpgradeType.DAMAGE);
                     break;
                 case UpgradeType.HEALTH:
                     shipDataUpgrader.UpgradeHealth(20f, PlayerType.CPU);
+                    UpgradeData[PlayerType.CPU].Add(UpgradeType.HEALTH);
                     break;
                 case UpgradeType.RANGE:
                     shipDataUpgrader.UpgradeMove(1, PlayerType.CPU);
+                    UpgradeData[PlayerType.CPU].Add(UpgradeType.RANGE);
                     break;
                 default:
                     break;

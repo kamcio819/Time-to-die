@@ -709,19 +709,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.25, y: 1, z: 4}
   m_Center: {x: -0.0000010728836, y: 0.57, z: -0.23933113}
---- !u!65 &3802254259286863640
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7191173803332507336}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 14.28, y: 13.72, z: 84.67}
-  m_Center: {x: 0, y: 8.46, z: 0}
 --- !u!65 &1903495265370638832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -734,6 +721,19 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 29.9, y: 13.72, z: 36.1}
+  m_Center: {x: 0, y: 8.46, z: 0}
+--- !u!65 &3802254259286863640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7191173803332507336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.28, y: 13.72, z: 84.67}
   m_Center: {x: 0, y: 8.46, z: 0}
 --- !u!1 &7468792662663418281
 GameObject:
@@ -1038,6 +1038,11 @@ PrefabInstance:
       propertyPath: shipOwnershipController
       value: 
       objectReference: {fileID: 9025534566852120633}
+    - target: {fileID: 3671240768619615528, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: shipType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5721111779952997546, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
         type: 3}
       propertyPath: shipTileController

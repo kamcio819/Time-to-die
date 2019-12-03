@@ -27,6 +27,10 @@ public class ShipModuleSystem : ITEModuleSystem
 
     private int createdShipsIndex = 0;
 
+    public List<GameObject> PlayerShips { get => playerShips; }
+    public List<GameObject> EnemyShips { get => enemyShips; }
+    public List<GameObject> AllShips { get => allShips; }
+
     private void OnEnable()
     {
         for(int i = 0; i < shipButtons.Length; ++i)
