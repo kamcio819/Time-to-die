@@ -29,6 +29,29 @@ public class ShipAttackingController : MonoBehaviour, ITurnable
         TurnModuleSystem.RemoveCommand(this);
     }
 
+    public bool AttackPosition(RaycastHit hit, Vector3 offset)
+    {
+        HexTile hexTile = hit.transform.GetComponent<HexTile>();
+        if (hexTile)
+        {
+            if (HexInRange(hexTile, shipDataController.ShipData.ShipDataContainer.GetAttackRange()))
+            {
+                AttackPosition(hexTile.transform.position + offset, 1f);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private bool HexInRange(HexTile hexTile, float range)
+    {
+        if (Mathf.Abs(hexTile.transform.position.x - transform.position.x) <= range && Mathf.Abs(hexTile.transform.position.z - transform.position.z) <= range)
+        {
+            return true;
+        }
+        return false;
+    }
+
     public void AttackPosition(Vector3 point, float speed)
     {
         shipDataController.attackPoints--;

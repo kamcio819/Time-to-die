@@ -484,6 +484,7 @@ GameObject:
   - component: {fileID: 5944956145141171172}
   - component: {fileID: 2527511494228609096}
   - component: {fileID: 5996670926717862080}
+  - component: {fileID: 9025534566852120633}
   m_Layer: 0
   m_Name: FrigateModel
   m_TagString: Untagged
@@ -534,7 +535,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 57c284ad1d262ef4fbf1b30c4bffb8e6, type: 2}
   - {fileID: 2100000, guid: a1d9cb9c5ef5e8c4ebcaa13a34b34886, type: 2}
-  - {fileID: 2100000, guid: c2fa5c47a18e6e34e967ef3183ad0c96, type: 2}
+  - {fileID: 2100000, guid: 464dffc5abc1bb54dbf859c9121d2a03, type: 2}
   - {fileID: 2100000, guid: 9855e70614dd5c64da46b54a0bfce6d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -601,6 +602,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OccupiedTiles: []
+--- !u!114 &9025534566852120633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5937843297281640746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bedad05659e2bc4f82718e1c85fd370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMaterial: {fileID: 2100000, guid: 575d8d7ac9a92ca4aac3fb54dcc7fd5f, type: 2}
+  playerMaterial: {fileID: 2100000, guid: 464dffc5abc1bb54dbf859c9121d2a03, type: 2}
+  meshRenderer: {fileID: 5924269433114538256}
 --- !u!1 &5937892889877607752
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,6 +721,19 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 14.28, y: 13.72, z: 84.67}
+  m_Center: {x: 0, y: 8.46, z: 0}
+--- !u!65 &1903495265370638832
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7191173803332507336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 29.9, y: 13.72, z: 36.1}
   m_Center: {x: 0, y: 8.46, z: 0}
 --- !u!1 &7468792662663418281
 GameObject:
@@ -910,27 +939,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frigate
       objectReference: {fileID: 0}
-    - target: {fileID: 4416873471869958738, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
-        type: 3}
-      propertyPath: beginPosition.y
-      value: 35.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4416873471869958738, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
-        type: 3}
-      propertyPath: missile
-      value: 
-      objectReference: {fileID: 8317444540619124621}
-    - target: {fileID: 3671240768619615528, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
-        type: 3}
-      propertyPath: shipData
-      value: 
-      objectReference: {fileID: 11400000, guid: 8dff6c773afb5aa4a94322cb484b7856,
-        type: 2}
-    - target: {fileID: 3671240768619615528, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
-        type: 3}
-      propertyPath: shipTileController
-      value: 
-      objectReference: {fileID: 5996670926717862080}
     - target: {fileID: 3580099131968842578, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1014,11 +1022,62 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 94274f408c4a96f4181e01d43d2edb61,
         type: 2}
+    - target: {fileID: 3671240768619615528, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: shipData
+      value: 
+      objectReference: {fileID: 11400000, guid: 8dff6c773afb5aa4a94322cb484b7856,
+        type: 2}
+    - target: {fileID: 3671240768619615528, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: shipTileController
+      value: 
+      objectReference: {fileID: 5996670926717862080}
+    - target: {fileID: 3671240768619615528, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: shipOwnershipController
+      value: 
+      objectReference: {fileID: 9025534566852120633}
+    - target: {fileID: 5721111779952997546, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: shipTileController
+      value: 
+      objectReference: {fileID: 5996670926717862080}
+    - target: {fileID: 4416873471869958738, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: beginPosition.y
+      value: 35.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416873471869958738, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: missile
+      value: 
+      objectReference: {fileID: 8317444540619124621}
     - target: {fileID: 8461316082604355849, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
         type: 3}
       propertyPath: meshRenderer
       value: 
       objectReference: {fileID: 5924269433114538256}
+    - target: {fileID: 4879886080864520361, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879886080864520361, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879886080864520361, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879886080864520361, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 3023847891103796839, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1064,26 +1123,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4879886080864520361, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4879886080864520361, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4879886080864520361, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4879886080864520361, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 45
-      objectReference: {fileID: 0}
     - target: {fileID: 6156914344019636234, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
         type: 3}
       propertyPath: m_Sprite
@@ -1110,6 +1149,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 35.4
       objectReference: {fileID: 0}
+    - target: {fileID: 5379976833649115655, guid: 0d03c5beb1787ff4ea763a6557eeb0df,
+        type: 3}
+      propertyPath: shipTileController
+      value: 
+      objectReference: {fileID: 5996670926717862080}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d03c5beb1787ff4ea763a6557eeb0df, type: 3}
 --- !u!4 &7791187322445928206 stripped

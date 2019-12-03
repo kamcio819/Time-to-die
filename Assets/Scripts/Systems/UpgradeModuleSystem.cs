@@ -68,6 +68,27 @@ public class UpgradeModuleSystem : ITEModuleSystem
         }
     }
 
+    public void UpgradeCPUShip(int obj)
+    {
+        if (ResourcesCheckerModuleSystem.CheckResources((UpgradeType)obj, true, PlayerType.CPU))
+        {
+            switch ((UpgradeType)obj)
+            {
+                case UpgradeType.DAMAGE:
+                    shipDataUpgrader.UpgradeDamage(10f, PlayerType.CPU);
+                    break;
+                case UpgradeType.HEALTH:
+                    shipDataUpgrader.UpgradeHealth(20f, PlayerType.CPU);
+                    break;
+                case UpgradeType.RANGE:
+                    shipDataUpgrader.UpgradeMove(1, PlayerType.CPU);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
     public override void Exit() {}
 
     public override void Initialize()

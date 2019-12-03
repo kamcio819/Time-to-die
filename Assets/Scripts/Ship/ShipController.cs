@@ -19,14 +19,20 @@ public class ShipController : MonoBehaviour
     private ShipTileController shipTileController = default;
 
     [SerializeField]
+    private ShipRangeDrawer shipRangeDrawer = default;
+
+    [SerializeField]
     private PlayerType playerType;
+
+    [SerializeField]
+    private ShipOwnershipController shipOwnershipController;
 
     private bool catchMovement = false;
     private bool catchAttack = false;
     private Camera cam;
     private CursorInput cursorInput;
 
-    private Vector3 offset = new Vector3(0f, 0.1f, 0f);
+    private Vector3 offset = new Vector3(0f, 0.2f, 0f);
 
     public PlayerType PlayerType { get => playerType; }
 
@@ -38,8 +44,8 @@ public class ShipController : MonoBehaviour
 
             if (uIShipController.Selected)
             {
-                DrawMovementRange(false);
-                DrawAttackRange(false);
+                shipRangeDrawer.DrawMovementRange(false);
+                shipRangeDrawer.DrawAttackRange(false);
             }
             uIShipController.ToggleUIPanel();
         }
@@ -63,8 +69,8 @@ public class ShipController : MonoBehaviour
 
     public void ProcessMovement()
     {
-        DrawAttackRange(false);
-        DrawMovementRange(true);
+        shipRangeDrawer.DrawAttackRange(false);
+        shipRangeDrawer.DrawMovementRange(true);
 
         catchMovement = true;
         catchAttack = false;
@@ -72,72 +78,19 @@ public class ShipController : MonoBehaviour
 
     public void ResetActions()
     {
-        DrawAttackRange(false);
-        DrawMovementRange(false);
+        shipRangeDrawer.DrawAttackRange(false);
+        shipRangeDrawer.DrawMovementRange(false);
         catchMovement = false;
         catchAttack = false;
     }
 
-    public void DrawMovementRange(bool flag)
-    {
-        Collider[] tiles = Physics.OverlapSphere(transform.position, shipDataController.ShipData.ShipDataContainer.GetMovementRange());
-        for (int i = 0; i < tiles.Length; ++i)
-        {
-            TileController tileController = tiles[i].GetComponent<TileController>();
-            HexTile hexTile = tiles[i].GetComponent<HexTile>();
-            if (tileController && hexTile && hexTile.tileType == MapSystem.Type.SEA && CheckForTileAvailability(hexTile))
-            {
-                if (flag)
-                    tileController.ChangeColorOfTile(Color.gray);
-                else
-                    tileController.ResetTileColor();
-            }
-                
-        }
-    }
-
-    private bool CheckForTileAvailability(HexTile hexTile)
-    {
-        if(shipTileController.OccupiedTiles.Contains(hexTile))
-        {
-            return true;
-        }
-        else
-        {
-            if (hexTile.availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-    }
-
     public void ProcessAttack()
     {
-        DrawMovementRange(false);
-        DrawAttackRange(true);
+        shipRangeDrawer.DrawMovementRange(false);
+        shipRangeDrawer.DrawAttackRange(true);
 
         catchAttack = true;
         catchMovement = false;
-    }
-
-    public void DrawAttackRange(bool flag)
-    {
-        Collider[] tiles = Physics.OverlapSphere(transform.position, shipDataController.ShipData.ShipDataContainer.GetAttackRange());
-        for (int i = 0; i < tiles.Length; ++i)
-        {
-            TileController tileController = tiles[i].GetComponent<TileController>();
-            if (tileController)
-            {
-                if (flag)
-                    tileController.ChangeColorOfTile(Color.yellow);
-                else
-                    tileController.ResetTileColor();
-            }
-        }
     }
 
     private void Update()
@@ -160,14 +113,9 @@ public class ShipController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            HexTile hexTile = hit.transform.GetComponent<HexTile>();
-            if (hexTile)
+            if(shipAttackingController.AttackPosition(hit, offset))
             {
-                if (HexInRange(hexTile, shipDataController.ShipData.ShipDataContainer.GetAttackRange()))
-                {
-                    shipAttackingController.AttackPosition(hexTile.transform.position + offset, 1f);
-                }
-                DrawAttackRange(false);
+                shipRangeDrawer.DrawAttackRange(false);
                 catchAttack = false;
                 uIShipController.ToggleUIPanel();
             }
@@ -181,27 +129,13 @@ public class ShipController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            HexTile hexTile = hit.transform.GetComponent<HexTile>();
-            if (hexTile)
+            if(shipMovementController.UpdateShipPosition(hit))
             {
-                if (HexInRange(hexTile, shipDataController.ShipData.ShipDataContainer.GetMovementRange()) && CheckForTileAvailability(hexTile))
-                {
-                    shipMovementController.MoveToPosition(hexTile.transform.position, 4f);
-                }
-                DrawMovementRange(false);
+                shipRangeDrawer.DrawMovementRange(false);
                 catchMovement = false;
                 uIShipController.ToggleUIPanel();
             }
         }
-    }
-
-    private bool HexInRange(HexTile hexTile, float range)
-    {
-        if(Mathf.Abs(hexTile.transform.position.x - transform.position.x) <= range && Mathf.Abs(hexTile.transform.position.z - transform.position.z) <= range)
-        {
-            return true;
-        }
-        return false;
     }
 
     private Ray CreateRayFromCamera()
@@ -213,6 +147,7 @@ public class ShipController : MonoBehaviour
     {
         playerType = _playerType;
         shipDataController.SetData(playerType);
+        shipOwnershipController.SetMaterial(playerType);
     }
 
 }

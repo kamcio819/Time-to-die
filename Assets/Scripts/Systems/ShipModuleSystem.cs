@@ -65,6 +65,16 @@ public class ShipModuleSystem : ITEModuleSystem
         }
     }
 
+    public void InstantiateCPUShip(int obj)
+    {
+        if (ResourcesCheckerModuleSystem.CheckResources((ShipType)obj, true, PlayerType.CPU))
+        {
+            GameObject ship = shipModuleFactory.ConstructShip((ShipType)obj, PlayerType.CPU);
+            enemyShips.Add(ship);
+            allShips.Add(ship);
+        }
+    }
+
     public int GetCreatedShips()
     {
         return createdShipsIndex;

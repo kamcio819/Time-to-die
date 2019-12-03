@@ -25,4 +25,21 @@ public class ShipTileController : MonoBehaviour
             hexTile.availableToPlaceOn = MapSystem.AvailableToPlaceOn.YES;
         }
     }
+
+    public bool CheckForTileAvailability(HexTile hexTile)
+    {
+        if (OccupiedTiles.Contains(hexTile))
+        {
+            return true;
+        } else
+        {
+            if (hexTile.availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES)
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
+        }
+    }
 }

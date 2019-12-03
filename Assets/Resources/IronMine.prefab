@@ -583,7 +583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8011254853400388130}
   - component: {fileID: 4845042847647638185}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: OwnershipIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,6 +10,32 @@ public class ShipMovementController : MonoBehaviour
     [SerializeField]
     private ShipDataController shipDataController = default;
 
+    [SerializeField]
+    private ShipTileController shipTileController = default;
+
+    public bool UpdateShipPosition(RaycastHit hit)
+    {
+        HexTile hexTile = hit.transform.GetComponent<HexTile>();
+        if (hexTile)
+        {
+            if (HexInRange(hexTile, shipDataController.ShipData.ShipDataContainer.GetMovementRange()) && shipTileController.CheckForTileAvailability(hexTile))
+            {
+                MoveToPosition(hexTile.transform.position, 4f);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private bool HexInRange(HexTile hexTile, float range)
+    {
+        if (Mathf.Abs(hexTile.transform.position.x - transform.position.x) <= range && Mathf.Abs(hexTile.transform.position.z - transform.position.z) <= range)
+        {
+            return true;
+        }
+        return false;
+    }
+
     public void MoveToPosition(Vector3 position, float duration)
     {
         shipDataController.movePoints--;
