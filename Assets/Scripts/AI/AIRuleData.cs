@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[PreferBinarySerialization]
 [System.Serializable]
 public class AIRuleData
 {

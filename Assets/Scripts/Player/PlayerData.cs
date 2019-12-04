@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[PreferBinarySerialization]
 [CreateAssetMenu(fileName = "PlayerData", menuName = "Player/Data", order = 1)]
 public class PlayerData : ScriptableObject
 {

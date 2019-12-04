@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[PreferBinarySerialization]
 [CreateAssetMenu(fileName = "AIData", menuName = "AI/Data", order = 1)]
 public class AIModuleData : ScriptableObject
 {
