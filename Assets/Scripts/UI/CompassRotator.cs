@@ -11,6 +11,9 @@ public class CompassRotator : MonoBehaviour
     [SerializeField]
     private Image fill = default;
 
+    [SerializeField]
+    private Animator compassFinishingColor = default;
+
 	[Range(5, 15)]
 	public float roationSpeed = 10f;
 
@@ -33,9 +36,14 @@ public class CompassRotator : MonoBehaviour
     {
 		transform.RotateAround(transform.position, Vector3.back, roationSpeed * Time.deltaTime);
         fill.fillAmount += 0.0135f * Time.deltaTime;
+        if(fill.fillAmount > 0.8f)
+        {
+            compassFinishingColor.SetBool("isFinishing", true);
+        }
         if (fill.fillAmount == 1)
         {
             fill.fillAmount = 0f;
+            compassFinishingColor.SetBool("isFinishing", false);
             turnModuleSystem.EndTurn();
         }
 	}
