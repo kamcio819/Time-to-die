@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipModuleFactory: {fileID: 5257609364994839330}
+  eventModuleSystem: {fileID: 2154709712490650478}
   shipPlacer: {fileID: 1979201075821459041}
   playerShips: []
   allShips: []
@@ -241,6 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipDataUpgrader: {fileID: 5668310954921157507}
+  eventModuleSystem: {fileID: 2154709712490650478}
 --- !u!1 &479869799408818294
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +713,7 @@ Transform:
   - {fileID: 2092845847925981550}
   - {fileID: 1728205164158179745}
   - {fileID: 2775912310809833009}
+  - {fileID: 5363678520533188518}
   m_Father: {fileID: 8095405044930103395}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1139,6 +1142,7 @@ MonoBehaviour:
     oil: 12
     iron: 12
   mineModuleFactory: {fileID: 1725054706064679036}
+  eventModuleSystem: {fileID: 2154709712490650478}
   minePlacer: {fileID: 7510390340233307448}
   playerMines: []
   allMines: []
@@ -2084,6 +2088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56097612264f10149a42c09d54b7686f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiObserver: {fileID: 7391240298365045086}
 --- !u!1 &8234681773874845203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,3 +2135,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiObservers:
   - {fileID: 3174559149493481024}
+--- !u!1 &8637973217809244359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5363678520533188518}
+  - component: {fileID: 7391240298365045086}
+  m_Layer: 0
+  m_Name: EventUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5363678520533188518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637973217809244359}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 421420977263689028}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7391240298365045086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637973217809244359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596a695fe0abe9f46be70564223c1f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  eventUIAnimationController: {fileID: 0}

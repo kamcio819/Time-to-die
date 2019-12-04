@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class EventModuleSystem : IEModuleSystem
 {
+    [SerializeField]
+    protected UIObsever uiObserver;
+
+    public virtual void Notify<T>(string txt)
+        where T : UIObsever
+    {
+        uiObserver.BindUI(txt);
+    }
+
     public override void TurnFinishUnit()
     {
         

@@ -42,6 +42,9 @@ public class MaterialsModuleSystem : ITEModuleSystem
     private MineModuleFactory mineModuleFactory = default;
 
     [SerializeField]
+    private EventModuleSystem eventModuleSystem = default;
+
+    [SerializeField]
     private ObjectPlacer minePlacer = default;
 
     private MineButton[] mineButtons;
@@ -91,7 +94,11 @@ public class MaterialsModuleSystem : ITEModuleSystem
             playerMines.Add(mine);
             allMines.Add(mine);
             minePlacer.SetCurentObj(playerMines[playerMines.Count - 1]);
-        }   
+        }
+        else
+        {
+            eventModuleSystem.Notify<EventUIBinder>("Not enough founds to create MINE: " + obj.ToString());
+        }
     }
 
     public void InstantiateCPUMine(MineType obj)

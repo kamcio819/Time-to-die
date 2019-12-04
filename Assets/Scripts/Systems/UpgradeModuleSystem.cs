@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class UpgradeModuleSystem : ITEModuleSystem
 {
+    [Header("Controllers")]
     [SerializeField]
     private ShipDataUpgrader shipDataUpgrader = default;
+
+    [SerializeField]
+    private EventModuleSystem eventModuleSystem = default;
 
     private UpgradeButton[] upgradeButtons;
 
@@ -53,6 +57,10 @@ public class UpgradeModuleSystem : ITEModuleSystem
                 default:
                     break;
             }
+        }
+        else
+        {
+            eventModuleSystem.Notify<EventUIBinder>("Not enough founds to create UPGRADE: " + obj.ToString());
         }
     }
 

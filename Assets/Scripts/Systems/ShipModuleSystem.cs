@@ -10,6 +10,9 @@ public class ShipModuleSystem : ITEModuleSystem
     private ShipModuleFactory shipModuleFactory = default;
 
     [SerializeField]
+    private EventModuleSystem eventModuleSystem = default;
+
+    [SerializeField]
     private ObjectPlacer shipPlacer = default;
 
     private ShipButton[] shipButtons = default;
@@ -56,6 +59,10 @@ public class ShipModuleSystem : ITEModuleSystem
             allShips.Add(ship);
             shipPlacer.SetCurentObj(playerShips[playerShips.Count - 1]);
             createdShipsIndex++;
+        }
+        else
+        {
+            eventModuleSystem.Notify<EventUIBinder>("Not enough founds to create SHIP: " + obj.ToString());
         }
     }
 
