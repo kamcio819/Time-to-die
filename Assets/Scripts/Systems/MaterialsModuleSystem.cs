@@ -147,7 +147,7 @@ public class MaterialsModuleSystem : ITEModuleSystem
         {
             UpdateMaterials(playerMines[i], PlayerType.PLAYER);
         }
-        for (int i = 0; i < playerMines.Count; ++i)
+        for (int i = 0; i < enemyMines.Count; ++i)
         {
             UpdateMaterials(enemyMines[i], PlayerType.CPU);
         }

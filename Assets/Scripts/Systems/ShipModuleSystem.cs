@@ -88,6 +88,28 @@ public class ShipModuleSystem : ITEModuleSystem
         }
     }
 
+    private void SetUpShips()
+    {
+        GameObject ship = shipModuleFactory.ConstructShip(ShipType.Battleship, PlayerType.PLAYER);
+        playerShips.Add(ship);
+        allShips.Add(ship);
+        shipPlacer.PlaceShipOnInitialPosition(ship, PlayerType.PLAYER);
+
+        ship = null;
+
+        ship = shipModuleFactory.ConstructShip(ShipType.Frigate, PlayerType.PLAYER);
+        playerShips.Add(ship);
+        allShips.Add(ship);
+        shipPlacer.PlaceShipOnInitialPosition(ship, PlayerType.PLAYER);
+
+        ship = null;
+
+        ship = shipModuleFactory.ConstructShip(ShipType.Battleship, PlayerType.CPU);
+        shipPlacer.PlaceShipOnInitialPosition(ship, PlayerType.CPU);
+        enemyShips.Add(ship);
+        allShips.Add(ship);
+    }
+
     public int GetCreatedShips()
     {
         return createdShipsIndex;
@@ -108,5 +130,10 @@ public class ShipModuleSystem : ITEModuleSystem
     public override void TurnFinishUnit()
     {
         createdShipsIndex = 0;
+    }
+
+    private void Start()
+    {
+        SetUpShips();
     }
 }

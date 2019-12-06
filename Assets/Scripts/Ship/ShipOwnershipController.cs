@@ -16,6 +16,8 @@ public class ShipOwnershipController : MonoBehaviour
 
     private List<Material> materials;
 
+    private Material[] mats;
+
     private void Awake()
     {
         materials = meshRenderer.materials.ToList();
@@ -23,17 +25,22 @@ public class ShipOwnershipController : MonoBehaviour
 
     public void SetMaterial(PlayerType playerType)
     {
-        int index;
         switch (playerType)
         {
             case PlayerType.CPU:
-                index = materials.IndexOf(materials.Find(x=>x.name.Equals("Green (Instance)")));
-                meshRenderer.materials[index] = enemyMaterial;
+                ChangeMaterial(enemyMaterial);
                 break;
             case PlayerType.PLAYER:
-                index = materials.IndexOf(materials.Find(x => x.name.Equals("Green (Instance)")));
-                meshRenderer.materials[index] = playerMaterial;
+                ChangeMaterial(playerMaterial);
                 break;
         }
+    }
+
+    private void ChangeMaterial(Material mat)
+    {
+        int index = materials.IndexOf(materials.Find(x => x.name.Equals("Green (Instance)")));
+        mats = meshRenderer.materials;
+        mats[index] = mat;
+        meshRenderer.materials = mats;
     }
 }

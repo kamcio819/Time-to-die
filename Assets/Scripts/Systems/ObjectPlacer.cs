@@ -35,7 +35,7 @@ public class ObjectPlacer : MonoBehaviour
 
     public void OnUpdate()
     {
-        if(currentObj)
+        if (currentObj)
         {
             timer += 0.15f;
             UpdatePosition();
@@ -45,7 +45,7 @@ public class ObjectPlacer : MonoBehaviour
                 timer = 0f;
                 currentObj = null;
             }
-        }     
+        }
     }
 
     private bool CorrectPosition()
@@ -70,16 +70,20 @@ public class ObjectPlacer : MonoBehaviour
 
     private void PlaceObject(HexTile tile)
     {
-        if(ShipPlacer)
+        if (ShipPlacer)
         {
-            if(tile.tileType == MapSystem.Type.SEA && tile.availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES)
+            if (tile.tileType == MapSystem.Type.SEA 
+                && tile.availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES 
+                && !ShipSideMapTiles(tile.gameObject, PlayerType.PLAYER))
             {
                 currentObj.transform.position = tile.transform.position + offset;
             }
         }
-        if(BuildingPlacer)
+        if (BuildingPlacer)
         {
-            if (tile.tileType == MapSystem.Type.SIMPLE && tile.availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES)
+            if (tile.tileType == MapSystem.Type.SIMPLE 
+                && tile.availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES 
+                && !MineSideMapTiles(tile.gameObject, PlayerType.PLAYER))
             {
                 currentObj.transform.position = tile.transform.position + offset;
             }
@@ -89,25 +93,64 @@ public class ObjectPlacer : MonoBehaviour
     public void PlaceCPUShip(GameObject ship)
     {
         List<GameObject> seaTiles = mapModuleSystem.Tiles.FindAll(x => CanPlaceOnTile(x, MapSystem.Type.SEA));
+        seaTiles.RemoveAll(x => ShipSideMapTiles(x, PlayerType.CPU));
         ship.transform.position = seaTiles[UnityEngine.Random.Range(0, seaTiles.Count - 1)].transform.position + offset;
     }
 
     public void PlaceCPUMine(GameObject mine)
     {
         List<GameObject> simpleTiles = mapModuleSystem.Tiles.FindAll(x => CanPlaceOnTile(x, MapSystem.Type.SIMPLE));
+        simpleTiles.RemoveAll(x => MineSideMapTiles(x, PlayerType.CPU));
         mine.transform.position = simpleTiles[UnityEngine.Random.Range(0, simpleTiles.Count - 1)].transform.position + offset;
     }
 
     private bool CanPlaceOnTile(GameObject x, MapSystem.Type type)
     {
         HexTile hexTile = x.GetComponent<HexTile>();
-        if(hexTile)
+        if (hexTile)
         {
-            if(hexTile.tileType == type && hexTile.availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES)
+            if (hexTile.tileType == type && hexTile.availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES)
             {
                 return true;
             }
         }
+        return false;
+    }
+
+    public void PlaceShipOnInitialPosition(GameObject ship, PlayerType playerType)
+    {
+        List<GameObject> seaTiles = mapModuleSystem.Tiles.FindAll(x => CanPlaceOnTile(x, MapSystem.Type.SEA));
+        seaTiles.RemoveAll(x => ShipSideMapTiles(x, playerType));
+        ship.transform.position = seaTiles[UnityEngine.Random.Range(0, seaTiles.Count - 1)].transform.position + offset;
+    }
+
+    private bool ShipSideMapTiles(GameObject tile, PlayerType playerType)
+    {
+        if (tile.transform.position.x > 8f && (tile.transform.position.z > 15f || tile.transform.position.z < 5f) && playerType == PlayerType.PLAYER)
+        {
+            return true;
+        }
+
+        if(tile.transform.position.x < 16f && (tile.transform.position.z > 15f || tile.transform.position.z < 5f) &&  playerType == PlayerType.CPU)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool MineSideMapTiles(GameObject tile, PlayerType playerType)
+    {
+        if (tile.transform.position.x > 10f && playerType == PlayerType.PLAYER)
+        {
+            return true;
+        }
+
+        if (tile.transform.position.x < 14f && playerType == PlayerType.CPU)
+        {
+            return true;
+        }
+
         return false;
     }
 }
