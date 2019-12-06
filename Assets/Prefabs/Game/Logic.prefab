@@ -533,7 +533,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aIRules:
   - conditions:
-    - SHIP NEED HEALTH
+    - PLAYER HEALTH MORE THAN ENEMY
+    - AFTER 500 SECONDS
     conclusions:
     - m_PersistentCalls:
         m_Calls:
@@ -551,7 +552,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - conditions:
-    - SHIP NEED DAMAGE
+    - PLAYER DAMAGE MORE THAN ENEMY
+    - AFTER 500 SECONDS
     conclusions:
     - m_PersistentCalls:
         m_Calls:
@@ -569,7 +571,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - conditions:
-    - SHIP NEED MOVEMENT RANGE
+    - PLAYER RANGE MORE THAN ENEMY
+    - AFTER 500 SECONDS
     conclusions:
     - m_PersistentCalls:
         m_Calls:
@@ -1544,7 +1547,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aIRules:
   - conditions:
-    - TO FEW BATTLESHIP
+    - MORE PLAYER BATTLESHIPS
+    - AFTER 300 SECONDS
     conclusions:
     - m_PersistentCalls:
         m_Calls:
@@ -1562,7 +1566,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - conditions:
-    - TO FEW CORVETTE
+    - MORE PLAYER CORVETTES
+    - AFTER 300 SECONDS
     conclusions:
     - m_PersistentCalls:
         m_Calls:
@@ -1580,7 +1585,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - conditions:
-    - TO FEW CRUISER
+    - MORE PLAYER CRUSIERS
+    - AFTER 300 SECONDS
     conclusions:
     - m_PersistentCalls:
         m_Calls:
@@ -1598,7 +1604,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - conditions:
-    - TO FEW DESTROYER
+    - MORE PLAYER DESTROYERS
+    - AFTER 300 SECONDS
     conclusions:
     - m_PersistentCalls:
         m_Calls:
@@ -1616,7 +1623,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - conditions:
-    - TO FEW FRIGATE
+    - MORE PLAYER FRIGATES
+    - AFTER 300 SECONDS
     conclusions:
     - m_PersistentCalls:
         m_Calls:
@@ -1627,6 +1635,44 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - conditions:
+    - MORE PLAYER DESTROYER THAN PLAYER 3X FRIGATES
+    - AFTER 300 SECONDS
+    conclusions:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5195129307825040307}
+          m_MethodName: InstantiateCPUShip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - conditions:
+    - MORE PLAYER BATTLESHIPS THAN PLAYER 2X CORVETTES
+    - AFTER 300 SECONDS
+    conclusions:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5195129307825040307}
+          m_MethodName: InstantiateCPUShip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0

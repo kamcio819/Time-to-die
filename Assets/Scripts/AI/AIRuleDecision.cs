@@ -15,9 +15,13 @@ public class AIRuleDecision : AIBehaviour
 
     public override void Process()
     {
-        List<string> concl = AIDecisions.GetRule();
-        AIRuleData ruleData = FindRuleData(concl);
-        ExecuteRule(ruleData);
+        Tuple<List<string>, List<string>, List<string>> rules = AIDecisions.GetRule();
+        AIRuleData upgradeRule = FindRuleData(rules.Item1);
+        AIRuleData shipRule = FindRuleData(rules.Item2);
+        AIRuleData materialsRule = FindRuleData(rules.Item3);
+        ExecuteRule(upgradeRule);
+        ExecuteRule(shipRule);
+        ExecuteRule(materialsRule);
     }
 
     private AIRuleData FindRuleData(List<string> concl)
@@ -63,9 +67,13 @@ public class AIRuleDecision : AIBehaviour
 
     private void ExecuteRule(AIRuleData aIRule)
     {
-        for (int i = 0; i < aIRule.Conclusions.Count; ++i)
+        if (aIRule != null)
         {
-            aIRule.Conclusions[i].Invoke();
+            for (int i = 0; i < aIRule.Conclusions.Count; ++i)
+            {
+                aIRule.Conclusions[i].Invoke();
+                Debug.Log(aIRule.Conclusions[i]);
+            }
         }
     }
 }
