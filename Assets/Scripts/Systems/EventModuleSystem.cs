@@ -5,7 +5,10 @@ using UnityEngine;
 public class EventModuleSystem : IEModuleSystem
 {
     [SerializeField]
-    protected UIObsever uiObserver;
+    private EventCameraHandler eventCameraHandler = default;
+
+    [SerializeField]
+    protected UIObsever uiObserver = default;
 
     public virtual void Notify<T>(string txt)
         where T : UIObsever
@@ -15,14 +18,16 @@ public class EventModuleSystem : IEModuleSystem
 
     public override void TurnFinishUnit()
     {
-        
+        eventCameraHandler.ProcessEvents();
     }
 
     public override void Exit()
     {
+
     }
 
     public override void Initialize()
     {
+        eventCameraHandler.Initialize();
     }
 }

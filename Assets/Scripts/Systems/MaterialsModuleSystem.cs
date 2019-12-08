@@ -65,6 +65,8 @@ public class MaterialsModuleSystem : ITEModuleSystem
     public List<GameObject> PlayerMines { get => playerMines; }
     public List<GameObject> EnemyMines { get => enemyMines; }
 
+    public Action<Vector3> MineConstructed;
+
     protected override void Awake()
     {
         base.Awake();
@@ -109,6 +111,7 @@ public class MaterialsModuleSystem : ITEModuleSystem
             minePlacer.PlaceCPUMine(mine);
             enemyMines.Add(mine);
             allMines.Add(mine);
+            MineConstructed?.Invoke(mine.transform.position);
         }
     }
 
@@ -120,6 +123,7 @@ public class MaterialsModuleSystem : ITEModuleSystem
             minePlacer.PlaceCPUMine(mine);
             enemyMines.Add(mine);
             allMines.Add(mine);
+            MineConstructed?.Invoke(mine.transform.position);
         }
     }
 

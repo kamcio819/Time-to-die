@@ -2003,6 +2003,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7dc4a5dcd06f845866893be2adf26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7712901993494188461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 194103733655897255}
+  - component: {fileID: 1790060315529738769}
+  m_Layer: 0
+  m_Name: EventCameraHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &194103733655897255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7712901993494188461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3834511564413058000}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1790060315529738769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7712901993494188461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde1918f5dddc9e478d78cb9f6ffc6f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipModuleSystem: {fileID: 5195129307825040307}
+  materialsModuleSystem: {fileID: 4401355785342313990}
+  cameraController: {fileID: 0}
 --- !u!1 &7868481703534337790
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,7 +2164,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 194103733655897255}
   m_Father: {fileID: 4401355784542045947}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2134,6 +2181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56097612264f10149a42c09d54b7686f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventCameraHandler: {fileID: 1790060315529738769}
   uiObserver: {fileID: 7391240298365045086}
 --- !u!1 &8234681773874845203
 GameObject:

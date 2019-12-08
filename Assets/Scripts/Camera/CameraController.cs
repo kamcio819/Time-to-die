@@ -1,6 +1,7 @@
 ﻿using DG.Tweening;
 using MapSystem;
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -134,6 +135,20 @@ public class CameraController : MonoBehaviour
         Vector3 lastPos = transform.position;
         Vector3 newPos = new Vector3(mapData.tilesWidth * xDiv, transform.position.y, mapData.tilesHeight * zDiv);
         transform.DOMove(newPos, 0.4f);
+    }
+
+    public void SetCameraPosition(Vector3 destinationPosition)
+    {
+        Vector3 beginPosition = transform.position;
+        StartCoroutine(MoveCamera(beginPosition, destinationPosition));
+    }
+
+    private IEnumerator MoveCamera(Vector3 beginPosition, Vector3 destinationPosition)
+    {
+        destinationPosition.y = transform.position.y;
+        transform.DOMove(destinationPosition, 0.8f);
+        yield return new WaitForSeconds(1.25f);
+        transform.DOMove(beginPosition, 0.45f);
     }
 
     public Tuple<float, float> GetDivisions()

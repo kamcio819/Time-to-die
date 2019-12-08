@@ -20,6 +20,7 @@ public class TurnModuleSystem : ITEModuleSystem
         AddCommand(FindObjectOfType<UIBindSystem>());
         AddCommand(FindObjectOfType<MaterialsModuleSystem>());
         AddCommand(FindObjectOfType<AIModuleSystem>());
+        AddCommand(FindObjectOfType<EventModuleSystem>());
     }
 
     public static void AddCommand(ITurnable command)

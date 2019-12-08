@@ -34,6 +34,8 @@ public class ShipModuleSystem : ITEModuleSystem
     public List<GameObject> EnemyShips { get => enemyShips; }
     public List<GameObject> AllShips { get => allShips; }
 
+    public Action<Vector3> ShipConstructed;
+
     private void OnEnable()
     {
         for(int i = 0; i < shipButtons.Length; ++i)
@@ -74,6 +76,7 @@ public class ShipModuleSystem : ITEModuleSystem
             shipPlacer.PlaceCPUShip(ship);
             enemyShips.Add(ship);
             allShips.Add(ship);
+            ShipConstructed?.Invoke(ship.transform.position);
         }
     }
 
@@ -85,6 +88,7 @@ public class ShipModuleSystem : ITEModuleSystem
             shipPlacer.PlaceCPUShip(ship);
             enemyShips.Add(ship);
             allShips.Add(ship);
+            ShipConstructed?.Invoke(ship.transform.position);
         }
     }
 
