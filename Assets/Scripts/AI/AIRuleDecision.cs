@@ -72,7 +72,6 @@ public class AIRuleDecision : AIBehaviour
             for (int i = 0; i < aIRule.Conclusions.Count; ++i)
             {
                 aIRule.Conclusions[i].Invoke();
-                Debug.Log(aIRule.Conclusions[i]);
             }
         }
     }
