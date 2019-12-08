@@ -74,7 +74,7 @@ public class ObjectPlacer : MonoBehaviour
         {
             if (tile.tileType == MapSystem.Type.SEA 
                 && tile.availableToPlaceOn == MapSystem.AvailableToPlaceOn.YES 
-                && !ShipSideMapTiles(tile.gameObject, PlayerType.PLAYER))
+                && !ShipSideMapTilesX(tile.gameObject, PlayerType.PLAYER))
             {
                 currentObj.transform.position = tile.transform.position + offset;
             }
@@ -93,7 +93,7 @@ public class ObjectPlacer : MonoBehaviour
     public void PlaceCPUShip(GameObject ship)
     {
         List<GameObject> seaTiles = mapModuleSystem.Tiles.FindAll(x => CanPlaceOnTile(x, MapSystem.Type.SEA));
-        seaTiles.RemoveAll(x => ShipSideMapTiles(x, PlayerType.CPU));
+        seaTiles.RemoveAll(x => ShipSideMapTilesX(x, PlayerType.CPU));
         ship.transform.position = seaTiles[UnityEngine.Random.Range(0, seaTiles.Count - 1)].transform.position + offset;
     }
 
@@ -120,21 +120,30 @@ public class ObjectPlacer : MonoBehaviour
     public void PlaceShipOnInitialPosition(GameObject ship, PlayerType playerType)
     {
         List<GameObject> seaTiles = mapModuleSystem.Tiles.FindAll(x => CanPlaceOnTile(x, MapSystem.Type.SEA));
-        seaTiles.RemoveAll(x => ShipSideMapTiles(x, playerType));
+        seaTiles.RemoveAll(x => ShipSideMapTilesX(x, playerType));
+        seaTiles.RemoveAll(x => ShipSideMapTilesZ(x));
         ship.transform.position = seaTiles[UnityEngine.Random.Range(0, seaTiles.Count - 1)].transform.position + offset;
     }
 
-    private bool ShipSideMapTiles(GameObject tile, PlayerType playerType)
+    private bool ShipSideMapTilesX(GameObject tile, PlayerType playerType)
     {
-        if (tile.transform.position.x > 8f && (tile.transform.position.z > 15f || tile.transform.position.z < 5f) && playerType == PlayerType.PLAYER)
+        if (tile.transform.position.x > 8f && playerType == PlayerType.PLAYER)
         {
             return true;
         }
 
-        if(tile.transform.position.x < 16f && (tile.transform.position.z > 15f || tile.transform.position.z < 5f) &&  playerType == PlayerType.CPU)
+        if(tile.transform.position.x < 16f && playerType == PlayerType.CPU)
         {
             return true;
         }
+
+        return false;
+    }
+
+    private bool ShipSideMapTilesZ(GameObject tile)
+    {
+        if (tile.transform.position.z > 18f || tile.transform.position.z < 3f)
+            return true;
 
         return false;
     }

@@ -52,5 +52,6 @@ public class CompassRotator : MonoBehaviour
     {
         fill.fillAmount = 0f;
         transform.localEulerAngles = new Vector3(0, 0, 0);
+        compassFinishingColor.SetBool("isFinishing", false);
     }
 }

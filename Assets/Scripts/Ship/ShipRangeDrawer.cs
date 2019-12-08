@@ -30,7 +30,7 @@ public class ShipRangeDrawer : MonoBehaviour
 
     public void DrawAttackRange(bool flag)
     {
-        Collider[] tiles = Physics.OverlapSphere(transform.position, shipDataController.ShipData.ShipDataContainer.GetAttackRange());
+        Collider[] tiles = Physics.OverlapSphere(transform.position, shipDataController.ShipData.ShipDataContainer.GetAttackRange() - 0.13f);
         for (int i = 0; i < tiles.Length; ++i)
         {
             TileController tileController = tiles[i].GetComponent<TileController>();
@@ -42,6 +42,12 @@ public class ShipRangeDrawer : MonoBehaviour
                     tileController.ResetTileColor();
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(transform.position, shipDataController.ShipData.ShipDataContainer.GetAttackRange());
     }
 
 }

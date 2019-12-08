@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23119730298666808}
   - component: {fileID: 114232247102238226}
   - component: {fileID: 65839740351133336}
+  - component: {fileID: 7353611347443343476}
   - component: {fileID: 114544018024740042}
   m_Layer: 4
   m_Name: seaTile
@@ -111,7 +112,20 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.95, y: 0.92, z: 0.02}
+  m_Size: {x: 0.62, y: 0.92, z: 0.02}
+  m_Center: {x: 0, y: 0, z: 0.07455317}
+--- !u!65 &7353611347443343476
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001853958448336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.92, y: 0.65, z: 0.02}
   m_Center: {x: 0, y: 0, z: 0.07455317}
 --- !u!114 &114544018024740042
 MonoBehaviour:
