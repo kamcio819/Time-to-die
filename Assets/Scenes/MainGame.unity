@@ -158,13 +158,13 @@ MonoBehaviour:
   overrideColor: 0
   overridingColor: {r: 1, g: 1, b: 1, a: 1}
   useShadow: 1
-  shadowMapRenderTexture: {fileID: 1314260054}
+  shadowMapRenderTexture: {fileID: 1216774776}
   useCookie: 1
   cookieMapRenderTexture: {fileID: 0}
   enableOutOfPhaseColor: 0
   outOfPhaseColorStrength: 0.25
   outOfPhaseColor: {r: 1, g: 0.48999998, b: 0.39999998, a: 1}
-  shadowDataRenderTexture: {fileID: 1511714622}
+  shadowDataRenderTexture: {fileID: 1340920562}
   customDistanceFalloffThreshold: 0.5
   customDistanceFalloffPower: 2
   customCookieDistanceFalloffStartThreshold: 0.1
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efe525a223a24a42913fffe734523c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!84 &1314260054
+--- !u!84 &1216774776
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -669,19 +669,7 @@ RenderTexture:
     m_WrapW: 1
   m_Dimension: 2
   m_VolumeDepth: 1
---- !u!114 &1441159899 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5263255526038226445, guid: eb6121131b1cc57488f135423cb3dec0,
-    type: 3}
-  m_PrefabInstance: {fileID: 4401355785073803402}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb4e5e421952d4f4f81c5bd9db54e254, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!84 &1511714622
+--- !u!84 &1340920562
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -715,6 +703,18 @@ RenderTexture:
     m_WrapW: 1
   m_Dimension: 2
   m_VolumeDepth: 1
+--- !u!114 &1441159899 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5263255526038226445, guid: eb6121131b1cc57488f135423cb3dec0,
+    type: 3}
+  m_PrefabInstance: {fileID: 4401355785073803402}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4e5e421952d4f4f81c5bd9db54e254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1550118891 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4203077140239228424, guid: eb6121131b1cc57488f135423cb3dec0,
