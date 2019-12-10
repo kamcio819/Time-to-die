@@ -6,16 +6,15 @@ using UnityEngine;
 public class ShipOwnershipController : MonoBehaviour
 {
     [SerializeField]
-    private Material enemyMaterial;
+    private Material enemyMaterial = default;
 
     [SerializeField]
-    private Material playerMaterial;
+    private Material playerMaterial = default;
 
     [SerializeField]
-    private MeshRenderer meshRenderer;
+    private MeshRenderer meshRenderer = default;
 
     private List<Material> materials;
-
     private Material[] mats;
 
     private void Awake()

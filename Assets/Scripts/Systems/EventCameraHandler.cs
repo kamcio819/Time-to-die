@@ -6,13 +6,13 @@ using UnityEngine;
 public class EventCameraHandler : MonoBehaviour
 {
     [SerializeField]
-    private ShipModuleSystem shipModuleSystem;
+    private ShipModuleSystem shipModuleSystem = default;
 
     [SerializeField]
-    private MaterialsModuleSystem materialsModuleSystem;
+    private MaterialsModuleSystem materialsModuleSystem = default;
 
     [SerializeField]
-    private CameraController cameraController;
+    private CameraController cameraController = default;
 
     private Queue<ICommand> commandBuffer;
 

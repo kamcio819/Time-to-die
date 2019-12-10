@@ -9,10 +9,10 @@ using UnityEngine.Events;
 public class AIRuleData
 {
     [SerializeField]
-    private List<string> conditions;
+    private List<string> conditions = default;
 
     [SerializeField]
-    private List<UnityEvent> conclusions;
+    private List<UnityEvent> conclusions = default;
 
     public List<string> Conditions { get => conditions; }
     public List<UnityEvent> Conclusions { get => conclusions; }

@@ -6,21 +6,21 @@ public class AIModuleSystem : ITEModuleSystem
 {
     [Header("Controllers")]
     [SerializeField]
-    private MaterialsModuleSystem materialsModuleSystem;
+    private MaterialsModuleSystem materialsModuleSystem = default;
 
     [SerializeField]
-    private ShipModuleSystem shipModuleSystem;
+    private ShipModuleSystem shipModuleSystem = default;
 
     [SerializeField]
-    private UpgradeModuleSystem upgradeModuleSystem;
+    private UpgradeModuleSystem upgradeModuleSystem = default;
 
     [Header("AI Modules")]
     [Space(20)]
     [SerializeField]
-    private AIRuleDecision aIRuleDecision;
+    private AIRuleDecision aIRuleDecision = default;
 
     [SerializeField]
-    private AIGameTree aIGameTree;
+    private AIGameTree aIGameTree = default;
 
     public override void TurnFinishUnit()
     {

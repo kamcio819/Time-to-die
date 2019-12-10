@@ -8,10 +8,10 @@ using UnityEngine;
 public class AIModuleData : ScriptableObject
 {
     [SerializeField]
-    private RuleInductionData ruleInductionData;
+    private RuleInductionData ruleInductionData = default;
 
     [SerializeField]
-    private GameTreeData gameTreeData;
+    private GameTreeData gameTreeData = default;
 
     public RuleInductionData RuleInductionData { get => ruleInductionData; }
     public GameTreeData GameTreeData { get => gameTreeData; }

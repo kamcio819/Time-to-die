@@ -16,10 +16,10 @@ public class GameState
 public class AIGameTree : AIBehaviour
 {
     [SerializeField]
-    private AIModuleData AIModuleData;
+    private AIModuleData AIModuleData = default;
 
     [SerializeField]
-    private ShipModuleSystem shipModuleSystem;
+    private ShipModuleSystem shipModuleSystem = default;
 
     private Dictionary<GameObject, AITreeNode> ShipsTrees = new Dictionary<GameObject, AITreeNode>();
 

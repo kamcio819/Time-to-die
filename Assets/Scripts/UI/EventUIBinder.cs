@@ -9,7 +9,7 @@ public class EventUIBinder : UIObsever
     private TextMeshProUGUI text = default;
 
     [SerializeField]
-    private EventUIAnimationController eventUIAnimationController;
+    private EventUIAnimationController eventUIAnimationController = default;
 
     public override void BindUI(string _text)
     {

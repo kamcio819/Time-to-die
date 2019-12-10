@@ -5,13 +5,13 @@ using UnityEngine;
 public class AIRuleDecision : AIBehaviour
 {
     [SerializeField]
-    private AIModuleData AIModuleData;
+    private AIModuleData AIModuleData = default;
 
     [SerializeField]
-    private AIDecisions AIDecisions;
+    private AIDecisions AIDecisions = default;
 
     [SerializeField]
-    private List<AIRuleHandler> aIRuleHandlers;
+    private List<AIRuleHandler> aIRuleHandlers = default;
 
     public override void Process()
     {

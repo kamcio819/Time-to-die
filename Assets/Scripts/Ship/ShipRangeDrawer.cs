@@ -5,10 +5,10 @@ using UnityEngine;
 public class ShipRangeDrawer : MonoBehaviour
 {
     [SerializeField]
-    private ShipDataController shipDataController;
+    private ShipDataController shipDataController = default;
 
     [SerializeField]
-    private ShipTileController shipTileController;
+    private ShipTileController shipTileController = default;
 
     public void DrawMovementRange(bool flag)
     {

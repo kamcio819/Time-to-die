@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipDataUpgrader : MonoBehaviour
 {
     [SerializeField]
-    private ShipDataController shipDataController;
+    private ShipDataController shipDataController = default;
 
     [SerializeField]
     private List<ShipData> playerShipsData = default;

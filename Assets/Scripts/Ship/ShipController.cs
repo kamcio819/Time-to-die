@@ -22,13 +22,13 @@ public class ShipController : MonoBehaviour
     private ShipRangeDrawer shipRangeDrawer = default;
 
     [SerializeField]
-    private ShipOwnershipController shipOwnershipController;
+    private ShipOwnershipController shipOwnershipController = default;
 
     [SerializeField]
-    private PlayerType playerType;
+    private PlayerType playerType = default;
 
     [SerializeField]
-    private ShipType shipType;
+    private ShipType shipType = default;
 
     private bool catchMovement = false;
     private bool catchAttack = false;

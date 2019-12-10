@@ -6,13 +6,13 @@ using UnityEngine;
 public abstract class MineController : MonoBehaviour
 {
     [SerializeField]
-    protected int goodAmount;
+    protected int goodAmount = default;
 
     [SerializeField]
-    private PlayerType playerType;
+    private PlayerType playerType = default;
 
     [SerializeField]
-    private SpriteRenderer ownershipSprite;
+    private SpriteRenderer ownershipSprite = default;
 
     public PlayerType PlayerType { get => playerType; }
 

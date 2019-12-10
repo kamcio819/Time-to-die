@@ -6,13 +6,13 @@ using UnityEngine;
 public class AIDecisions : MonoBehaviour
 {
     [SerializeField]
-    private ShipModuleSystem shipModuleSystem;
+    private ShipModuleSystem shipModuleSystem = default;
 
     [SerializeField]
-    private MaterialsModuleSystem materialsModuleSystem;
+    private MaterialsModuleSystem materialsModuleSystem = default;
 
     [SerializeField]
-    private UpgradeModuleSystem upgradeModuleSystem;
+    private UpgradeModuleSystem upgradeModuleSystem = default;
 
     private List<string> shipRule = new List<string>();
     private List<string> upgradeRule = new List<string>();
