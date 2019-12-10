@@ -1,6 +1,27 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+public class ShipState
+{
+    public Vector3 position;
+    public int shipDiffernce;
+    public int shipDestroyed;
+    public int shipDistance;
+
+    public ShipType shipType;
+    public ShipData shipData;
+
+    public ShipState(Vector3 position, ShipType shipType, ShipData shipData , int shipDiffernce, int shipDestroyed)
+    {
+        this.position = position;
+        this.shipType = shipType;
+        this.shipData = shipData;
+        this.shipDiffernce = shipDiffernce;
+        this.shipDestroyed = shipDestroyed;
+    }
+}
 
 [System.Serializable]
 public class AITreeNodeData
@@ -9,34 +30,28 @@ public class AITreeNodeData
     private float destroyedWeight;
     private float distanceWeight;
 
-    private int shipDifference;
-    private int shipDestroyed;
-    private float shipDistance;
+    private ShipState gameState;
 
-    public AITreeNodeData(float differenceWeight, float destroyedWeight, float distanceWeight)
+    public AITreeNodeData(float differenceWeight, float destroyedWeight, float distanceWeight, ShipState gameState)
     {
         this.differenceWeight = differenceWeight;
         this.destroyedWeight = destroyedWeight;
         this.distanceWeight = distanceWeight;
-    }
-
-    public void SetShipDiffernce(int diff)
-    {
-        shipDifference = diff;
-    }
-
-    public void SetShipDestroyed(int dest)
-    {
-        shipDestroyed = dest;
-    }
-
-    public void SetShipDistance(float distance)
-    {
-        shipDistance = distance;
+        this.gameState = gameState;
     }
 
     public float GetValue()
     {
-        return differenceWeight * shipDifference + destroyedWeight * shipDestroyed - distanceWeight * shipDistance;
+        return differenceWeight * gameState.shipDiffernce + destroyedWeight * gameState.shipDestroyed - distanceWeight * gameState.shipDistance;
+    }
+
+    public void SetGameState(ShipState gameState)
+    {
+        this.gameState = gameState;
+    }
+
+    public ShipState GetGameState()
+    {
+        return this.gameState;
     }
 }

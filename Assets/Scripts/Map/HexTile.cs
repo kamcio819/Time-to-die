@@ -4,12 +4,13 @@ using UnityEngine;
 using MapSystem;
 
 [System.Serializable]
-	public class HexTile : MonoBehaviour {
-	    public float movementPoints;	
-	    public int tileWidth;
-	    public int tileHeight;
-	    public bool isWalkable;
-	    public Type tileType;
-	    public AvailableToPlaceOn availableToPlaceOn;
+public class HexTile : MonoBehaviour
+{
+	public float movementPoints;	
+	public int tileWidth;
+	public int tileHeight;
+	public bool isWalkable;
+	public Type tileType;
+	public AvailableToPlaceOn availableToPlaceOn;
 }
 

@@ -1,7 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+
+public enum NodeAction
+{
+    MOVE,
+    SHOOT,
+    NONE
+}
 
 [System.Serializable]
 public class AITreeNode
@@ -23,16 +31,44 @@ public class AITreeNode
     public AITreeNode Left { get => left; set => left = value; }
     public AITreeNode Right { get => right; set => right = value; }
 
-    public AITreeNode(AITreeNode parent, float differenceWeight, float destroyedWeight, float distanceWeight)
+    public AITreeNode(AITreeNode parent, ShipState gameState, float differenceWeight, float destroyedWeight, float distanceWeight, NodeAction nodeAction)
     {
-        nodeData = new AITreeNodeData(differenceWeight, destroyedWeight, distanceWeight);
+        ProcessActionGameState(gameState, nodeAction);
+        nodeData = new AITreeNodeData(differenceWeight, destroyedWeight, distanceWeight, gameState);
         nodeParent = parent;
     }
 
-    public AITreeNode(float differenceWeight, float destroyedWeight, float distanceWeight)
+    public AITreeNode(ShipState gameState, float differenceWeight, float destroyedWeight, float distanceWeight, NodeAction nodeAction)
     {
-        nodeData = new AITreeNodeData(differenceWeight, destroyedWeight, distanceWeight);
+        nodeData = new AITreeNodeData(differenceWeight, destroyedWeight, distanceWeight, gameState);
         nodeParent = null;
+    }
+
+    private void ProcessActionGameState(ShipState gameState, NodeAction nodeAction)
+    {
+        switch(nodeAction)
+        {
+            case NodeAction.SHOOT:
+                TryToShootFromPosition(gameState);
+                break;
+            case NodeAction.MOVE:
+                MovePosition(gameState);
+                break;
+        }
+    }
+
+    private void MovePosition(ShipState gameState)
+    {
+        AIGameTreeProcesserModule.AITryToMove(gameState);
+    }
+
+    private void TryToShootFromPosition(ShipState gameState)
+    {
+        if(AIGameTreeProcesserModule.AITryToShoot(gameState.position, gameState.shipData.ShipDataContainer.GetAttackRange())) 
+        {
+            gameState.shipDestroyed++;
+            gameState.shipDiffernce--;
+        }
     }
 
     public AITreeNode GetLeft()
@@ -45,19 +81,13 @@ public class AITreeNode
         return Right;
     }
 
-    public void SetShipDiffernce(int diff)
+    public void SetGameState(ShipState gameState)
     {
-        nodeData.SetShipDiffernce(diff);
+        nodeData.SetGameState(gameState);
     }
 
-    public void SetShipDestroyed(int dest)
+    public ShipState GetGameState()
     {
-        nodeData.SetShipDestroyed(dest);
+        return nodeData.GetGameState();
     }
-
-    public void SetShipDistance(float dist)
-    {
-        nodeData.SetShipDistance(dist);
-    }
-
 }
