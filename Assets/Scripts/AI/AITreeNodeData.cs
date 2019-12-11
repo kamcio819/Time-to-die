@@ -5,21 +5,34 @@ using UnityEngine;
 
 public class ShipState
 {
-    public Vector3 position;
-    public int shipDiffernce;
-    public int shipDestroyed;
-    public int shipDistance;
+    public Vector3 Position;
+    public int ShipDiffernce;
+    public int ShipDestroyed;
+    public int ShipDistance;
 
-    public ShipType shipType;
-    public ShipData shipData;
+    public ShipType ShipType;
+    public ShipData ShipData;
 
-    public ShipState(Vector3 position, ShipType shipType, ShipData shipData , int shipDiffernce, int shipDestroyed)
+    public int Depth;
+
+    public ShipState(ShipState shipState)
     {
-        this.position = position;
-        this.shipType = shipType;
-        this.shipData = shipData;
-        this.shipDiffernce = shipDiffernce;
-        this.shipDestroyed = shipDestroyed;
+        this.Position = shipState.Position;
+        this.ShipType = shipState.ShipType;
+        this.ShipData = shipState.ShipData;
+        this.ShipDiffernce = shipState.ShipDiffernce;
+        this.ShipDestroyed = shipState.ShipDestroyed;
+        this.Depth = shipState.Depth;
+    }
+
+    public ShipState(Vector3 position, ShipType shipType, ShipData shipData , int shipDiffernce, int shipDestroyed, int depth)
+    {
+        this.Position = position;
+        this.ShipType = shipType;
+        this.ShipData = shipData;
+        this.ShipDiffernce = shipDiffernce;
+        this.ShipDestroyed = shipDestroyed;
+        this.Depth = depth;
     }
 }
 
@@ -30,28 +43,28 @@ public class AITreeNodeData
     private float destroyedWeight;
     private float distanceWeight;
 
-    private ShipState gameState;
+    private ShipState shipState;
 
-    public AITreeNodeData(float differenceWeight, float destroyedWeight, float distanceWeight, ShipState gameState)
+    public AITreeNodeData(float differenceWeight, float destroyedWeight, float distanceWeight, ShipState shipState)
     {
         this.differenceWeight = differenceWeight;
         this.destroyedWeight = destroyedWeight;
         this.distanceWeight = distanceWeight;
-        this.gameState = gameState;
+        this.shipState = shipState;
     }
 
     public float GetValue()
     {
-        return differenceWeight * gameState.shipDiffernce + destroyedWeight * gameState.shipDestroyed - distanceWeight * gameState.shipDistance;
+        return differenceWeight * shipState.ShipDiffernce + destroyedWeight * shipState.ShipDestroyed - distanceWeight * shipState.ShipDistance;
     }
 
     public void SetGameState(ShipState gameState)
     {
-        this.gameState = gameState;
+        this.shipState = gameState;
     }
 
     public ShipState GetGameState()
     {
-        return this.gameState;
+        return this.shipState;
     }
 }

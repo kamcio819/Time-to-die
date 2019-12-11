@@ -29,7 +29,7 @@ public class AIGameTreeProcesserModule : MonoBehaviour
     {
         for (int i = 0; i < shipModuleSystem.PlayerShips.Count; ++i)
         {
-            if (ShipInRange(position, shipModuleSystem.PlayerShips[i], range))
+            if (ShipInRange(position, shipModuleSystem.PlayerShips[i].transform.position, range))
             {
                 return true;
             }
@@ -37,9 +37,9 @@ public class AIGameTreeProcesserModule : MonoBehaviour
         return false;
     }
 
-    private static bool ShipInRange(Vector3 position, GameObject ship, float range)
+    private static bool ShipInRange(Vector3 position, Vector3 position2, float range)
     {
-        if(Mathf.Abs(position.x - ship.transform.position.x) <= range && Mathf.Abs(position.z - ship.transform.position.z) <= range)
+        if(Mathf.Abs(position.x - position2.x) <= range && Mathf.Abs(position.z - position2.z) <= range)
         {
             return true;
         }
@@ -48,42 +48,77 @@ public class AIGameTreeProcesserModule : MonoBehaviour
 
     public static void AITryToMove(ShipState shipState)
     {
-        GameObject shipToMove = null;
         int distance;
-
-        for (int i = 0; i < shipModuleSystem.PlayerShips.Count; ++i)
+        List<Vector3> positions = new List<Vector3>();
+        for(int i =0; i < shipModuleSystem.PlayerShips.Count; ++i)
         {
-            if (ShipInRange(shipState.position, shipModuleSystem.PlayerShips[i], shipState.shipData.ShipDataContainer.GetMovementRange()))
+            positions.AddRange(FindPlayerShipPoistions(shipModuleSystem.PlayerShips[i].transform.position, shipState));
+        }
+
+        for (int i = 0; i < positions.Count; ++i)
+        {
+            if (ShipInRange(shipState.Position, positions[i], shipState.ShipData.ShipDataContainer.GetMovementRange()))
             {
-                shipToMove = shipModuleSystem.PlayerShips[i];
-                distance = (int)(shipState.position - shipToMove.transform.position).magnitude;
-                if (FindTilePosition(shipState, shipToMove.transform.position, distance/distance))
+                distance = (int)(shipState.Position - positions[i]).magnitude;
+                if (FindTilePosition(shipState, positions[i], distance/distance))
                 {
-                    shipState.shipDistance = distance;
+                    shipState.ShipDistance = distance;
                     break;
                 }
                 continue;
             }
         }
 
-        shipToMove = shipModuleSystem.PlayerShips[UnityEngine.Random.Range(0, shipModuleSystem.PlayerShips.Count)];
-        distance = (int)(shipState.position - shipToMove.transform.position).magnitude;
-        if (FindTilePosition(shipState, shipToMove.transform.position, distance))
+        Vector3 shipPosition = positions[UnityEngine.Random.Range(0, positions.Count)];
+        distance = (int)(shipState.Position - shipPosition).magnitude;
+        if (FindTilePosition(shipState, shipPosition, distance))
         {
-            shipState.shipDistance = distance;
+            shipState.ShipDistance = distance;
         }
+    }
+
+    private static List<Vector3> FindPlayerShipPoistions(Vector3 position, ShipState shipState)
+    {
+        return FindPositions(position, shipState.ShipData.ShipDataContainer.GetMovementRange(), shipState.Depth);
+    }
+
+    private static List<Vector3> FindPositions(Vector3 position, int range, int depth)
+    {
+        Collider[] tiles = Physics.OverlapSphere(position, range);
+        List<Vector3> hexTiles = new List<Vector3>();
+        for (int i = 0; i < tiles.Length; ++i)
+        {
+            HexTile hex = tiles[i].GetComponent<HexTile>();
+            if(hex && hex.tileType == MapSystem.Type.SEA)
+            {
+                hexTiles.Add(hex.transform.position);
+            }
+        }
+
+
+        if (depth < 0)
+        {
+            return null;
+        }
+        if (depth > 0)
+        {
+            hexTiles = FindPositions(hexTiles[UnityEngine.Random.Range(0, hexTiles.Count - 1)], range, depth - 1);
+        }
+
+        return hexTiles;
+
     }
 
     private static bool FindTilePosition(ShipState shipState, Vector3 position2, int magnitude)
     {
-        Vector3 newPos = shipState.position;
-        newPos.x += Mathf.Abs(shipState.position.x - position2.x) / magnitude;
-        newPos.z += Mathf.Abs(shipState.position.z - position2.z) / magnitude;
+        Vector3 newPos = shipState.Position;
+        newPos.x += Mathf.Abs(shipState.Position.x - position2.x) / magnitude;
+        newPos.z += Mathf.Abs(shipState.Position.z - position2.z) / magnitude;
         for(int i = 0; i < seaTiles.Count; ++i)
         {
             if(CheckTilePos(newPos, seaTiles[i].transform.position))
             {
-                shipState.position = seaTiles[i].transform.position;
+                shipState.Position = seaTiles[i].transform.position;
                 return true;
             }
         }

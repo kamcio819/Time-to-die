@@ -31,22 +31,24 @@ public class AITreeNode
     public AITreeNode Left { get => left; set => left = value; }
     public AITreeNode Right { get => right; set => right = value; }
 
-    public AITreeNode(AITreeNode parent, ShipState gameState, float differenceWeight, float destroyedWeight, float distanceWeight, NodeAction nodeAction)
+    public AITreeNode(AITreeNode parent, ShipState shipState, float differenceWeight, float destroyedWeight, float distanceWeight, NodeAction nodeAction)
     {
-        ProcessActionGameState(gameState, nodeAction);
-        nodeData = new AITreeNodeData(differenceWeight, destroyedWeight, distanceWeight, gameState);
+        ShipState newState = new ShipState(shipState);
+        ProcessActionGameState(newState, nodeAction);
+        nodeData = new AITreeNodeData(differenceWeight, destroyedWeight, distanceWeight, newState);
         nodeParent = parent;
     }
 
-    public AITreeNode(ShipState gameState, float differenceWeight, float destroyedWeight, float distanceWeight, NodeAction nodeAction)
+    public AITreeNode(ShipState shipState, float differenceWeight, float destroyedWeight, float distanceWeight, NodeAction nodeAction)
     {
-        nodeData = new AITreeNodeData(differenceWeight, destroyedWeight, distanceWeight, gameState);
+        ShipState newState = new ShipState(shipState);
+        nodeData = new AITreeNodeData(differenceWeight, destroyedWeight, distanceWeight, newState);
         nodeParent = null;
     }
 
     private void ProcessActionGameState(ShipState gameState, NodeAction nodeAction)
     {
-        switch(nodeAction)
+        switch (nodeAction)
         {
             case NodeAction.SHOOT:
                 TryToShootFromPosition(gameState);
@@ -64,10 +66,10 @@ public class AITreeNode
 
     private void TryToShootFromPosition(ShipState gameState)
     {
-        if(AIGameTreeProcesserModule.AITryToShoot(gameState.position, gameState.shipData.ShipDataContainer.GetAttackRange())) 
+        if(AIGameTreeProcesserModule.AITryToShoot(gameState.Position, gameState.ShipData.ShipDataContainer.GetAttackRange())) 
         {
-            gameState.shipDestroyed++;
-            gameState.shipDiffernce--;
+            gameState.ShipDestroyed++;
+            gameState.ShipDiffernce--;
         }
     }
 

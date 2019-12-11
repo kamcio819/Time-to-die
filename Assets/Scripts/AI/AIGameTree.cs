@@ -31,7 +31,7 @@ public class AIGameTree : AIBehaviour
             ShipDataController sDataController = shipModuleSystem.EnemyShips[i].GetComponent<ShipDataController>();
             ShipsTrees.Add(shipModuleSystem.EnemyShips[i],
                 GenerateTree(
-                    new AITreeNode(new ShipState(shipModuleSystem.EnemyShips[i].transform.position, sController.ShipType, sDataController.ShipData, shipModuleSystem.PlayerShips.Count - shipModuleSystem.EnemyShips.Count, 0),
+                    new AITreeNode(new ShipState(shipModuleSystem.EnemyShips[i].transform.position, sController.ShipType, sDataController.ShipData, shipModuleSystem.PlayerShips.Count - shipModuleSystem.EnemyShips.Count, 0, 0),
                                             0.25f,
                                             0.75f,
                                             0.3f,
@@ -54,6 +54,7 @@ public class AIGameTree : AIBehaviour
 
         if (depth > 0)
         {
+            node.GetGameState().Depth++;
             currentNode.Left = GenerateTree(currentNode, depth - 1, NodeAction.SHOOT);
             currentNode.Right = GenerateTree(currentNode, depth - 1, NodeAction.MOVE);
         }
