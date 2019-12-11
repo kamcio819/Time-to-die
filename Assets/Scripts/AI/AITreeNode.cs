@@ -31,12 +31,15 @@ public class AITreeNode
     public AITreeNode Left { get => left; set => left = value; }
     public AITreeNode Right { get => right; set => right = value; }
 
+    public Action Execute;
+
     public AITreeNode(AITreeNode parent, ShipState shipState, float differenceWeight, float destroyedWeight, float distanceWeight, NodeAction nodeAction)
     {
         ShipState newState = new ShipState(shipState);
         ProcessActionGameState(newState, nodeAction);
         nodeData = new AITreeNodeData(differenceWeight, destroyedWeight, distanceWeight, newState);
         nodeParent = parent;
+        Execute += () => { AIGameTreeProcesserModule.AIProcess(nodeAction, shipState); };
     }
 
     public AITreeNode(ShipState shipState, float differenceWeight, float destroyedWeight, float distanceWeight, NodeAction nodeAction)
@@ -66,7 +69,7 @@ public class AITreeNode
 
     private void TryToShootFromPosition(ShipState gameState)
     {
-        if(AIGameTreeProcesserModule.AITryToShoot(gameState.Position, gameState.ShipData.ShipDataContainer.GetAttackRange())) 
+        if(AIGameTreeProcesserModule.AITryToShoot(gameState)) 
         {
             gameState.ShipDestroyed++;
             gameState.ShipDiffernce--;

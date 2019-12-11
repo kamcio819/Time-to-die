@@ -15,6 +15,8 @@ public class ShipState
 
     public int Depth;
 
+    public Vector3 EnemyPosition;
+
     public ShipState(ShipState shipState)
     {
         this.Position = shipState.Position;
@@ -23,9 +25,10 @@ public class ShipState
         this.ShipDiffernce = shipState.ShipDiffernce;
         this.ShipDestroyed = shipState.ShipDestroyed;
         this.Depth = shipState.Depth;
+        this.EnemyPosition = shipState.EnemyPosition;
     }
 
-    public ShipState(Vector3 position, ShipType shipType, ShipData shipData , int shipDiffernce, int shipDestroyed, int depth)
+    public ShipState(Vector3 position, ShipType shipType, ShipData shipData ,int shipDiffernce, int shipDestroyed, int depth)
     {
         this.Position = position;
         this.ShipType = shipType;
