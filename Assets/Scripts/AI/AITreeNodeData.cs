@@ -23,17 +23,19 @@ public class ShipState
         this.ShipType = shipState.ShipType;
         this.ShipData = shipState.ShipData;
         this.ShipDiffernce = shipState.ShipDiffernce;
+        this.ShipDistance = shipState.ShipDistance;
         this.ShipDestroyed = shipState.ShipDestroyed;
         this.Depth = shipState.Depth;
         this.EnemyPosition = shipState.EnemyPosition;
     }
 
-    public ShipState(Vector3 position, ShipType shipType, ShipData shipData ,int shipDiffernce, int shipDestroyed, int depth)
+    public ShipState(Vector3 position, ShipType shipType, ShipData shipData ,int shipDiffernce, int shipDestroyed, int shipDistance, int depth)
     {
         this.Position = position;
         this.ShipType = shipType;
         this.ShipData = shipData;
         this.ShipDiffernce = shipDiffernce;
+        this.ShipDistance = shipDistance;
         this.ShipDestroyed = shipDestroyed;
         this.Depth = depth;
     }

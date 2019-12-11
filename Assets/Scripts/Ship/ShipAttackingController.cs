@@ -36,9 +36,28 @@ public class ShipAttackingController : MonoBehaviour, ITurnable
         {
             if (HexInRange(hexTile, shipDataController.ShipData.ShipDataContainer.GetAttackRange()))
             {
-                AttackPosition(hexTile.transform.position + offset, 1f);
+                AttackPositionExecute(hexTile.transform.position + offset, 1f);
                 return true;
             }
+        }
+        return false;
+    }
+
+    public bool AttackPosition(Vector3 position)
+    {
+        if (HexInRange(position, shipDataController.ShipData.ShipDataContainer.GetAttackRange()))
+        {
+            AttackPositionExecute(position, 1f);
+            return true;
+        }      
+        return false;
+    }
+
+    private bool HexInRange(Vector3 position, float range)
+    {
+        if (Mathf.Abs(position.x - transform.position.x) <= range && Mathf.Abs(position.z - transform.position.z) <= range)
+        {
+            return true;
         }
         return false;
     }
@@ -52,7 +71,7 @@ public class ShipAttackingController : MonoBehaviour, ITurnable
         return false;
     }
 
-    public void AttackPosition(Vector3 point, float speed)
+    public void AttackPositionExecute(Vector3 point, float speed)
     {
         shipDataController.attackPoints--;
         if (shipDataController.attackPoints >= 0)

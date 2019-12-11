@@ -20,12 +20,14 @@ public class EventCameraHandler : MonoBehaviour
     {
         shipModuleSystem.ShipConstructed += SubscribeCameraMovement;
         materialsModuleSystem.MineConstructed += SubscribeCameraMovement;
+        AIGameTreeProcesserModule.GameTreeAction += SubscribeCameraMovement;
     }
 
     private void OnDisable()
     {
         shipModuleSystem.ShipConstructed -= SubscribeCameraMovement;
         materialsModuleSystem.MineConstructed -= SubscribeCameraMovement;
+        AIGameTreeProcesserModule.GameTreeAction -= SubscribeCameraMovement;
     }
 
     public void ProcessEvents()

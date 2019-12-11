@@ -12,6 +12,8 @@ public class AIGameTreeProcesserModule : MonoBehaviour
 
     private static List<GameObject> seaTiles = new List<GameObject>();
 
+    public static Action<Vector3> GameTreeAction;
+
     private void Awake()
     {
         shipModuleSystem = FindObjectOfType<ShipModuleSystem>();
@@ -27,7 +29,6 @@ public class AIGameTreeProcesserModule : MonoBehaviour
 
     public static bool AITryToShoot(ShipState shipState)
     {
-        int distance;
         List<Vector3> positions = new List<Vector3>();
         for (int i = 0; i < shipModuleSystem.PlayerShips.Count; ++i)
         {
@@ -40,8 +41,13 @@ public class AIGameTreeProcesserModule : MonoBehaviour
         {
             if (ShipInRange(shipState.Position, positions[i], shipState.ShipData.ShipDataContainer.GetAttackRange()))
             {
-                shipsInRange.Add(shipModuleSystem.PlayerShips[i].transform.position);
+                shipsInRange.Add(positions[i]);
             }
+        }
+
+        if (shipsInRange.Count == 0)
+        {
+            return false;
         }
 
         shipState.EnemyPosition = FindMinDistance(shipsInRange, shipState.Position);
@@ -50,6 +56,7 @@ public class AIGameTreeProcesserModule : MonoBehaviour
         {
             return true;
         }
+
         return false;
     }
 
@@ -92,13 +99,15 @@ public class AIGameTreeProcesserModule : MonoBehaviour
     private static void ShootShip(ShipState shipState)
     {
         GameObject shooterShip = shipModuleSystem.EnemyShips.Find(x => x.GetComponent<ShipController>().ShipType == shipState.ShipType);
-        shooterShip.GetComponent<ShipAttackingController>().AttackPosition(shipState.EnemyPosition, 1f);
+        shooterShip.GetComponent<ShipAttackingController>().AttackPosition(shipState.EnemyPosition);
+        GameTreeAction?.Invoke(shipState.EnemyPosition);
     }
 
     private static void MoveShip(ShipState shipState)
     {
         GameObject shipToMove = shipModuleSystem.EnemyShips.Find(x => x.GetComponent<ShipController>().ShipType == shipState.ShipType);
-        shipToMove.GetComponent<ShipMovementController>().MoveToPosition(shipState.Position, 2f);
+        shipToMove.GetComponent<ShipMovementController>().MoveToPosition(shipState.Position, 1f);
+        GameTreeAction?.Invoke(shipState.Position);
     }
 
     private static bool ShipInRange(Vector3 position, Vector3 position2, float range)
@@ -133,9 +142,9 @@ public class AIGameTreeProcesserModule : MonoBehaviour
             }
         }
 
-        Vector3 shipPosition = positions[UnityEngine.Random.Range(0, positions.Count)];
+        Vector3 shipPosition = positions[UnityEngine.Random.Range(0, positions.Count - 1)];
         distance = (int)(shipState.Position - shipPosition).magnitude;
-        if (FindTilePosition(shipState, shipPosition, distance))
+        if (FindTilePosition(shipState, shipPosition, distance / 2))
         {
             shipState.ShipDistance = distance;
         }
