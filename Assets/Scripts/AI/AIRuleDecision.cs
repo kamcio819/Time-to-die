@@ -5,9 +5,6 @@ using UnityEngine;
 public class AIRuleDecision : AIBehaviour
 {
     [SerializeField]
-    private AIModuleData AIModuleData = default;
-
-    [SerializeField]
     private AIDecisions AIDecisions = default;
 
     [SerializeField]

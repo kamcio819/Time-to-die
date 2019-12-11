@@ -4,16 +4,6 @@ using UnityEngine;
 
 public class AIModuleSystem : ITEModuleSystem
 {
-    [Header("Controllers")]
-    [SerializeField]
-    private MaterialsModuleSystem materialsModuleSystem = default;
-
-    [SerializeField]
-    private ShipModuleSystem shipModuleSystem = default;
-
-    [SerializeField]
-    private UpgradeModuleSystem upgradeModuleSystem = default;
-
     [Header("AI Modules")]
     [Space(20)]
     [SerializeField]

@@ -60,65 +60,6 @@ public class AIGameTreeProcesserModule : MonoBehaviour
         return false;
     }
 
-    private static Vector3 FindMinDistance(List<Vector3> list, Vector3 position)
-    {
-        if (list.Count == 0)
-        {
-            throw new InvalidOperationException("Empty list");
-        }
-
-        int minDistance = int.MaxValue;
-        Vector3 shipToFind = Vector3.zero;
-
-        for(int i = 0;i < list.Count; ++i)
-        {
-            int distance = (int)(position - list[i]).magnitude;
-            if (distance < minDistance)
-            {
-                minDistance = distance;
-                shipToFind = list[i];
-            }
-        }
-
-        return shipToFind;
-    }
-
-    public static void AIProcess(NodeAction nodeAction, ShipState shipState)
-    {
-        switch(nodeAction)
-        {
-            case NodeAction.MOVE:
-                MoveShip(shipState);
-                break;
-            case NodeAction.SHOOT:
-                ShootShip(shipState);
-                break;
-        }
-    }
-
-    private static void ShootShip(ShipState shipState)
-    {
-        GameObject shooterShip = shipModuleSystem.EnemyShips.Find(x => x.GetComponent<ShipController>().ShipType == shipState.ShipType);
-        shooterShip.GetComponent<ShipAttackingController>().AttackPosition(shipState.EnemyPosition);
-        GameTreeAction?.Invoke(shipState.EnemyPosition);
-    }
-
-    private static void MoveShip(ShipState shipState)
-    {
-        GameObject shipToMove = shipModuleSystem.EnemyShips.Find(x => x.GetComponent<ShipController>().ShipType == shipState.ShipType);
-        shipToMove.GetComponent<ShipMovementController>().MoveToPosition(shipState.Position, 1f);
-        GameTreeAction?.Invoke(shipState.Position);
-    }
-
-    private static bool ShipInRange(Vector3 position, Vector3 position2, float range)
-    {
-        if(Mathf.Abs(position.x - position2.x) <= range && Mathf.Abs(position.z - position2.z) <= range)
-        {
-            return true;
-        }
-        return false;
-    }
-
     public static void AITryToMove(ShipState shipState)
     {
         int distance;
@@ -148,6 +89,33 @@ public class AIGameTreeProcesserModule : MonoBehaviour
         {
             shipState.ShipDistance = distance;
         }
+    }
+
+    public static void AIProcess(NodeAction nodeAction, ShipState shipState)
+    {
+        switch (nodeAction)
+        {
+            case NodeAction.MOVE:
+                MoveShip(shipState);
+                break;
+            case NodeAction.SHOOT:
+                ShootShip(shipState);
+                break;
+        }
+    }
+
+    private static void ShootShip(ShipState shipState)
+    {
+        GameObject shooterShip = shipModuleSystem.EnemyShips.Find(x => x.GetComponent<ShipController>().ShipType == shipState.ShipType);
+        shooterShip.GetComponent<ShipAttackingController>().AttackPosition(shipState.EnemyPosition);
+        GameTreeAction?.Invoke(shipState.EnemyPosition);
+    }
+
+    private static void MoveShip(ShipState shipState)
+    {
+        GameObject shipToMove = shipModuleSystem.EnemyShips.Find(x => x.GetComponent<ShipController>().ShipType == shipState.ShipType);
+        shipToMove.GetComponent<ShipMovementController>().MoveToPosition(shipState.Position, 1f);
+        GameTreeAction?.Invoke(shipState.Position);
     }
 
     private static List<Vector3> FindPlayerShipPoistions(Vector3 position, ShipState shipState)
@@ -214,6 +182,29 @@ public class AIGameTreeProcesserModule : MonoBehaviour
 
     }
 
+    private static Vector3 FindMinDistance(List<Vector3> list, Vector3 position)
+    {
+        if (list.Count == 0)
+        {
+            throw new InvalidOperationException("Empty list");
+        }
+
+        int minDistance = int.MaxValue;
+        Vector3 shipToFind = Vector3.zero;
+
+        for (int i = 0; i < list.Count; ++i)
+        {
+            int distance = (int)(position - list[i]).magnitude;
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                shipToFind = list[i];
+            }
+        }
+
+        return shipToFind;
+    }
+
     private static bool FindTilePosition(ShipState shipState, Vector3 position2, int magnitude)
     {
         Vector3 newPos = shipState.Position;
@@ -238,6 +229,15 @@ public class AIGameTreeProcesserModule : MonoBehaviour
             return true;
         }
 
+        return false;
+    }
+
+    private static bool ShipInRange(Vector3 position, Vector3 position2, float range)
+    {
+        if (Mathf.Abs(position.x - position2.x) <= range && Mathf.Abs(position.z - position2.z) <= range)
+        {
+            return true;
+        }
         return false;
     }
 }

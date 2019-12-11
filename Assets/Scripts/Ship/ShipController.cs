@@ -16,9 +16,6 @@ public class ShipController : MonoBehaviour
     private ShipAttackingController shipAttackingController = default;
 
     [SerializeField]
-    private ShipTileController shipTileController = default;
-
-    [SerializeField]
     private ShipRangeDrawer shipRangeDrawer = default;
 
     [SerializeField]
