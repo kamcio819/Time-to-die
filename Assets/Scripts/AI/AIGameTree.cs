@@ -57,6 +57,7 @@ public class AIGameTree : AIBehaviour
                                             NodeAction.NONE
                     ),
                     4, 
+                    1,
                     NodeAction.NONE)
             );
         }
@@ -97,7 +98,7 @@ public class AIGameTree : AIBehaviour
         return shipToFind;
     }
 
-    private AITreeNode GenerateTree(AITreeNode node, int depth, NodeAction nodeAction)
+    private AITreeNode GenerateTree(AITreeNode node, int depth, int stateDepth, NodeAction nodeAction)
     {
         if (depth < 0)
         {
@@ -108,9 +109,9 @@ public class AIGameTree : AIBehaviour
 
         if (depth > 0)
         {
-            node.GetGameState().Depth++;
-            currentNode.Left = GenerateTree(currentNode, depth - 1, NodeAction.SHOOT);
-            currentNode.Right = GenerateTree(currentNode, depth - 1, NodeAction.MOVE);
+            node.GetGameState().Depth = stateDepth;
+            currentNode.Left = GenerateTree(currentNode, depth - 1, stateDepth + 1, NodeAction.SHOOT);
+            currentNode.Right = GenerateTree(currentNode, depth - 1, stateDepth + 1, NodeAction.MOVE);
         }
 
         return currentNode;

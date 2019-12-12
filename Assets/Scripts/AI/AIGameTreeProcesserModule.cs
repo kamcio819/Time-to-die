@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AIGameTreeProcesserModule : MonoBehaviour
@@ -35,6 +36,8 @@ public class AIGameTreeProcesserModule : MonoBehaviour
             positions.AddRange(FindPlayerAttackPoistions(shipModuleSystem.PlayerShips[i].transform.position, shipState));
         }
 
+        positions = positions.Distinct().ToList();
+
         List<Vector3> shipsInRange = new List<Vector3>();
 
         for (int i = 0; i < positions.Count; ++i)
@@ -68,6 +71,8 @@ public class AIGameTreeProcesserModule : MonoBehaviour
         {
             positions.AddRange(FindPlayerShipPoistions(shipModuleSystem.PlayerShips[i].transform.position, shipState));
         }
+
+        positions = positions.Distinct().ToList();
 
         for (int i = 0; i < positions.Count; ++i)
         {
@@ -114,7 +119,7 @@ public class AIGameTreeProcesserModule : MonoBehaviour
     private static void MoveShip(ShipState shipState)
     {
         GameObject shipToMove = shipModuleSystem.EnemyShips.Find(x => x.GetComponent<ShipController>().ShipType == shipState.ShipType);
-        shipToMove.GetComponent<ShipMovementController>().MoveToPosition(shipState.Position, 1f);
+        shipToMove.GetComponent<ShipMovementController>().MoveToPosition(shipState.Position, 2f);
         GameTreeAction?.Invoke(shipState.Position);
     }
 
@@ -208,8 +213,8 @@ public class AIGameTreeProcesserModule : MonoBehaviour
     private static bool FindTilePosition(ShipState shipState, Vector3 position2, int magnitude)
     {
         Vector3 newPos = shipState.Position;
-        newPos.x += Mathf.Abs(shipState.Position.x - position2.x) / magnitude;
-        newPos.z += Mathf.Abs(shipState.Position.z - position2.z) / magnitude;
+        newPos.x += position2.x- shipState.Position.x  / magnitude;
+        newPos.z += position2.z - shipState.Position.z / magnitude;
         for(int i = 0; i < seaTiles.Count; ++i)
         {
             if(CheckTilePos(newPos, seaTiles[i].transform.position))
